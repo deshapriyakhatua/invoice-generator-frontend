@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!--=============== Google Fonts & Icon ===============-->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,100..700,0..1,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:opsz,wght@9..40,100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/invoice-generator-frontend/user/invoice/invoice1.css">
+</head>
+
+<body>
+    <section class="invoice_container">
+        <div class="main_invoice">
+
+            <div class="invoice_section1">
+                <img src="http://www.supah.it/dribbble/017/logo.png" alt="" class="invoice_logo">
+                <input type="text" class="invoice_type" value="Invoice">
+            </div>
+    
+            <div class="invoice_section2">
+                <textarea name="invoice_note" class="invoice_note" cols="30"
+                    rows="10">Hello, Philip Brooks. &#013;Thank you for shopping from our store and for your order </textarea>
+                <div class="section2_part2">
+                    <input type="text" class="invoice_id" value="ORDER #800000025">
+                    <input type="text" class="invoice_date" value="MARCH 4TH 2016">
+                </div>
+            </div>
+    
+            <table class="invoice_section3">
+                <tbody>
+                    <tr class="item_header">
+                        <th width="52%">
+                            <input type="text" class="table_header item_name" value="Item">
+                        </th>
+                        <th>
+                            <input type="text" class="table_header sku" value="SKU">
+                        </th>
+                        <th>
+                            <input type="text" class="table_header quantity" value="Quantity"> 
+                        </th>
+                        <th>
+                            <input type="text" class="table_header price" value="Subtotal (₹)">
+                        </th>
+                    </tr>
+                    <tr class="row_separator">
+                        <td height="1" colspan="4"></td>
+                    </tr>
+                    <tr class="item_row">
+                        <td class="first">
+                            <input type="text" class="item_name" value="Beats Studio Over-Ear Headphones">  
+                        </td>
+                        <td class="second">
+                            <input type="text" class="sku" value="MH792AM/A">
+                        </td>
+                        <td class="third">
+                            <input type="number" class="quantity" value="1">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="859">
+                        </td>
+                    </tr>
+                    <tr class="row_separator">
+                        <td height="1" colspan="4"></td>
+                    </tr>
+                    <tr class="item_row">
+                        <td class="first">
+                            <input type="text" class="item_name" value="Beats RemoteTalk Cable">  
+                        </td>
+                        <td class="second">
+                            <input type="text" class="sku" value="MHDV2G/A">
+                        </td>
+                        <td class="third">
+                            <input type="number" class="quantity" value="4">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="1259">
+                        </td>
+                    </tr>
+                    <tr class="row_separator">
+                        <td height="1" colspan="4"></td>
+                    </tr>
+    
+                    <tr class="subtotal_row after_item_row">
+                        <td class="third" colspan="3">
+                            <input type="text" class="subtotal" value="Subtotal">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="4259">
+                        </td>
+                    </tr>
+                    <tr class="shipping_row after_item_row">
+                        <td class="third" colspan="3">
+                            <input type="text" class="shipping" value="Shipping & Handling">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="150">
+                        </td>
+                    </tr>
+                    <tr class="gst_row after_item_row">
+                        <td class="third" colspan="3">
+                            <input type="text" class="gst" value="GST">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="400">
+                        </td>
+                    </tr>
+                    <tr class="grand_total_row after_item_row">
+                        <td class="third" colspan="3">
+                            <input type="text" class="grand_total" value="Grand Total">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="4040">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    
+            <div class="invoice_section4">
+                <div class="billig">
+                    <input type="text" value="BILLING INFORMATION">
+                    <input type="text" value="Philip Brooks">
+                    <input type="text" value="Public Wales, Somewhere">
+                    <input type="text" value="New York NY">
+                    <input type="text" value="4468, United States">
+                    <input type="text" value="T: 202-555-0133">
+                </div>
+                <div class="shipping">
+                    <input type="text" value="SHIPPING INFORMATION">
+                    <input type="text" value="Sup Inc">
+                    <input type="text" value="Another Place, Somewhere">
+                    <input type="text" value="New York NY">
+                    <input type="text" value="4468, United States">
+                    <input type="text" value="T: 202-555-0171">
+                </div>
+                <div class="payment_method">
+                    <input type="text" value="PAYMENT METHOD">
+                    <input type="text" value="Credit Card">
+                    <input type="text" value="Credit Card Type: Visa">
+                    <input type="text" value="Worldpay Transaction ID: 4185939336">
+                    <input type="text" value="Right of Withdrawal">
+                </div>
+                <div class="shipping_method">
+                    <input type="text" value="SHIPPING METHOD">
+                    <input type="text" value="UPS: U.S. Shipping Services">
+                </div>
+            </div>
+    
+            <div class="invoice_section5">
+                <input type="text" value="Have a nice day.">
+            </div>
+    
+        </div>
+    </section>
+</body>
+
+</html>
