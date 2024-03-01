@@ -17,23 +17,12 @@ input:focus {
     background-color: #f2f1f1;
 }
 
-textarea {
-    border-width: 0;
-    outline: 0;
-    color: #585858;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-}
-
-textarea:focus {
-    background-color: #f2f1f1;
-}
-
 .invoice_container {
     width: 600px;
     aspect-ratio: 210/297;
     padding: 1cm;
     border: 1px solid black;
+    margin: 50px auto;
 }
 
 .main_invoice {
@@ -51,6 +40,7 @@ textarea:focus {
 .invoice_logo {
     width: 32px;
     height: 32px;
+    cursor: pointer;
 }
 
 .invoice_type {
@@ -59,32 +49,32 @@ textarea:focus {
     text-align: right;
 }
 
+
 .invoice_section2 {
     margin-top: 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
-.invoice_note {
-    height: 80px;
-    text-align: left;
-    line-height: 18px;
-    resize: none;
-    overflow: hidden;
+.business_details {
+    width: 50%;
 }
 
-.section2_part2 {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.business_details input:first-child {
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.invoice_details {
+    width: 50%;
 }
 
 .invoice_id {
+    width: 100%;
     text-align: right;
 }
 
 .invoice_date {
+    width: 100%;
     text-align: right;
 }
 
@@ -101,9 +91,12 @@ textarea:focus {
     width: 100%;
 }
 
-.invoice_section3 tbody .item_row input,
 .invoice_section3 tbody .item_header input {
-    padding: 10px 0;
+    padding: 0 0 10px 0;
+}
+
+.invoice_section3 tbody .item_row input {
+    padding: 5px 0;
 }
 
 .invoice_section3 tbody .after_item_row input {
@@ -162,11 +155,153 @@ textarea:focus {
 
 .invoice_section4 > div >input {
     width: 100%;
-    letter-spacing: .7px;
+    letter-spacing: .4px;
 }
 
 
 .invoice_section5 {
     position: absolute;
     bottom: 0;
+    width: 100%;
+}
+
+.invoice_section5 input {
+    width: 100%;
+}
+
+/* =============== image upload popup ================= */
+
+
+.image_upload {
+    position: absolute;
+    top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+   	justify-content: center;
+	align-items: center;
+}
+
+.close_drag_drop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	background-color: #b2b2b2a2;
+}
+.upload-files-container {
+    position: relative;
+	background-color: #f7fff7;
+	width: 420px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	flex-direction: column;
+	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
+}
+.drag-file-area {
+	border: 2px dashed #787878;
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.drag-file-area .upload-icon {
+	font-size: 25px;
+}
+
+.drag-file-area h4 {
+	font-size: 20px;
+	margin: 15px 0;
+}
+.drag-file-area .browse-files {
+    position: relative;
+}
+
+.drag-file-area .browse-files-text {
+	color: #3e3ef5;
+	font-weight: bolder;
+}
+
+.default-file-input {
+    position: absolute;
+    cursor: pointer;
+	opacity: 0;
+}
+.cannot-upload-message {
+	background-color: #ffc6c4;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+	padding: 5px 10px 5px 30px;
+	border-radius: 5px;
+	color: #BB0000;
+	display: none;
+}
+.cannot-upload-message span, .upload-button-icon {
+	padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+	padding-left: 20px;
+	cursor: pointer;
+}
+.file-block {
+	color: #f7fff7;
+	background-color: #474747;
+  	transition: all 1s;
+	width: 390px;
+	position: relative;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 15px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+}
+.progress-bar {
+	display: flex;
+	position: absolute;
+	bottom: -10px;
+    left: 0;
+	width: 0;
+	height: 10%;
+	border-radius: 25px;
+	background-color: #a9a9a9;
+}
+.upload-button {
+	font-family: 'Montserrat';
+	background-color: #484848;
+	color: #f7fff7;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
 }
