@@ -18,7 +18,7 @@ input:focus {
 }
 
 .invoice_container {
-    width: 600px;
+    width: 720px;
     aspect-ratio: 210/297;
     padding: 1cm;
     border: 1px solid rgb(180, 180, 180);
@@ -57,6 +57,10 @@ input:focus {
 
 .business_details {
     width: 50%;
+}
+
+.invoice_section2 input {
+    width: 100%;
 }
 
 .business_details input:first-child {
@@ -202,7 +206,7 @@ input:focus {
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 10px 20px, rgba(0, 0, 0, 0.28) 0px 6px 6px;
 }
 .drag-file-area {
-	border: 2px dashed #787878;
+	border: 2px dashed #c2c2c2;
 	border-radius: 40px;
 	margin: 10px 0 15px;
 	padding: 30px 50px;
@@ -245,6 +249,7 @@ input:focus {
 	border-radius: 5px;
 	color: #BB0000;
 	display: none;
+    transition: all 1s ease-in-out;
 }
 .cannot-upload-message span, .upload-button-icon {
 	padding-right: 10px;
@@ -305,4 +310,43 @@ input:focus {
 	margin: 10px;
 	padding: 7.5px 50px;
 	cursor: pointer;
+}
+
+
+.support_container {
+    position: absolute;
+    right: 250px;
+    top: 80px;
+    border: 1px solid rgb(217, 217, 217);
+    padding: 400px 100px;
+}
+
+.support_container .print_button {
+    padding: 5px 10px;
+    background-color: #e37272;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+
+
+@media print {
+    .main_header {
+        display: none;
+        visibility: hidden; 
+    }
+
+    .support_container {
+        visibility: hidden !important; 
+    }
+    #invoice_container {
+        margin-top: 0;
+        border-width: 0;
+    }
+
+    #invoice_container * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
 }
