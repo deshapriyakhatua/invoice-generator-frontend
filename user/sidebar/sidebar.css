@@ -8,7 +8,8 @@ a {
 }
 
 .main_header {
-    z-index: 1;
+    position: relative;
+    z-index: 2;
 }
 
 .header {

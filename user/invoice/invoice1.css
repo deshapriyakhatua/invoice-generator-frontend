@@ -21,8 +21,8 @@ input:focus {
     width: 600px;
     aspect-ratio: 210/297;
     padding: 1cm;
-    border: 1px solid black;
-    margin: 50px auto;
+    border: 1px solid rgb(180, 180, 180);
+    margin: 20px auto;
 }
 
 .main_invoice {
@@ -173,6 +173,7 @@ input:focus {
 
 
 .image_upload {
+    z-index: 1;
     position: absolute;
     top: 0;
 	width: 100vw;

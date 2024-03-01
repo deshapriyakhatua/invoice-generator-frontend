@@ -52,7 +52,7 @@ var isAdvancedUpload = function() {
                         document.querySelector(".invoice_logo").src = e.target.result;
                       }
                       reader.readAsDataURL(fileInput.files[0]);
-
+                      document.querySelector(".image_upload").style.display = "none";
                     } else {
                       width += 5;
                       progressBar.style.width = width + "%";
