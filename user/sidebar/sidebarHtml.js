@@ -3,7 +3,13 @@ document.write(`
 
         <!--=============== Navbar ===============-->
         <header class="header">
-            <div class="menu_icon" onclick="showSideBar()"></div>
+            <div class="menu_and_site_logo">
+                <div class="menu_icon" onclick="showSideBar()"></div>
+                <div class="pro-sidebar-logo">
+                    <div>Ei</div>
+                    <h5>EasyInvoice</h5>
+                </div>
+            </div>
             <div class="profile_icon">
                 <span class="material-symbols-rounded"> account_circle </span>
             </div>

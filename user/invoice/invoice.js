@@ -130,6 +130,7 @@ document.querySelector(".close_drag_drop").addEventListener("click", (event) => 
 /* ------------ Add & remove item row ---------- */
 
 document.querySelector(".item_add_remove .add_item").addEventListener("click", (event)=>{
+    if(document.querySelectorAll(".invoice_section3 tbody tr").length >= 25){ return; }
     let itemRow = document.createElement("tr");
     itemRow.className = "item_row";
     itemRow.innerHTML = `
@@ -157,6 +158,7 @@ document.querySelector(".item_add_remove .add_item").addEventListener("click", (
     let afterItemRow = document.querySelector(".after_item_row");
     parentNode.insertBefore(itemRow,afterItemRow);
     parentNode.insertBefore(rowSeparator,afterItemRow);
+    calculateTotalPrice();
 });
 
 document.querySelector(".item_add_remove .remove_item").addEventListener("click", (event)=>{
@@ -165,10 +167,12 @@ document.querySelector(".item_add_remove .remove_item").addEventListener("click"
         allRows[allRows.length-5].remove();
         allRows[allRows.length-6].remove();
      }
+     calculateTotalPrice();
 });
 
 
 /*------------------- Calculate invoice price ------------------ */
+
 function calculateTotalPrice(){
     let subTotal = 0;
     document.querySelectorAll(".item_row .fourth input").forEach((elem)=>{
