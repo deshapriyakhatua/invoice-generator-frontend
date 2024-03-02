@@ -8,7 +8,7 @@
 input {
     border-width: 0;
     outline: 0;
-    color: #585858;
+    color: #000000;
     font-size: 11px;
     transition: all .2s ease-in-out;
 }
@@ -45,7 +45,7 @@ input:focus {
 
 .invoice_type {
     font-size: 21px; 
-    color: #4b4b4b; 
+    color: #000000; 
     text-align: right;
 }
 
@@ -136,7 +136,7 @@ input:focus {
 
 .invoice_section3 tbody .grand_total_row input {
     font-weight: 600;
-    color: #303030;
+    color: #000000;
 }
 
 
@@ -154,7 +154,7 @@ input:focus {
 
 .invoice_section4 > div >input:first-child {
     font-weight: 600;
-    color: #585858;
+    color: #000000;
 }
 
 .invoice_section4 > div >input {
@@ -322,13 +322,30 @@ input:focus {
 }
 
 .support_container .print_button {
-    padding: 5px 10px;
-    background-color: #e37272;
+    margin-top: 20px;
+    padding: 5px 20px;
+    background-color: #6e6e6e;
     border: none;
     color: #ffffff;
     cursor: pointer;
+    border-radius: 15px;
 }
 
+.item_add_remove button {
+    padding: 5px 20px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 15px;
+}
+
+.item_add_remove button:first-child {
+    background-color: rgb(104, 131, 104);
+}
+
+.item_add_remove button:last-child {
+    background-color: rgb(232, 118, 118);
+}
 
 
 @media print {

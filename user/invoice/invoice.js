@@ -127,6 +127,67 @@ document.querySelector(".close_drag_drop").addEventListener("click", (event) => 
 });
 
 
+/* ------------ Add & remove item row ---------- */
+
+document.querySelector(".item_add_remove .add_item").addEventListener("click", (event)=>{
+    let itemRow = document.createElement("tr");
+    itemRow.className = "item_row";
+    itemRow.innerHTML = `
+                        <td class="first">
+                            <input type="text" class="item_name" value="Beats RemoteTalk Cable">
+                        </td>
+                        <td class="second">
+                            <input type="text" class="sku" value="MHDV2G/A">
+                        </td>
+                        <td class="third">
+                            <input type="number" class="quantity" value="1">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="price" value="0">
+                        </td>
+    `;
+
+    let rowSeparator = document.createElement("tr");
+    rowSeparator.className = "row_separator";
+    rowSeparator.innerHTML = `
+                        <td height="1" colspan="4"></td>
+    `;
+
+    let parentNode = document.querySelector(".invoice_section3 tbody");
+    let afterItemRow = document.querySelector(".after_item_row");
+    parentNode.insertBefore(itemRow,afterItemRow);
+    parentNode.insertBefore(rowSeparator,afterItemRow);
+});
+
+document.querySelector(".item_add_remove .remove_item").addEventListener("click", (event)=>{
+     let allRows = document.querySelectorAll(".invoice_section3 tbody tr");
+     if(allRows.length > 8){
+        allRows[allRows.length-5].remove();
+        allRows[allRows.length-6].remove();
+     }
+});
+
+
+/*------------------- Calculate invoice price ------------------ */
+function calculateTotalPrice(){
+    let subTotal = 0;
+    document.querySelectorAll(".item_row .fourth input").forEach((elem)=>{
+        subTotal += elem.value*1;
+    });
+    document.querySelector(".subtotal_row .second input").value = subTotal;
+
+    subTotal += document.querySelector(".shipping_row .second input").value*1;
+    subTotal += document.querySelector(".gst_row .second input").value*1;
+
+    document.querySelector(".grand_total_row .second input").value = subTotal;
+}
+
+calculateTotalPrice();
+
+window.addEventListener('input', function (evt) {
+    calculateTotalPrice();
+});
+
 /*------------- print invoice -----------*/
 
 document.querySelector(".print_button").addEventListener("click", () => {

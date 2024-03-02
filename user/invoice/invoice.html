@@ -2,11 +2,12 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <!--=============== Google Fonts & Icon ===============-->
+    <!---------------- Google Fonts & Icon ---------------->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,100..700,0..1,0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,13 +16,17 @@
 
     <!-------------- link css -------------->
     <link rel="stylesheet" href="/invoice-generator-frontend/user/sidebar/sidebar.css">
-    <link rel="stylesheet" href="/invoice-generator-frontend/user/invoice/invoice1.css">
+    <link rel="stylesheet" href="/invoice-generator-frontend/user/invoice/invoice.css">
+
 </head>
 
 <body>
+
     <!---------------- Navbar & Sidebar --------------->
+
     <script src="/invoice-generator-frontend/user/sidebar/sidebarHtml.js"></script>
 
+    <!---------------- Main Invoice section ---------------->
 
     <section class="invoice_container" id="invoice_container">
         <div class="main_invoice">
@@ -101,34 +106,34 @@
                     </tr>
 
                     <tr class="subtotal_row after_item_row">
-                        <td class="third" colspan="3">
+                        <td class="first" colspan="3">
                             <input type="text" class="subtotal" value="Subtotal">
                         </td>
-                        <td class="fourth">
+                        <td class="second">
                             <input type="number" class="price" value="4259">
                         </td>
                     </tr>
                     <tr class="shipping_row after_item_row">
-                        <td class="third" colspan="3">
+                        <td class="first" colspan="3">
                             <input type="text" class="shipping" value="Shipping & Handling">
                         </td>
-                        <td class="fourth">
+                        <td class="second">
                             <input type="number" class="price" value="150">
                         </td>
                     </tr>
                     <tr class="gst_row after_item_row">
-                        <td class="third" colspan="3">
+                        <td class="first" colspan="3">
                             <input type="text" class="gst" value="GST">
                         </td>
-                        <td class="fourth">
+                        <td class="second">
                             <input type="number" class="price" value="400">
                         </td>
                     </tr>
                     <tr class="grand_total_row after_item_row">
-                        <td class="third" colspan="3">
+                        <td class="first" colspan="3">
                             <input type="text" class="grand_total" value="Grand Total">
                         </td>
-                        <td class="fourth">
+                        <td class="second">
                             <input type="number" class="price" value="4040">
                         </td>
                     </tr>
@@ -209,14 +214,19 @@
     <!---------------- support section ------------->
 
     <section class="support_container">
+        <div class="item_add_remove">
+            <button class="add_item">Add Item</button>
+            <button class="remove_item">Remove Item</button>
+        </div>
         <button class="print_button"> Print </button>
     </section>
 
 
-
+    <!----------------- Other JS ---------------->
 
     <script src="/invoice-generator-frontend/user/sidebar/sidebar.js"></script>
-    <script src="/invoice-generator-frontend/user/invoice/invoice1.js"></script>
+    <script src="/invoice-generator-frontend/user/invoice/invoice.js"></script>
+
 </body>
 
 </html>

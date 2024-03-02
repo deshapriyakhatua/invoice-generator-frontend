@@ -4,7 +4,9 @@ document.write(`
         <!--=============== Navbar ===============-->
         <header class="header">
             <div class="menu_icon" onclick="showSideBar()"></div>
-            <div class="profile_icon"></div>
+            <div class="profile_icon">
+                <span class="material-symbols-rounded"> account_circle </span>
+            </div>
         </header>
 
         <!--=============== Sidebar ===============-->
