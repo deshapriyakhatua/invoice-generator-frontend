@@ -5,7 +5,8 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>SnapBills Invoice Gerator Free</title>
+    <link rel="icon" type="image/x-icon" href="/user/invoice/favicon.png">
 
     <!---------------- Google Fonts & Icon ---------------->
     <link rel="stylesheet"
@@ -27,202 +28,205 @@
     <script src="/user/sidebar/sidebarHtml.js"></script>
 
     <!---------------- Main Invoice section ---------------->
+    <section class="invoice_body">
 
-    <section class="invoice_container" id="invoice_container">
-        <div class="main_invoice">
+        <!---------- invoice ----------->
 
-            <div class="invoice_section1">
-                <img src="/invoice-generator-frontend/user/invoice/invoiceLogo.jpg" alt="" class="invoice_logo">
-                <input type="text" class="invoice_type" value="Invoice">
+        <section class="invoice_container" id="invoice_container">
+            <div class="main_invoice">
+    
+                <div class="invoice_section1">
+                    <img src="/user/invoice/invoiceLogo.jpg" alt="" class="invoice_logo">
+                    <input type="text" class="invoice_type" value="Invoice">
+                </div>
+    
+                <div class="invoice_section2">
+                    <div class="business_details">
+                        <input type="text" value="Business Name">
+                        <input type="text" value="Business Address ">
+                        <input type="text" value="City, State, Postal Code">
+                        <input type="text" value="Country">
+                        <input type="text" value="5245236987">
+                        <input type="text" value="business@private.com">
+                    </div>
+                    <div class="invoice_details">
+                        <input type="text" class="invoice_id" value="ORDER #800000025">
+                        <input type="date" class="invoice_date" value="">
+                    </div>
+                </div>
+    
+                <table class="invoice_section3">
+                    <tbody>
+                        <tr class="item_header">
+                            <th width="52%">
+                                <input type="text" class="table_header item_name" value="Item">
+                            </th>
+                            <th>
+                                <input type="text" class="table_header sku" value="SKU">
+                            </th>
+                            <th>
+                                <input type="text" class="table_header quantity" value="Quantity">
+                            </th>
+                            <th>
+                                <input type="text" class="table_header price" value="Subtotal (₹)">
+                            </th>
+                        </tr>
+                        <tr class="row_separator">
+                            <td height="1" colspan="4"></td>
+                        </tr>
+                        <tr class="item_row">
+                            <td class="first">
+                                <input type="text" class="item_name" value="Beats Studio Over-Ear Headphones">
+                            </td>
+                            <td class="second">
+                                <input type="text" class="sku" value="MH792AM/A">
+                            </td>
+                            <td class="third">
+                                <input type="number" class="quantity" value="1">
+                            </td>
+                            <td class="fourth">
+                                <input type="number" class="price" value="859">
+                            </td>
+                        </tr>
+                        <tr class="row_separator">
+                            <td height="1" colspan="4"></td>
+                        </tr>
+                        <tr class="item_row">
+                            <td class="first">
+                                <input type="text" class="item_name" value="Beats RemoteTalk Cable">
+                            </td>
+                            <td class="second">
+                                <input type="text" class="sku" value="MHDV2G/A">
+                            </td>
+                            <td class="third">
+                                <input type="number" class="quantity" value="4">
+                            </td>
+                            <td class="fourth">
+                                <input type="number" class="price" value="1259">
+                            </td>
+                        </tr>
+                        <tr class="row_separator">
+                            <td height="1" colspan="4"></td>
+                        </tr>
+    
+                        <tr class="subtotal_row after_item_row">
+                            <td class="first" colspan="3">
+                                <input type="text" class="subtotal" value="Subtotal">
+                            </td>
+                            <td class="second">
+                                <input type="number" class="price" value="4259">
+                            </td>
+                        </tr>
+                        <tr class="shipping_row after_item_row">
+                            <td class="first" colspan="3">
+                                <input type="text" class="shipping" value="Shipping & Handling">
+                            </td>
+                            <td class="second">
+                                <input type="number" class="price" value="150">
+                            </td>
+                        </tr>
+                        <tr class="gst_row after_item_row">
+                            <td class="first" colspan="3">
+                                <input type="text" class="gst" value="GST">
+                            </td>
+                            <td class="second">
+                                <input type="number" class="price" value="400">
+                            </td>
+                        </tr>
+                        <tr class="grand_total_row after_item_row">
+                            <td class="first" colspan="3">
+                                <input type="text" class="grand_total" value="Grand Total">
+                            </td>
+                            <td class="second">
+                                <input type="number" class="price" value="4040">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+    
+                <div class="invoice_section4">
+                    <div class="billig">
+                        <input type="text" value="BILLING INFORMATION">
+                        <input type="text" value="Philip Brooks">
+                        <input type="text" value="Public Wales, Somewhere">
+                        <input type="text" value="New York NY">
+                        <input type="text" value="4468, United States">
+                        <input type="text" value="T: 202-555-0133">
+                    </div>
+                    <div class="shipping">
+                        <input type="text" value="SHIPPING INFORMATION">
+                        <input type="text" value="Sup Inc">
+                        <input type="text" value="Another Place, Somewhere">
+                        <input type="text" value="New York NY">
+                        <input type="text" value="4468, United States">
+                        <input type="text" value="T: 202-555-0171">
+                    </div>
+                    <div class="payment_method">
+                        <input type="text" value="PAYMENT METHOD">
+                        <input type="text" value="Credit Card">
+                        <input type="text" value="Credit Card Type: Visa">
+                        <input type="text" value="Worldpay Transaction ID: 4185939336">
+                        <input type="text" value="Right of Withdrawal">
+                    </div>
+                    <div class="shipping_method">
+                        <input type="text" value="SHIPPING METHOD">
+                        <input type="text" value="UPS: U.S. Shipping Services">
+                    </div>
+                </div>
+    
+                <div class="invoice_section5">
+                    <input type="text" value="Have a nice day.">
+                </div>
+    
             </div>
-
-            <div class="invoice_section2">
-                <div class="business_details">
-                    <input type="text" value="Business Name">
-                    <input type="text" value="Business Address ">
-                    <input type="text" value="City, State, Postal Code">
-                    <input type="text" value="Country">
-                    <input type="text" value="5245236987">
-                    <input type="text" value="business@private.com">
+        </section>
+    
+       <!---------- image upload popup -------->
+    
+        <section class="image_upload">
+            <div class="close_drag_drop"></div>
+            <div class="upload-files-container">
+                <div class="drag-file-area">
+                    <span class="material-symbols-rounded upload-icon"> file_upload</span>
+                    <h4 class="dynamic-message"> Drag & drop </h4>
+                    <span class="browse-files"> 
+                        <input type="file" class="default-file-input" /> 
+                        <span>or</span>
+                        <span class="browse-files-text">browse file</span>
+                        <span>from device</span> 
+                    </span> 
                 </div>
-                <div class="invoice_details">
-                    <input type="text" class="invoice_id" value="ORDER #800000025">
-                    <input type="date" class="invoice_date" value="">
-                </div>
-            </div>
-
-            <table class="invoice_section3">
-                <tbody>
-                    <tr class="item_header">
-                        <th width="52%">
-                            <input type="text" class="table_header item_name" value="Item">
-                        </th>
-                        <th>
-                            <input type="text" class="table_header sku" value="SKU">
-                        </th>
-                        <th>
-                            <input type="text" class="table_header quantity" value="Quantity">
-                        </th>
-                        <th>
-                            <input type="text" class="table_header price" value="Subtotal (₹)">
-                        </th>
-                    </tr>
-                    <tr class="row_separator">
-                        <td height="1" colspan="4"></td>
-                    </tr>
-                    <tr class="item_row">
-                        <td class="first">
-                            <input type="text" class="item_name" value="Beats Studio Over-Ear Headphones">
-                        </td>
-                        <td class="second">
-                            <input type="text" class="sku" value="MH792AM/A">
-                        </td>
-                        <td class="third">
-                            <input type="number" class="quantity" value="1">
-                        </td>
-                        <td class="fourth">
-                            <input type="number" class="price" value="859">
-                        </td>
-                    </tr>
-                    <tr class="row_separator">
-                        <td height="1" colspan="4"></td>
-                    </tr>
-                    <tr class="item_row">
-                        <td class="first">
-                            <input type="text" class="item_name" value="Beats RemoteTalk Cable">
-                        </td>
-                        <td class="second">
-                            <input type="text" class="sku" value="MHDV2G/A">
-                        </td>
-                        <td class="third">
-                            <input type="number" class="quantity" value="4">
-                        </td>
-                        <td class="fourth">
-                            <input type="number" class="price" value="1259">
-                        </td>
-                    </tr>
-                    <tr class="row_separator">
-                        <td height="1" colspan="4"></td>
-                    </tr>
-
-                    <tr class="subtotal_row after_item_row">
-                        <td class="first" colspan="3">
-                            <input type="text" class="subtotal" value="Subtotal">
-                        </td>
-                        <td class="second">
-                            <input type="number" class="price" value="4259">
-                        </td>
-                    </tr>
-                    <tr class="shipping_row after_item_row">
-                        <td class="first" colspan="3">
-                            <input type="text" class="shipping" value="Shipping & Handling">
-                        </td>
-                        <td class="second">
-                            <input type="number" class="price" value="150">
-                        </td>
-                    </tr>
-                    <tr class="gst_row after_item_row">
-                        <td class="first" colspan="3">
-                            <input type="text" class="gst" value="GST">
-                        </td>
-                        <td class="second">
-                            <input type="number" class="price" value="400">
-                        </td>
-                    </tr>
-                    <tr class="grand_total_row after_item_row">
-                        <td class="first" colspan="3">
-                            <input type="text" class="grand_total" value="Grand Total">
-                        </td>
-                        <td class="second">
-                            <input type="number" class="price" value="4040">
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <div class="invoice_section4">
-                <div class="billig">
-                    <input type="text" value="BILLING INFORMATION">
-                    <input type="text" value="Philip Brooks">
-                    <input type="text" value="Public Wales, Somewhere">
-                    <input type="text" value="New York NY">
-                    <input type="text" value="4468, United States">
-                    <input type="text" value="T: 202-555-0133">
-                </div>
-                <div class="shipping">
-                    <input type="text" value="SHIPPING INFORMATION">
-                    <input type="text" value="Sup Inc">
-                    <input type="text" value="Another Place, Somewhere">
-                    <input type="text" value="New York NY">
-                    <input type="text" value="4468, United States">
-                    <input type="text" value="T: 202-555-0171">
-                </div>
-                <div class="payment_method">
-                    <input type="text" value="PAYMENT METHOD">
-                    <input type="text" value="Credit Card">
-                    <input type="text" value="Credit Card Type: Visa">
-                    <input type="text" value="Worldpay Transaction ID: 4185939336">
-                    <input type="text" value="Right of Withdrawal">
-                </div>
-                <div class="shipping_method">
-                    <input type="text" value="SHIPPING METHOD">
-                    <input type="text" value="UPS: U.S. Shipping Services">
-                </div>
-            </div>
-
-            <div class="invoice_section5">
-                <input type="text" value="Have a nice day.">
-            </div>
-
-        </div>
-    </section>
-
-   <!-------------- image upload popup -------------->
-
-    <section class="image_upload">
-        <div class="close_drag_drop"></div>
-        <div class="upload-files-container">
-            <div class="drag-file-area">
-                <span class="material-symbols-rounded upload-icon"> file_upload</span>
-                <h4 class="dynamic-message"> Drag & drop </h4>
-                <span class="browse-files"> 
-                    <input type="file" class="default-file-input" /> 
-                    <span>or</span>
-                    <span class="browse-files-text">browse file</span>
-                    <span>from device</span> 
-                </span> 
-            </div>
-            <span class="cannot-upload-message"> 
-                <span class="material-symbols-rounded">error</span> 
-                Please select a file first 
-                <span class="material-symbols-rounded cancel-alert-button">cancel</span> 
-            </span>
-            <div class="file-block">
-                <div class="progress-bar"> </div>
-                <div class="file-info"> 
-                    <span class="material-symbols-rounded file-icon">description</span> 
-                    <span class="file-name"> </span> | 
-                    <span class="file-size"> </span> 
-                </div>
-                <span class="material-symbols-rounded remove-file-icon">Delete</span>
-                
-            </div>
-            <button type="button" class="upload-button"> Upload </button>
-        </div>
-    </section>
-
-    <!---------------- support section ------------->
-
-    <section class="support_container">
-        <div class="item_add_remove">
-            <span class="material-symbols-rounded">
-                playlist_remove
+                <span class="cannot-upload-message"> 
+                    <span class="material-symbols-rounded">error</span> 
+                    Please select a file first 
+                    <span class="material-symbols-rounded cancel-alert-button">cancel</span> 
                 </span>
-            <button class="add_item">Add Item</button>
-            <button class="remove_item">Remove Item</button>
-        </div>
-        <button class="print_button"> Print </button>
+                <div class="file-block">
+                    <div class="progress-bar"> </div>
+                    <div class="file-info"> 
+                        <span class="material-symbols-rounded file-icon">description</span> 
+                        <span class="file-name"> </span> | 
+                        <span class="file-size"> </span> 
+                    </div>
+                    <span class="material-symbols-rounded remove-file-icon">Delete</span>
+                    
+                </div>
+                <button type="button" class="upload-button"> Upload </button>
+            </div>
+        </section>
+    
+        <!--------- support section ---------->
+    
+        <section class="support_container">
+            <div class="item_add_remove">
+                <button class="material-symbols-rounded add_item"> playlist_add </button>
+                <button class="material-symbols-rounded remove_item"> playlist_remove </button>
+            </div>
+            <button class="print_button"> Print </button>
+        </section>
+
     </section>
+    
 
 
     <!----------------- Other JS ---------------->

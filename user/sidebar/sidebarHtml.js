@@ -6,8 +6,7 @@ document.write(`
             <div class="menu_and_site_logo">
                 <div class="menu_icon" onclick="showSideBar()"></div>
                 <div class="pro-sidebar-logo">
-                    <div>Ei</div>
-                    <h5>EasyInvoice</h5>
+                    <img src="/user/sidebar/logoDark.png" alt="">
                 </div>
             </div>
             <div class="profile_icon">
@@ -21,8 +20,7 @@ document.write(`
                 <div class="sidebar-header">
                     <div class="close_sidebar" onclick="hideSideBar()"></div>
                     <div class="pro-sidebar-logo">
-                        <div>Ei</div>
-                        <h5>Easy Invoice</h5>
+                        <img src="/user/sidebar/logoLight.png" alt="">
                     </div>
                 </div>
                 <div class="sidebar-content">
