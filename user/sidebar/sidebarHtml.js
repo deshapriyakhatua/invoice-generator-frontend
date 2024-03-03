@@ -16,9 +16,10 @@ document.write(`
 
         <!--=============== Sidebar ===============-->
         <aside class="sidebar hide_sidebar">
+            <div class="closeSideBar" onclick="hideSideBar()"></div>
             <div class="sidebar-layout">
                 <div class="sidebar-header">
-                    <div class="close_sidebar" onclick="hideSideBar()"></div>
+                    <div class="close_sidebar_icon" onclick="hideSideBar()"></div>
                     <div class="pro-sidebar-logo">
                         <img src="/user/sidebar/logoLight.png" alt="">
                     </div>

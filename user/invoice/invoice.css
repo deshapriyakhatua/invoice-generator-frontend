@@ -18,11 +18,12 @@ input:focus {
 }
 
 .invoice_body {
-    margin-top: 30px;
+    margin-top: 90px;
     padding-bottom: 30px;
     display: flex;
     justify-content: center;
     gap: 10px;
+    z-index: 1;
 }
 
 .invoice_container {
@@ -374,5 +375,33 @@ input:focus {
     #invoice_container * {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
+    }
+}
+
+@media only screen and (max-width: 780px)  {
+    .invoice_body {
+        flex-direction: column;
+        align-items: center;
+    }
+    .support_container {
+        width: 650px;
+    }
+}
+
+@media only screen and (max-width: 680px)  {
+    .invoice_container {
+        width: 500px;
+    }
+    .support_container {
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 520px)  {
+    .invoice_container {
+        width: 420px;
+    }
+    .support_container {
+        width: 420px;
     }
 }

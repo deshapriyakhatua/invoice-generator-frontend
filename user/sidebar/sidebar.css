@@ -1,5 +1,4 @@
 body {
-    color: #3f4750;
     font-size: 0.9rem;
 }
 
@@ -8,19 +7,22 @@ a {
 }
 
 .main_header {
-    position: relative;
     z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+
 }
 
 .header {
-    position: relative;
-    width: 100%;
+    width: 100vw;
     height: 60px;
     padding: 0 20px;
     border-bottom: 1px solid #e9e9e9;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: white;
 }
 
 .header .menu_and_site_logo {
@@ -79,18 +81,26 @@ a {
 }
 
 .sidebar {
-    color: #7d84ab;
     position: absolute;
     top: 0;
     left: 0;
     width: 350px;
     min-height: 100vh;
-    background-color: #0c1e35;
     transition: all .3s ease-in-out;
 }
 
 .sidebar.hide_sidebar {
     left: -350px;
+}
+
+.sidebar .closeSideBar {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+}
+
+.sidebar.hide_sidebar .closeSideBar {
+    display: none;
 }
 
 .sidebar::-webkit-scrollbar-thumb {
@@ -108,11 +118,11 @@ a {
 
 .sidebar .sidebar-layout {
     height: auto;
-    min-height: 100%;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     position: relative;
-    z-index: 2;
+    background-color: #0c1e35;
 }
 
 .sidebar .sidebar-layout .sidebar-header {
@@ -122,7 +132,7 @@ a {
     padding: 0 20px;
 }
 
-.sidebar-header .close_sidebar {
+.sidebar-header .close_sidebar_icon {
     position: relative;
     width: 32px;
     height: 32px;
@@ -131,25 +141,25 @@ a {
     transition: all .3s ease-in-out;
 }
 
-.sidebar-header .close_sidebar:hover {
+.sidebar-header .close_sidebar_icon:hover {
     opacity: 1;
 }
 
-.sidebar-header .close_sidebar:before,
-.sidebar-header .close_sidebar:after {
+.sidebar-header .close_sidebar_icon:before,
+.sidebar-header .close_sidebar_icon:after {
     position: absolute;
     left: 15px;
     content: ' ';
-    height: 33px;
+    height: 28px;
     width: 2px;
-    background-color: #c7c7c7;
+    background-color: #def5c4;
 }
 
-.sidebar-header .close_sidebar:before {
+.sidebar-header .close_sidebar_icon:before {
     transform: rotate(45deg);
 }
 
-.sidebar-header .close_sidebar:after {
+.sidebar-header .close_sidebar_icon:after {
     transform: rotate(-45deg);
 }
 
@@ -207,7 +217,8 @@ a {
     font-size: 0.8em;
     letter-spacing: 2px;
     transition: opacity 0.3s;
-    opacity: 0.5;
+    color: #e9e6b16d;
+    opacity: 1;
 }
 
 .main_header .sidebar .menu .menu-item a {
@@ -215,9 +226,12 @@ a {
     align-items: center;
     height: 50px;
     padding: 0 20px 0 40px;
-    color: #7d84ab;
+    color: #ddf8bf97;
 }
 
+.main_header .sidebar .menu .menu-item a:hover .menu-title {
+    color: #ddf8bfd8;
+}
 
 .main_header .sidebar .menu .menu-item a .menu-title {
     font-size: 0.9em;
@@ -234,10 +248,6 @@ a {
     padding: 5px;
     opacity: 1;
     transition: opacity 0.3s;
-}
-
-.main_header .sidebar .menu .menu-item a:hover .menu-title {
-    color: #dee2ec;
 }
 
 .main_header .sidebar .menu .menu-item a:hover::after {
