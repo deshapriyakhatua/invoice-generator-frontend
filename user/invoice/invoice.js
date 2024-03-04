@@ -135,16 +135,16 @@ document.querySelector(".item_add_remove .add_item").addEventListener("click", (
     itemRow.className = "item_row";
     itemRow.innerHTML = `
                         <td class="first">
-                            <input type="text" class="item_name" value="Beats RemoteTalk Cable">
+                            <input type="text" class="item_name" value="Item Full Name">
                         </td>
                         <td class="second">
-                            <input type="text" class="sku" value="MHDV2G/A">
+                            <input type="number" class="unit_price" value="100">
                         </td>
                         <td class="third">
                             <input type="number" class="quantity" value="1">
                         </td>
                         <td class="fourth">
-                            <input type="number" class="price" value="0">
+                            <input type="number" class="price" value="" disabled>
                         </td>
     `;
 
@@ -174,10 +174,18 @@ document.querySelector(".item_add_remove .remove_item").addEventListener("click"
 /*------------------- Calculate invoice price ------------------ */
 
 function calculateTotalPrice(){
+
     let subTotal = 0;
-    document.querySelectorAll(".item_row .fourth input").forEach((elem)=>{
-        subTotal += elem.value*1;
+
+    document.querySelectorAll(".item_row").forEach((elem)=>{
+        let unitPrice = elem.querySelector(".unit_price").value * 1;
+        let quantity = elem.querySelector(".quantity").value * 1;
+
+        let price = unitPrice * quantity;
+        elem.querySelector(".price").value = price;
+        subTotal += price;
     });
+
     document.querySelector(".subtotal_row .second input").value = subTotal;
 
     subTotal += document.querySelector(".shipping_row .second input").value*1;

@@ -13,6 +13,10 @@ input {
     transition: all .2s ease-in-out;
 }
 
+input:disabled {
+    background-color: transparent;
+}
+
 input:focus {
     background-color: #f2f1f1;
 }
@@ -46,7 +50,7 @@ input:focus {
 
 .invoice_logo {
     width: 32px;
-    height: 32px;
+    height: auto;
     cursor: pointer;
 }
 
@@ -107,7 +111,7 @@ input:focus {
 }
 
 .invoice_section3 tbody .item_row input {
-    padding: 5px 0;
+    padding: 5px 10px 5px 0;
 }
 
 .invoice_section3 tbody .after_item_row input {
@@ -121,7 +125,7 @@ input:focus {
     letter-spacing: .7px;
 }
 
-.invoice_section3 tbody input.sku {
+.invoice_section3 tbody input.unit_price {
     font-size: 10px;
 }
 
