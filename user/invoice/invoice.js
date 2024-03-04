@@ -141,17 +141,23 @@ document.querySelector(".item_add_remove .add_item").addEventListener("click", (
                             <input type="number" class="unit_price" value="100">
                         </td>
                         <td class="third">
-                            <input type="number" class="quantity" value="1">
+                            <input type="number" class="cgst" value="89">
                         </td>
                         <td class="fourth">
-                            <input type="number" class="price" value="" disabled>
+                            <input type="number" class="sgst" value="89">
+                        </td>
+                        <td class="fifth">
+                            <input type="number" class="quantity" value="1">
+                        </td>
+                        <td class="sixth">
+                            <input type="number" class="price" value="859" disabled>
                         </td>
     `;
 
     let rowSeparator = document.createElement("tr");
     rowSeparator.className = "row_separator";
     rowSeparator.innerHTML = `
-                        <td height="1" colspan="4"></td>
+                        <td height="1" colspan="6"></td>
     `;
 
     let parentNode = document.querySelector(".invoice_section3 tbody");
@@ -178,7 +184,7 @@ function calculateTotalPrice(){
     let subTotal = 0;
 
     document.querySelectorAll(".item_row").forEach((elem)=>{
-        let unitPrice = elem.querySelector(".unit_price").value * 1;
+        let unitPrice = elem.querySelector(".unit_price").value * 1 + elem.querySelector(".cgst").value * 1 + elem.querySelector(".sgst").value * 1;
         let quantity = elem.querySelector(".quantity").value * 1;
 
         let price = unitPrice * quantity;
@@ -189,7 +195,6 @@ function calculateTotalPrice(){
     document.querySelector(".subtotal_row .second input").value = subTotal;
 
     subTotal += document.querySelector(".shipping_row .second input").value*1;
-    subTotal += document.querySelector(".gst_row .second input").value*1;
 
     document.querySelector(".grand_total_row .second input").value = subTotal;
 }

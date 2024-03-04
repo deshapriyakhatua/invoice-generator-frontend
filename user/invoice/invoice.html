@@ -42,15 +42,15 @@
     
                 <div class="invoice_section2">
                     <div class="business_details">
-                        <input type="text" value="Business Name">
-                        <input type="text" value="Business Address ">
-                        <input type="text" value="City, State, Postal Code">
-                        <input type="text" value="Country">
-                        <input type="text" value="5245236987">
-                        <input type="text" value="business@private.com">
+                        <input type="text" placeholder="SnapBills Private Limited">
+                        <input type="text" placeholder="Ground Floor, Building 5A, 32">
+                        <input type="text" placeholder="OGL Tech Rd, Bondridra">
+                        <input type="text" placeholder="Bengaluru, Karnataka 560068">
+                        <input type="text" value="" placeholder="private@snapbills.com">
+                        <input type="text" value="" placeholder="GSTIN 0464RGES529425R5">
                     </div>
                     <div class="invoice_details">
-                        <input type="text" class="invoice_id" value="ORDER #800000025">
+                        <input type="text" class="invoice_id" placeholder="ORDER #800000025">
                         <input type="date" class="invoice_date" value="">
                     </div>
                 </div>
@@ -58,21 +58,27 @@
                 <table class="invoice_section3">
                     <tbody>
                         <tr class="item_header">
-                            <th width="52%">
-                                <input type="text" class="table_header item_name" value="Item">
+                            <th width="42%">
+                                <input type="text" class="table_header item_name" value="Item" disabled>
                             </th>
                             <th>
-                                <input type="text" class="table_header sku" value="Price (₹)">
+                                <input type="text" class="table_header unit_price" value="Price (₹)" disabled>
                             </th>
                             <th>
-                                <input type="text" class="table_header quantity" value="Quantity">
+                                <input type="text" class="table_header cgst" value="CGST" disabled>
                             </th>
                             <th>
-                                <input type="text" class="table_header price" value="Subtotal (₹)">
+                                <input type="text" class="table_header sgst" value="SGST" disabled>
+                            </th>
+                            <th>
+                                <input type="text" class="table_header quantity" value="Qty" disabled>
+                            </th>
+                            <th>
+                                <input type="text" class="table_header price" value="Subtotal (₹)" disabled>
                             </th>
                         </tr>
                         <tr class="row_separator">
-                            <td height="1" colspan="4"></td>
+                            <td height="1" colspan="6"></td>
                         </tr>
                         <tr class="item_row">
                             <td class="first">
@@ -82,14 +88,20 @@
                                 <input type="number" class="unit_price" value="554">
                             </td>
                             <td class="third">
-                                <input type="number" class="quantity" value="1">
+                                <input type="number" class="cgst" value="89">
                             </td>
                             <td class="fourth">
+                                <input type="number" class="sgst" value="89">
+                            </td>
+                            <td class="fifth">
+                                <input type="number" class="quantity" value="1">
+                            </td>
+                            <td class="sixth">
                                 <input type="number" class="price" value="859" disabled>
                             </td>
                         </tr>
                         <tr class="row_separator">
-                            <td height="1" colspan="4"></td>
+                            <td height="1" colspan="6"></td>
                         </tr>
                         <tr class="item_row">
                             <td class="first">
@@ -99,18 +111,24 @@
                                 <input type="number" class="unit_price" value="400">
                             </td>
                             <td class="third">
-                                <input type="number" class="quantity" value="4">
+                                <input type="number" class="cgst" value="89">
                             </td>
                             <td class="fourth">
-                                <input type="number" class="price" value="1259" disabled>
+                                <input type="number" class="sgst" value="89">
+                            </td>
+                            <td class="fifth">
+                                <input type="number" class="quantity" value="1">
+                            </td>
+                            <td class="sixth">
+                                <input type="number" class="price" value="859" disabled>
                             </td>
                         </tr>
                         <tr class="row_separator">
-                            <td height="1" colspan="4"></td>
+                            <td height="1" colspan="6"></td>
                         </tr>
     
                         <tr class="subtotal_row after_item_row">
-                            <td class="first" colspan="3">
+                            <td class="first" colspan="5">
                                 <input type="text" class="subtotal" value="Subtotal">
                             </td>
                             <td class="second">
@@ -118,23 +136,15 @@
                             </td>
                         </tr>
                         <tr class="shipping_row after_item_row">
-                            <td class="first" colspan="3">
+                            <td class="first" colspan="5">
                                 <input type="text" class="shipping" value="Shipping & Handling">
                             </td>
                             <td class="second">
                                 <input type="number" class="price" value="150">
                             </td>
                         </tr>
-                        <tr class="gst_row after_item_row">
-                            <td class="first" colspan="3">
-                                <input type="text" class="gst" value="GST">
-                            </td>
-                            <td class="second">
-                                <input type="number" class="price" value="400">
-                            </td>
-                        </tr>
                         <tr class="grand_total_row after_item_row">
-                            <td class="first" colspan="3">
+                            <td class="first" colspan="5">
                                 <input type="text" class="grand_total" value="Grand Total">
                             </td>
                             <td class="second">
@@ -146,36 +156,34 @@
     
                 <div class="invoice_section4">
                     <div class="billig">
-                        <input type="text" value="BILLING INFORMATION">
-                        <input type="text" value="Philip Brooks">
-                        <input type="text" value="Public Wales, Somewhere">
-                        <input type="text" value="New York NY">
-                        <input type="text" value="4468, United States">
-                        <input type="text" value="T: 202-555-0133">
+                        <input type="text" value="BILLING INFORMATION" disabled>
+                        <input type="text" placeholder="Vinay Dara">
+                        <input type="text" placeholder="Rajrang, Gulapor">
+                        <input type="text" placeholder="Near Rajrang SBI Branch">
+                        <input type="text" placeholder="Kathaward, Rajasthan 302545">
+                        <input type="text" placeholder="9876543210">
                     </div>
                     <div class="shipping">
-                        <input type="text" value="SHIPPING INFORMATION">
-                        <input type="text" value="Sup Inc">
-                        <input type="text" value="Another Place, Somewhere">
-                        <input type="text" value="New York NY">
-                        <input type="text" value="4468, United States">
-                        <input type="text" value="T: 202-555-0171">
+                        <input type="text" value="SHIPPING INFORMATION" disabled>
+                        <input type="text" placeholder="Vinay Dara">
+                        <input type="text" placeholder="Rajrang, Gulapor">
+                        <input type="text" placeholder="Near Rajrang SBI Branch">
+                        <input type="text" placeholder="Kathaward, Rajasthan 302545">
+                        <input type="text" placeholder="9876543210">
                     </div>
                     <div class="payment_method">
-                        <input type="text" value="PAYMENT METHOD">
-                        <input type="text" value="Credit Card">
-                        <input type="text" value="Credit Card Type: Visa">
-                        <input type="text" value="Worldpay Transaction ID: 4185939336">
-                        <input type="text" value="Right of Withdrawal">
+                        <input type="text" value="PAYMENT METHOD" disabled>
+                        <input type="text" placeholder="Online">
+                        <input type="text" placeholder="Paid">
                     </div>
                     <div class="shipping_method">
-                        <input type="text" value="SHIPPING METHOD">
-                        <input type="text" value="UPS: U.S. Shipping Services">
+                        <input type="text" value="SHIPPING METHOD" disabled>
+                        <input type="text" placeholder="FedEx Corporation">
                     </div>
                 </div>
     
                 <div class="invoice_section5">
-                    <input type="text" value="Have a nice day.">
+                    <input type="text" placeholder="Have a nice day.">
                 </div>
     
             </div>

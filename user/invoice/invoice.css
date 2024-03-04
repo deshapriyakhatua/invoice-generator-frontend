@@ -125,10 +125,9 @@ input:focus {
     letter-spacing: .7px;
 }
 
-.invoice_section3 tbody input.unit_price {
-    font-size: 10px;
-}
-
+.invoice_section3 tbody input.unit_price,
+.invoice_section3 tbody input.cgst,
+.invoice_section3 tbody input.sgst,
 .invoice_section3 tbody input.quantity {
     text-align: center;
 }
