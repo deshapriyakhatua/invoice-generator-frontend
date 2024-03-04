@@ -130,7 +130,7 @@ document.querySelector(".close_drag_drop").addEventListener("click", (event) => 
 /* ------------ Add & remove item row ---------- */
 
 document.querySelector(".item_add_remove .add_item").addEventListener("click", (event)=>{
-    if(document.querySelectorAll(".invoice_section3 tbody tr").length >= 25){ return; }
+    //if(document.querySelectorAll(".invoice_section3 tbody tr").length >= 25){ return; }
     let itemRow = document.createElement("tr");
     itemRow.className = "item_row";
     itemRow.innerHTML = `

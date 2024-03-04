@@ -27,9 +27,8 @@ input:focus {
 }
 
 .invoice_container {
-    width: 650px;
-    aspect-ratio: 210/297;
-    padding: 1cm;
+    width: 700px;
+    padding: 35px;
     border: 1px solid rgb(180, 180, 180);
 }
 
@@ -172,9 +171,7 @@ input:focus {
 
 
 .invoice_section5 {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    margin-top: 35px;
 }
 
 .invoice_section5 input {
@@ -357,8 +354,14 @@ input:focus {
 }
 
 /* ----------- css for print button press ----------*/
-
+title::after {
+    content: "skj";
+}
 @media print {
+
+    title {
+        content: 'hi';
+    }
     .main_header {
         display: none;
         visibility: hidden; 
@@ -367,10 +370,24 @@ input:focus {
     .support_container {
         visibility: hidden !important; 
     }
-    #invoice_container {
-        margin-top: 0;
+
+    .invoice_body {
+
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .invoice_container {
+        margin: 0 auto;
         border-width: 0;
     }
+
+    .support_container {
+        display: none;
+    }
+    
 
     #invoice_container * {
         print-color-adjust: exact !important;
@@ -378,17 +395,26 @@ input:focus {
     }
 }
 
-@media only screen and (max-width: 780px)  {
+@media only screen and (max-width: 900px)  {
     .invoice_body {
         flex-direction: column;
         align-items: center;
     }
     .support_container {
-        width: 650px;
+        width: 700px;
     }
 }
 
-@media only screen and (max-width: 680px)  {
+@media only screen and (max-width: 780px)  {
+    .invoice_container {
+        width: 600px;
+    }
+    .support_container {
+        width: 600px;
+    }
+}
+
+@media only screen and (max-width: 620px)  {
     .invoice_container {
         width: 500px;
     }
@@ -399,9 +425,9 @@ input:focus {
 
 @media only screen and (max-width: 520px)  {
     .invoice_container {
-        width: 420px;
+        width: 400px;
     }
     .support_container {
-        width: 420px;
+        width: 400px;
     }
 }

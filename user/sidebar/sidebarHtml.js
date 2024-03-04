@@ -21,7 +21,7 @@ document.write(`
                 <div class="sidebar-header">
                     <div class="close_sidebar_icon" onclick="hideSideBar()"></div>
                     <div class="pro-sidebar-logo">
-                        <img src="/user/sidebar/logoLight.png" alt="">
+                        <img src="/user/sidebar/logoLight1.png" alt="">
                     </div>
                 </div>
                 <div class="sidebar-content">

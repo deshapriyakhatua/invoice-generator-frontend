@@ -226,11 +226,11 @@ a {
     align-items: center;
     height: 50px;
     padding: 0 20px 0 40px;
-    color: #ddf8bf97;
+    color: #bfd8f897;
 }
 
 .main_header .sidebar .menu .menu-item a:hover .menu-title {
-    color: #ddf8bfd8;
+    color: #e1ecf5d8;
 }
 
 .main_header .sidebar .menu .menu-item a .menu-title {
