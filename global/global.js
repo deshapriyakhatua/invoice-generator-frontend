@@ -1,5 +1,5 @@
 //const BACKEND_PRE_URL = "http://localhost:8080";
-const BACKEND_PRE_URL = "https://spring.up.railway.app/";
+const BACKEND_PRE_URL = "https://spring.up.railway.app";
 //const FRONTEND_PRE_URL = "http://127.0.0.1:5500";
 const FRONTEND_PRE_URL = "https://snapbills.in";
 
