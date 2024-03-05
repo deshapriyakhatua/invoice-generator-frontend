@@ -1,11 +1,12 @@
 window.addEventListener("load", () => {
 
-    const apiUrl = BACKEND_PRE_URL + '/auth/signIn';
+    const apiUrl = BACKEND_PRE_URL + '/auth/signUp';
 
     const contactForm = document.getElementById('form-login');
     const responseMessage = document.getElementById('status_text');
 
     contactForm.addEventListener('submit', function (event) {
+        console.log(45)
         event.preventDefault();
         responseMessage.textContent = "";
         responseMessage.textContent = "";
