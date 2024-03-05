@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
+    <title>Sign IN</title>
+
+    <!------------ Google Fonts & Icon ------------->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,100..700,0..1,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+        rel="stylesheet">
+
+
+    <style type="text/css">
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        body {
+            min-height: 100%;
+            background-color: #ffffff;
+            --theme-color: #0c1e35;
+        }
+
+        h1 {
+            letter-spacing: -1px;
+        }
+
+        a {
+            color: var(--theme-color);
+            text-decoration: unset;
+        }
+
+        span {
+            display: block;
+            font-size: 20px;
+            line-height: 28px;
+            color: #1a1f36;
+        }
+
+        label {
+            margin-bottom: 10px;
+        }
+
+        .signin_container {
+            padding: 2rem 0 4rem 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .main_logo {
+            height: 25px;
+        }
+
+        .formbg-outer {
+            padding: 33px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            box-shadow: rgba(60, 66, 87, 0.12) 0px 7px 14px 0px, rgba(0, 0, 0, 0.12) 0px 3px 6px 0px;
+        }
+
+        .formbg {
+            margin: 0px auto;
+            padding: 4rem 3rem;
+            background: white;
+            border-radius: 4px;
+
+        }
+
+        #form-login {
+            margin-top: 2rem;
+        }
+
+        .field {
+            margin-bottom: 1rem;
+        }
+
+        .field input {
+            font-size: 16px;
+            line-height: 28px;
+            padding: 8px 16px;
+            width: 360px;
+            height: 44px;
+            border: unset;
+            border-radius: 4px;
+            outline-color: rgb(84 105 212/ 0.5);
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
+        }
+
+        .forgot_password_parent {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: center;
+        }
+
+        .reset-pass a,
+        label {
+            font-size: 13px;
+            font-weight: 600;
+            display: block;
+        }
+
+        .reset-pass>a {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+
+        #submit_button {
+            margin-top: 2rem;
+            background-color: var(--theme-color);
+            color: #e8f2f8;
+            font-weight: 400;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 16px;
+            vertical-align: middle;
+        }
+
+        #status_text {
+            margin-bottom: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 400;
+            color: red;
+        }
+
+        a.ssolink {
+            display: block;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        a.ssolink span {
+            background-color: rgb(255, 55, 0);
+            display: inline;
+            color: white;
+            padding: 0px 4px;
+            border-radius: 50%;
+            vertical-align: middle;
+            font-size: 14px;
+        }
+
+        .footer-link span {
+            font-size: 14px;
+            text-align: center;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .signin_container {
+                padding: 2rem 0;
+            }
+
+            .field input {
+                width: 350px;
+            }
+
+            .formbg-outer {
+                padding: 33px 0;
+                box-shadow: none;
+            }
+
+            .formbg_title {
+                text-align: center;
+            }
+        }
+
+        @media screen and (max-width: 500px) {
+            .signin_container {
+                padding: 1rem 0;
+            }
+
+            .field input {
+                height: 35px;
+            }
+
+            .formbg {
+                padding: 2.5rem 1rem;
+                box-shadow: none;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="signin_container">
+
+        <div class="formbg-outer">
+            <img class="main_logo" src="/logoDark.png" alt="">
+            <div class="formbg">
+                <span class="formbg_title">Sign In to your account</span>
+                <form id="form-login">
+                    <div class="field">
+                        <label for="email">Email or Phone Number</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="field">
+                        <div class="forgot_password_parent">
+                            <label for="password">Password</label>
+                            <div class="reset-pass">
+                                <a href="#">Forgot your password?</a>
+                            </div>
+                        </div>
+                        <input type="password" name="password" id="password">
+                    </div>
+                    <div class="field">
+                        <input id="submit_button" type="submit" name="submit" value="Sign In">
+                    </div>
+                    <p id="status_text"></p>
+                    <div class="field">
+                        <a class="ssolink" href="#">Sign-in with Google
+                            <span>G</span>
+                        </a>
+                    </div>
+                </form>
+            </div>
+            <div class="footer-link">
+                <span>Don't have an account? <a href="/auth/signup.html">Sign Up</a></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="/global/global.js"></script>
+<script src="/auth/signinBcknd.js"></script>
+
+</html>

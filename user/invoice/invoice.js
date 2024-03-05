@@ -118,7 +118,7 @@ removeFileButton.addEventListener("click", () => {
 
  /*------------- Open & Close upload popup ----------- */
 
-document.querySelector(".invoice_logo").addEventListener("click", (event) => {
+document.querySelector(".invoice_logo_holder").addEventListener("click", (event) => {
     document.querySelector(".image_upload").style.display = "flex";
 });
 
@@ -135,7 +135,7 @@ document.querySelector(".item_add_remove .add_item").addEventListener("click", (
     itemRow.className = "item_row";
     itemRow.innerHTML = `
                         <td class="first">
-                            <input type="text" class="item_name" value="Item Full Name">
+                            <input type="text" class="item_name" placeholder="Beats Studio Over-Ear Headphones &#128393;">
                         </td>
                         <td class="second">
                             <input type="number" class="unit_price" value="100">

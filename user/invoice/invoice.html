@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Free Invoice Generator</title>
-    <link rel="icon" type="image/x-icon" href="/user/invoice/favicon.png">
+    <link rel="icon" type="image/x-icon" href="/favicon.png">
 
     <!------------ Google Fonts & Icon ------------->
     <link rel="stylesheet"
@@ -36,21 +36,25 @@
             <div class="main_invoice">
     
                 <div class="invoice_section1">
-                    <img src="/user/invoice/invoiceLogo.jpg" alt="" class="invoice_logo">
-                    <input type="text" class="invoice_type" value="Invoice">
+                    <div class="invoice_logo_holder">
+                        <img src="/user/invoice/invoiceLogo.jpg" alt="" class="invoice_logo">
+                        <span> &#128394;</span>
+                    </div>
+                    
+                    <input type="text" class="invoice_type" placeholder="Invoice &#128394;">
                 </div>
     
                 <div class="invoice_section2">
                     <div class="business_details">
-                        <input type="text" placeholder="SnapBills Private Limited">
-                        <input type="text" placeholder="Ground Floor, Building 5A, 32">
-                        <input type="text" placeholder="OGL Tech Rd, Bondridra">
-                        <input type="text" placeholder="Bengaluru, Karnataka 560068">
-                        <input type="text" value="" placeholder="private@snapbills.com">
-                        <input type="text" value="" placeholder="GSTIN 0464RGES529425R5">
+                        <input type="text" placeholder="SnapBills Private Limited &#128394;">
+                        <input type="text" placeholder="Ground Floor, Building 5A, 32 &#128394;">
+                        <input type="text" placeholder="OGL Tech Rd, Bondridra &#128394;">
+                        <input type="text" placeholder="Bengaluru, Karnataka 560068 &#128394;">
+                        <input type="text" value="" placeholder="private@snapbills.com &#128394;">
+                        <input type="text" value="" placeholder="GSTIN 0464RGES529425R5 &#128394;">
                     </div>
                     <div class="invoice_details">
-                        <input type="text" class="invoice_id" placeholder="ORDER #800000025">
+                        <input type="text" class="invoice_id" placeholder="ORDER #800000025 &#128394;">
                         <input type="date" class="invoice_date" value="">
                     </div>
                 </div>
@@ -82,7 +86,7 @@
                         </tr>
                         <tr class="item_row">
                             <td class="first">
-                                <input type="text" class="item_name" value="Beats Studio Over-Ear Headphones">
+                                <input type="text" class="item_name" placeholder="Beats Studio Over-Ear Headphones &#128394;">
                             </td>
                             <td class="second">
                                 <input type="number" class="unit_price" value="554">
@@ -105,7 +109,7 @@
                         </tr>
                         <tr class="item_row">
                             <td class="first">
-                                <input type="text" class="item_name" value="Beats RemoteTalk Cable">
+                                <input type="text" class="item_name" placeholder="Beats RemoteTalk Cable  &#128394;">
                             </td>
                             <td class="second">
                                 <input type="number" class="unit_price" value="400">
@@ -137,7 +141,7 @@
                         </tr>
                         <tr class="shipping_row after_item_row">
                             <td class="first" colspan="5">
-                                <input type="text" class="shipping" value="Shipping & Handling">
+                                <input type="text" class="shipping" value="Shipping & Handling &#128394;">
                             </td>
                             <td class="second">
                                 <input type="number" class="price" value="150">
@@ -157,33 +161,33 @@
                 <div class="invoice_section4">
                     <div class="billig">
                         <input type="text" value="BILLING INFORMATION" disabled>
-                        <input type="text" placeholder="Vinay Dara">
-                        <input type="text" placeholder="Rajrang, Gulapor">
-                        <input type="text" placeholder="Near Rajrang SBI Branch">
-                        <input type="text" placeholder="Kathaward, Rajasthan 302545">
-                        <input type="text" placeholder="9876543210">
+                        <input type="text" placeholder="Vinay Dara &#128394;">
+                        <input type="text" placeholder="Rajrang, Gulapor &#128394;">
+                        <input type="text" placeholder="Kathaward, Rajasthan 302545 &#128394;">
+                        <input type="text" placeholder="Near Rajrang SBI Branch &#128394;">
+                        <input type="text" placeholder="9876543210 &#128394;">
                     </div>
                     <div class="shipping">
                         <input type="text" value="SHIPPING INFORMATION" disabled>
-                        <input type="text" placeholder="Vinay Dara">
-                        <input type="text" placeholder="Rajrang, Gulapor">
-                        <input type="text" placeholder="Near Rajrang SBI Branch">
-                        <input type="text" placeholder="Kathaward, Rajasthan 302545">
-                        <input type="text" placeholder="9876543210">
+                        <input type="text" placeholder="Vinay Dara &#128394;">
+                        <input type="text" placeholder="Rajrang, Gulapor &#128394;">
+                        <input type="text" placeholder="Kathaward, Rajasthan 302545 &#128394;">
+                        <input type="text" placeholder="Near Rajrang SBI Branch &#128394;">
+                        <input type="text" placeholder="9876543210 &#128394;">
                     </div>
                     <div class="payment_method">
                         <input type="text" value="PAYMENT METHOD" disabled>
-                        <input type="text" placeholder="Online">
-                        <input type="text" placeholder="Paid">
+                        <input type="text" placeholder="Online  &#128394;">
+                        <input type="text" placeholder="Paid  &#128394;">
                     </div>
                     <div class="shipping_method">
                         <input type="text" value="SHIPPING METHOD" disabled>
-                        <input type="text" placeholder="FedEx Corporation">
+                        <input type="text" placeholder="FedEx Corporation  &#128394;">
                     </div>
                 </div>
     
                 <div class="invoice_section5">
-                    <input type="text" placeholder="Have a nice day.">
+                    <input type="text" placeholder="Have a nice day. &#128394;">
                 </div>
     
             </div>
