@@ -5,7 +5,12 @@
     font-family: 'Open Sans', sans-serif; 
 }
 
-input {
+textarea {
+    resize: none;
+}
+
+input,
+textarea {
     border-width: 0;
     outline: 0;
     color: #000000;
@@ -17,15 +22,18 @@ input {
 input:disabled {
     background-color: transparent;
 }
-input:hover {
+input:hover,
+textarea:hover {
     border-color: rgb(193, 193, 193);
 }
-input:focus {
+input:focus,
+textarea:focus {
     border-color: black;
     background-color: #f2f1f1;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     color: black;
     opacity: 1; /* Firefox */
 }
@@ -36,14 +44,12 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_body {
     margin-top: 90px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    padding-bottom: 150px;
     z-index: 1;
 }
 
 .invoice_container {
+    margin: auto;
     width: 700px;
     padding: 35px;
     border: 1px solid rgb(180, 180, 180);
@@ -213,7 +219,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     padding: 0 0 10px 0;
 }
 
-.invoice_section3 tbody .item_row input {
+.invoice_section3 tbody .item_row input,
+.invoice_section3 tbody .item_row textarea {
     padding: 5px 10px 5px 0;
 }
 
@@ -564,16 +571,14 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 /*-------- support section ---------*/
 
 .support_container {
-    position: relative;
-    border: 1px solid rgb(176, 176, 176);
-    padding: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
 
 .support_container .print_button {
-    padding: 5px 20px;
+    padding: 8px 25px;
+    font-size: 15px;
     background-color: #fd5c2ffc;
     border: none;
     color: #ffffff;
@@ -583,27 +588,15 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 
 /* ----------- css for print button press ----------*/
-title::after {
-    content: "skj";
-}
+
 @media print {
 
-    title {
-        content: 'hi';
-    }
-    .main_header {
-        display: none;
-        visibility: hidden; 
-    }
-
+    .main_header,
     .support_container {
-        visibility: hidden !important; 
+        display: none;
     }
 
     .invoice_body {
-
-        flex-direction: column;
-        align-items: center;
         margin: 0;
         padding: 0;
     }
@@ -612,33 +605,22 @@ title::after {
         margin: 0 auto;
         border-width: 0;
     }
-
-    .support_container {
-        display: none;
-    }
     
-
     #invoice_container * {
         print-color-adjust: exact !important;
         -webkit-print-color-adjust: exact !important;
     }
+
 }
 
-@media only screen and (max-width: 900px)  {
-    .invoice_body {
-        flex-direction: column;
-        align-items: center;
-    }
+@media only screen and (max-width: 1080px)  {
     .support_container {
-        width: 700px;
+        right: 20px;
     }
 }
 
 @media only screen and (max-width: 780px)  {
     .invoice_container {
-        width: 600px;
-    }
-    .support_container {
         width: 600px;
     }
 }
@@ -647,16 +629,10 @@ title::after {
     .invoice_container {
         width: 500px;
     }
-    .support_container {
-        width: 500px;
-    }
 }
 
 @media only screen and (max-width: 520px)  {
     .invoice_container {
-        width: 400px;
-    }
-    .support_container {
         width: 400px;
     }
 }
