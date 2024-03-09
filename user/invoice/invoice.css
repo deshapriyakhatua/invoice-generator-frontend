@@ -5,198 +5,18 @@
     font-family: 'Open Sans', sans-serif; 
 }
 
-input {
-    border-width: 0;
-    outline: 0;
-    color: #000000;
-    font-size: 11px;
-    transition: all .2s ease-in-out;
-}
-
-input:disabled {
-    background-color: transparent;
-}
-
-input:focus {
-    background-color: #f2f1f1;
-}
-
-input::placeholder {
-    color: black;
-    opacity: 1; /* Firefox */
-}
-
-input::-ms-input-placeholder { /* Edge 12-18 */
-    color: black;
-}
-
 .invoice_body {
     margin-top: 90px;
-    padding-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+    padding-bottom: 150px;
     z-index: 1;
 }
 
-.invoice_container {
-    width: 700px;
-    padding: 35px;
-    border: 1px solid rgb(180, 180, 180);
-}
-
-.main_invoice {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-.invoice_section1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.invoice_logo_holder span {
-    cursor: pointer;
-    opacity: 0;
-}
-
-.invoice_logo_holder:hover span {
-    opacity: 1;
-}
-
-.invoice_logo {
-    width: 32px;
-    height: auto;
-    cursor: pointer;
-}
-
-.invoice_type {
-    font-size: 21px; 
-    color: #000000; 
-    text-align: right;
-}
-
-
-.invoice_section2 {
-    margin-top: 30px;
-    display: flex;
-}
-
-.business_details {
-    width: 50%;
-}
-
-.invoice_section2 input {
-    width: 100%;
-}
-
-.business_details input:first-child {
-    font-size: 12px;
-    font-weight: 600;
-}
-
-.invoice_details {
-    width: 50%;
-}
-
-.invoice_id {
-    width: 100%;
-    text-align: right;
-}
-
-.invoice_date {
-    width: 100%;
-    text-align: right;
-}
-
-.invoice_section3 {
-    width: 100%;
-    margin-top: 20px;
-}
-
-.invoice_section3 .row_separator td {
-    background-color: #d8d8d8;
-}
-
-.invoice_section3 tbody input {
-    width: 100%;
-}
-
-.invoice_section3 tbody .item_header input {
-    padding: 0 0 10px 0;
-}
-
-.invoice_section3 tbody .item_row input {
-    padding: 5px 10px 5px 0;
-}
-
-.invoice_section3 tbody .after_item_row input {
-    padding: 2px 0;
-}
-.invoice_section3 tbody .subtotal_row input {
-    margin-top: 10px;
-}
-
-.invoice_section3 tbody th input {
-    letter-spacing: .7px;
-}
-
-.invoice_section3 tbody input.unit_price,
-.invoice_section3 tbody input.cgst,
-.invoice_section3 tbody input.sgst,
-.invoice_section3 tbody input.quantity {
-    text-align: center;
-}
-
-.invoice_section3 tbody input.price {
-    text-align: right;
-}
-
-.invoice_section3 tbody input.subtotal,
-.invoice_section3 tbody input.shipping,
-.invoice_section3 tbody input.gst,
-.invoice_section3 tbody input.grand_total {
-    text-align: right;
-    letter-spacing: .8px;
-}
-
-.invoice_section3 tbody .grand_total_row input {
-    font-weight: 600;
-    color: #000000;
-}
-
-
-.invoice_section4 {
-    margin-top: 15px;
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.invoice_section4 > div {
-    margin-top: 20px;
-    width: 50%;
-}
-
-.invoice_section4 > div >input:first-child {
-    font-weight: 600;
-    color: #000000;
-}
-
-.invoice_section4 > div >input {
-    width: 100%;
-    letter-spacing: .4px;
-}
-
-
-.invoice_section5 {
-    margin-top: 35px;
-}
-
-.invoice_section5 input {
-    width: 100%;
+.invoice_iframe {
+	display: block;
+	margin: auto;
+    width: calc(100vw - 50px);
+    height: 100vh;
+    border: 10px solid rgb(229, 228, 228);
 }
 
 /* =============== image upload popup ================= */
@@ -341,16 +161,14 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 /*-------- support section ---------*/
 
 .support_container {
-    position: relative;
-    border: 1px solid rgb(176, 176, 176);
-    padding: 30px 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
 }
 
 .support_container .print_button {
-    padding: 5px 20px;
+    padding: 8px 25px;
+    font-size: 15px;
     background-color: #fd5c2ffc;
     border: none;
     color: #ffffff;
@@ -358,97 +176,3 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     border-radius: 15px;
 }
 
-.item_add_remove button {
-    padding: 5px 10px;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 15px;
-}
-
-.item_add_remove button:first-child {
-    background-color: rgb(39, 108, 2);
-}
-
-.item_add_remove button:last-child {
-    background-color: rgb(220, 40, 40);
-}
-
-/* ----------- css for print button press ----------*/
-title::after {
-    content: "skj";
-}
-@media print {
-
-    title {
-        content: 'hi';
-    }
-    .main_header {
-        display: none;
-        visibility: hidden; 
-    }
-
-    .support_container {
-        visibility: hidden !important; 
-    }
-
-    .invoice_body {
-
-        flex-direction: column;
-        align-items: center;
-        margin: 0;
-        padding: 0;
-    }
-
-    .invoice_container {
-        margin: 0 auto;
-        border-width: 0;
-    }
-
-    .support_container {
-        display: none;
-    }
-    
-
-    #invoice_container * {
-        print-color-adjust: exact !important;
-        -webkit-print-color-adjust: exact !important;
-    }
-}
-
-@media only screen and (max-width: 900px)  {
-    .invoice_body {
-        flex-direction: column;
-        align-items: center;
-    }
-    .support_container {
-        width: 700px;
-    }
-}
-
-@media only screen and (max-width: 780px)  {
-    .invoice_container {
-        width: 600px;
-    }
-    .support_container {
-        width: 600px;
-    }
-}
-
-@media only screen and (max-width: 620px)  {
-    .invoice_container {
-        width: 500px;
-    }
-    .support_container {
-        width: 500px;
-    }
-}
-
-@media only screen and (max-width: 520px)  {
-    .invoice_container {
-        width: 400px;
-    }
-    .support_container {
-        width: 400px;
-    }
-}
