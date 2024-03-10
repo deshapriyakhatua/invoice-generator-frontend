@@ -30,9 +30,13 @@
 .heading_options button {
 	padding: 8px 10px;
 	font-weight: 600;
+	background-color: rgb(5, 218, 222);
 	border: none;
-	background-color: rgb(215, 215, 215);
 	cursor: pointer;
+}
+
+.heading_options button:first-child {
+	background-color: rgb(73, 223, 133);
 }
 
 .heading_options button:hover {
@@ -57,11 +61,9 @@
 	.heading_options button {
 		font-size: 12px;
 		padding: 6px 8px;
-		font-weight: 400;
 	}
 	.main_heading {
 		font-size: 16px;
-		font-weight: 400;
 	}
 }
 
