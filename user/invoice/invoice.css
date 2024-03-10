@@ -6,19 +6,83 @@
 }
 
 .invoice_body {
-    margin-top: 90px;
+    margin-top: 70px;
     padding-bottom: 150px;
     z-index: 1;
+	background-color: #ffffff;
 }
+
+.header_row {
+	margin-bottom: 30px;
+	background-color: #f3f3f3;
+	padding: 10px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.main_heading {
+	color: #000000;
+	font-weight: 400;
+}
+
+.heading_options button {
+	padding: 8px 10px;
+	font-weight: 600;
+	border: none;
+	background-color: rgb(215, 215, 215);
+	cursor: pointer;
+}
+
+.heading_options button:hover {
+	background-color: rgb(6, 6, 6);
+	color: white;
+}
+
+.heading_options .print_invoice {
+	background-color: orange;
+}
+
+@media only screen and (max-width: 1000px) {
+	.header_row {
+		padding: 10px 25px;
+	}
+	.main_heading {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.heading_options button {
+		font-size: 12px;
+		padding: 6px 8px;
+		font-weight: 400;
+	}
+	.main_heading {
+		font-size: 16px;
+		font-weight: 400;
+	}
+}
+
+
+
+
 
 .invoice_iframe {
 	display: block;
 	margin: auto;
-    width: calc(100vw - 50px);
+    width: 900px;
     height: 100vh;
     border: 10px solid rgb(229, 228, 228);
+	background-color: rgb(251, 251, 251);
 }
 
+@media only screen and (max-width: 1000px) {
+	.invoice_iframe {
+		width: calc(100vw - 50px);
+	}
+}
 /* =============== image upload popup ================= */
 
 
@@ -158,21 +222,4 @@
 	cursor: pointer;
 }
 
-/*-------- support section ---------*/
-
-.support_container {
-    position: fixed;
-    bottom: 50px;
-    right: 50px;
-}
-
-.support_container .print_button {
-    padding: 8px 25px;
-    font-size: 15px;
-    background-color: #fd5c2ffc;
-    border: none;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 15px;
-}
 

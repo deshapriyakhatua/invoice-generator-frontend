@@ -158,7 +158,7 @@ document.querySelector(".close_drag_drop").addEventListener("click", (event) => 
 
 /*------------- print invoice -----------*/
 
-document.querySelector(".print_button").addEventListener("click", () => {
+document.querySelector(".heading_options .print_invoice").addEventListener("click", () => {
     document.querySelector(".invoice_iframe").contentWindow.print();
 });
 

@@ -438,6 +438,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
     .main_invoice {
         margin: 0 auto;
+        padding: 0;
         border-width: 0;
     }
     
@@ -449,8 +450,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 @page {
-    /* dimensions for the whole page */
-    size: A4;
-    
-    margin: 0;
+    size: a4;
+    margin: 8mm 0;
 }
