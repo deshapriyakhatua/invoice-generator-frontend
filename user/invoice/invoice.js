@@ -23,3 +23,9 @@ document.querySelector(".heading_options .print_invoice").addEventListener("clic
 });
 
 
+/*------------- iframe loading ----------- */
+
+document.querySelector(".invoice_iframe").addEventListener("load", (event)=>{
+    event.target.style.display = "block";
+    document.querySelector(".holds-the-iframe").style.display = "none";
+})

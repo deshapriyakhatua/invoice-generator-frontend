@@ -67,8 +67,17 @@
 	}
 }
 
-.invoice_iframe {
+
+.holds-the-iframe {
 	display: block;
+	margin: 200px auto 0 auto;
+    width: 80px;
+	aspect-ratio: 1/1;
+	border-radius: 50%;
+}
+
+.invoice_iframe {
+	display: none;
 	margin: auto;
     width: 900px;
     height: 100vh;

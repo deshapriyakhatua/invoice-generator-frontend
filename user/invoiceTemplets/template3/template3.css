@@ -69,35 +69,33 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_type {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 45px;
+    font-weight: 700;
     color: #000000; 
     text-align: left;
+    width: 70%;
 }
 
 .invoice_id {
-    font-size: 14px;
+    margin-left: 20px;
+    font-size: 13px;
     font-weight: 600;
 }
 
 .invoice_date {
-    font-size: 14px;
+    width: 130px;
+    font-size: 18px;
     font-weight: 600;
-    text-align: right;
+    text-align: left;
 }
 
-.invoice_logo_holder span {
-    cursor: pointer;
-    opacity: 0;
-}
-
-.invoice_logo_holder:hover span {
-    opacity: 1;
+.invoice_logo_holder {
+    border: 1px solid rgba(255, 0, 0, 0);
 }
 
 .invoice_logo {
     width: auto;
-    height: 45px;
+    height: 65px;
     cursor: pointer;
 }
 
@@ -198,10 +196,11 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     margin-top: 15px;
 }
 
-.invoice_section3 > div >input:first-child {
+.invoice_section3 > div > input:first-child {
     font-size: 14px;
     font-weight: 600;
     color: #000000;
+    font-style: italic;
 }
 
 .invoice_section3 input,

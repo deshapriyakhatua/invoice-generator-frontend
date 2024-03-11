@@ -1,4 +1,4 @@
-window.addEventListener("load", () => {
+
 
     /*-------------- Upload logo -------------- */
 
@@ -203,8 +203,7 @@ window.addEventListener("load", () => {
     function removeRowItem(event) {
         let parent = event.target.parentNode.parentNode.parentNode;
         let row = event.target.parentNode.parentNode;
-        let rowSeparator = event.target.parentNode.parentNode.nextElementSibling
-        console.log(rowSeparator)
+        let rowSeparator = event.target.parentNode.parentNode.nextElementSibling;
         parent.removeChild(row)
         parent.removeChild(rowSeparator);
 
@@ -297,5 +296,3 @@ window.addEventListener("load", () => {
         calculateTotalPrice();
     });
 
-
-});
