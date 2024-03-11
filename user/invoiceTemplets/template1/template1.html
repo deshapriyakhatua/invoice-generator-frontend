@@ -29,7 +29,7 @@
                     <span></span>
                 </div>
                 
-                <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="Invoice">
+                <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="TAX INVOICE">
             </div>
 
             <div class="invoice_section2">
@@ -71,7 +71,7 @@
             <table class="invoice_section3">
                 <tbody>
                     <tr class="item_header">
-                        <th width="42%">
+                        <th>
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header item_name" value="Item" disabled>
                         </th>
                         <th>
@@ -147,17 +147,15 @@
                     <tr class="row_separator">
                         <td height="1" colspan="6"></td>
                     </tr>
-                    <tr class="add_new_row">
-                        <td height="1" colspan="6">
+
+                    <tr class="subtotal_row after_item_row add_new_row">
+                        <td height="1" colspan="1">
                             <div class="add_line">
                                 <span class="material-symbols-rounded add-line-icon">add_circle</span>
                                 <span class="add_line_text">Add Line</span>
                             </div>
                         </td>
-                    </tr>
-
-                    <tr class="subtotal_row after_item_row">
-                        <td class="first" colspan="5">
+                        <td class="first" colspan="4">
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="subtotal" value="Subtotal">
                         </td>
                         <td class="second">
@@ -270,6 +268,40 @@
                 <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Have a nice day.">
             </div>
 
+        </div>
+    </section>
+
+    <!---------- image upload popup -------->
+    
+    <section class="image_upload">
+        <div class="close_drag_drop"></div>
+        <div class="upload-files-container">
+            <div class="drag-file-area">
+                <span class="material-symbols-rounded upload-icon"> file_upload</span>
+                <h4 class="dynamic-message"> Drag & drop </h4>
+                <span class="browse-files"> 
+                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="file" class="default-file-input autocorrect="off" autocapitalize="off" spellcheck="false"" /> 
+                    <span>or</span>
+                    <span class="browse-files-text">browse file</span>
+                    <span>from device</span> 
+                </span> 
+            </div>
+            <span class="cannot-upload-message"> 
+                <span class="material-symbols-rounded">error</span> 
+                Please select a file first 
+                <span class="material-symbols-rounded cancel-alert-button">cancel</span> 
+            </span>
+            <div class="file-block">
+                <div class="progress-bar"> </div>
+                <div class="file-info"> 
+                    <span class="material-symbols-rounded file-icon">description</span> 
+                    <span class="file-name"> </span> | 
+                    <span class="file-size"> </span> 
+                </div>
+                <span class="material-symbols-rounded remove-file-icon">Delete</span>
+                
+            </div>
+            <button type="button" class="upload-button"> Upload </button>
         </div>
     </section>
 

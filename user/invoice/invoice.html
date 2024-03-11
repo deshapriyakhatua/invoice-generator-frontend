@@ -8,7 +8,7 @@
     <meta name="description" content="Generate invoices effortlessly with our complimentary GST Invoice Generator. Simply input your billing details to generate instant invoices. Print them, download as PDF, email to your customers, or save them to the cloud with ease.">
     <meta name="keywords" content="invoice generator print PDF">
     <title>Free Invoice Generator</title>
-    <link rel="icon" type="image/x-icon" href="/favicon5.png">
+    <link rel="icon" type="image/x-icon" href="/favicon10.png">
 
     <!------------ Google Fonts & Icon ------------->
     <link rel="stylesheet"
@@ -31,10 +31,11 @@
 
     <!---------------- Main Invoice section ---------------->
     <section class="invoice_body">
+        
         <div class="header_row">
             <h1 class="main_heading">Free Invoice Generator</h1>
             <div class="heading_options">
-                <button>Layout</button>
+                <button class="change_layout">Layout</button>
                 <button>Save</button>
                 <button class="print_invoice"> Print</button>
             </div>
@@ -43,40 +44,6 @@
         <!---------- invoice ----------->
 
         <iframe src="/user/invoiceTemplets/template1/template1.html" frameborder="0" class="invoice_iframe"></iframe>
-    
-       <!---------- image upload popup -------->
-    
-        <section class="image_upload">
-            <div class="close_drag_drop"></div>
-            <div class="upload-files-container">
-                <div class="drag-file-area">
-                    <span class="material-symbols-rounded upload-icon"> file_upload</span>
-                    <h4 class="dynamic-message"> Drag & drop </h4>
-                    <span class="browse-files"> 
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="file" class="default-file-input autocorrect="off" autocapitalize="off" spellcheck="false"" /> 
-                        <span>or</span>
-                        <span class="browse-files-text">browse file</span>
-                        <span>from device</span> 
-                    </span> 
-                </div>
-                <span class="cannot-upload-message"> 
-                    <span class="material-symbols-rounded">error</span> 
-                    Please select a file first 
-                    <span class="material-symbols-rounded cancel-alert-button">cancel</span> 
-                </span>
-                <div class="file-block">
-                    <div class="progress-bar"> </div>
-                    <div class="file-info"> 
-                        <span class="material-symbols-rounded file-icon">description</span> 
-                        <span class="file-name"> </span> | 
-                        <span class="file-size"> </span> 
-                    </div>
-                    <span class="material-symbols-rounded remove-file-icon">Delete</span>
-                    
-                </div>
-                <button type="button" class="upload-button"> Upload </button>
-            </div>
-        </section>
 
     </section>
     

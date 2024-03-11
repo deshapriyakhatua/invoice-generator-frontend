@@ -24,7 +24,6 @@
         <div class="main_invoice">
 
             <div class="invoice_section1">
-                
                 <div>
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="TAX INVOICE">
                     <div class="invoice_details">
@@ -32,18 +31,13 @@
                         
                         <input autocorrect="off" autocapitalize="off" spellcheck="false" type="date" class="invoice_date" value="">
                     </div>
-                </div>
-                
-
+                </div>        
                 <div class="invoice_logo_holder">
                     <img src="/user/invoice2/invoiceLogo.png" alt="" class="invoice_logo">
-                    <span></span>
                 </div>
-
             </div>
 
             <div class="invoice_section2">
-
                 <div class="business_details">
                     <div>
                         <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
@@ -61,57 +55,61 @@
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="private@snapbills.com">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="PAN No: AAECA3151B">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="GSTIN 0464RGES529425R5">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="GST No: GSTIN 0464RGES529425R5">
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="CIN No: U72900WB2003PTC095621">
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="SAC No: 998422">
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="Phone: 033-71002000">
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="Email: private@snapbills.com">
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="" placeholder="Website: www.snapbills.in">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
                     </div>
                     <div class="add_line">
                         <span class="material-symbols-rounded add-line-icon">add_circle</span>
                         <span class="add_line_text">Add Line</span>
                     </div>
-                </div>
-                
+                </div> 
             </div>
 
-            <div class="invoice_section4">
+            <div class="invoice_section3">
                 <div class="billig">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="BILLING INFORMATION" placeholder="BILLING INFORMATION">
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Vinay Dara">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Rajrang, Gulapor">
+                        <textarea name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Kathaward, Rajasthan 302545">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Mob : 9876543210">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Near Rajrang SBI Branch">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Payment Method : Online">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="9876543210">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div class="add_line">
-                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
-                        <span class="add_line_text">Add Line</span>
-                    </div>
-                </div>
-                <div class="payment_method">
-                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="PAYMENT METHOD" placeholder="PAYMENT METHOD">
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Online ">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Paid ">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Payment Status : Paid">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div class="add_line">
@@ -122,34 +120,23 @@
                 <div class="shipping">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="SHIPPING INFORMATION" placeholder="SHIPPING INFORMATION">
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Vinay Dara">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Rajrang, Gulapor">
+                        <textarea name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Kathaward, Rajasthan 302545">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="LandMark : Near Rajrang SBI Branch">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Near Rajrang SBI Branch">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Mob : 9876543210">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="9876543210">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div class="add_line">
-                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
-                        <span class="add_line_text">Add Line</span>
-                    </div>
-                </div>
-                <div class="shipping_method">
-                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="SHIPPING METHOD" placeholder="SHIPPING METHOD">
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="FedEx Corporation ">
+                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Shipping By : DELHIVERY PVT LTD">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div class="add_line">
@@ -159,7 +146,7 @@
                 </div>
             </div>
 
-            <table class="invoice_section3">
+            <table class="invoice_section4">
                 <tbody>
                     <tr class="item_header">
                         <th>
@@ -238,17 +225,15 @@
                     <tr class="row_separator">
                         <td height="1" colspan="6"></td>
                     </tr>
-                    <tr class="add_new_row">
-                        <td height="1" colspan="6">
+
+                    <tr class="subtotal_row after_item_row add_new_row">
+                        <td height="1" colspan="1">
                             <div class="add_line">
                                 <span class="material-symbols-rounded add-line-icon">add_circle</span>
                                 <span class="add_line_text">Add Line</span>
                             </div>
                         </td>
-                    </tr>
-
-                    <tr class="subtotal_row after_item_row">
-                        <td class="first" colspan="5">
+                        <td class="first" colspan="4">
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="subtotal" value="Subtotal">
                         </td>
                         <td class="second">
@@ -272,14 +257,46 @@
                         </td>
                     </tr>
                 </tbody>
-            </table>
-
-            
+            </table>         
 
             <div class="invoice_section5">
-                <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Have a nice day.">
+                <textarea name="" id="" cols="30" rows="2" placeholder="Have a nice day." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             </div>
 
+        </div>
+    </section>
+
+    <!---------- image upload popup -------->
+    
+    <section class="image_upload">
+        <div class="close_drag_drop"></div>
+        <div class="upload-files-container">
+            <div class="drag-file-area">
+                <span class="material-symbols-rounded upload-icon"> file_upload</span>
+                <h4 class="dynamic-message"> Drag & drop </h4>
+                <span class="browse-files"> 
+                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="file" class="default-file-input autocorrect="off" autocapitalize="off" spellcheck="false"" /> 
+                    <span>or</span>
+                    <span class="browse-files-text">browse file</span>
+                    <span>from device</span> 
+                </span> 
+            </div>
+            <span class="cannot-upload-message"> 
+                <span class="material-symbols-rounded">error</span> 
+                Please select a file first 
+                <span class="material-symbols-rounded cancel-alert-button">cancel</span> 
+            </span>
+            <div class="file-block">
+                <div class="progress-bar"> </div>
+                <div class="file-info"> 
+                    <span class="material-symbols-rounded file-icon">description</span> 
+                    <span class="file-name"> </span> | 
+                    <span class="file-size"> </span> 
+                </div>
+                <span class="material-symbols-rounded remove-file-icon">Delete</span>
+                
+            </div>
+            <button type="button" class="upload-button"> Upload </button>
         </div>
     </section>
 
