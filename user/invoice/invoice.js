@@ -10,11 +10,13 @@ document.querySelector(".change_layout").addEventListener("click", ()=>{
     document.querySelector(".holds-the-iframe").style.display = "block";
 
     if(iframe.src.endsWith("/user/invoiceTemplets/template1/template1.html")){
-        iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template2/template2.html";
+        iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template4/template4.html";
     }else if(iframe.src.endsWith("/user/invoiceTemplets/template2/template2.html")){
         iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template3/template3.html";
-    }else{
+    }else if(iframe.src.endsWith("/user/invoiceTemplets/template3/template3.html")){
         iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template1/template1.html";
+    }else{
+        iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template2/template2.html";
     }
 
 });

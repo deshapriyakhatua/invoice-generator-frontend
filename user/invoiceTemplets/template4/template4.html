@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invoice template3</title>
+    <title>Invoice template4</title>
 
     <!------------ Google Fonts & Icon ------------->
 
@@ -15,7 +15,7 @@
 
     <!-------------- link css -------------->
 
-    <link rel="stylesheet" href="/user/invoiceTemplets/template3/template3.css">
+    <link rel="stylesheet" href="/user/invoiceTemplets/template4/template4.css">
 
 </head>
 <body>
@@ -24,7 +24,7 @@
         <div class="main_invoice">
 
             <div class="invoice_section1">
-                <div>
+                <div class="invoice_type_holder">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="Tax Invoice">
                     <div class="invoice_details">
                         
@@ -36,6 +36,16 @@
                 </div>        
                 <div class="invoice_logo_holder">
                     <img src="/global/files/invoiceLogo.png" alt="" class="invoice_logo">
+                    <div class="business_details">
+                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
+                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="6" placeholder="Ground Floor, Building 5A, 
+                        32 OGL Tech Rd, Bondridra
+                        Bengaluru, Karnataka 560068
+                        PAN No: AAECA3151B
+                        GST No: GSTIN 0464RGES529425R5
+                        CIN No: U72900WB2003PTC095621
+                        SAC No: 998422"></textarea>
+                    </div>
                 </div>
             </div>
 
@@ -210,40 +220,14 @@
             </table>         
 
             <div class="invoice_section4">
-                <textarea class="resize_textarea" name="" id="" cols="30" rows="2" placeholder="Thank you for choosing us ! Have a nice day." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-            </div>
+                <textarea class="resize_textarea" name="" id="" cols="30" rows="2" placeholder="Type your notes here...
+                Thank you for choosing us ! Have a nice day.
 
-            <div class="invoice_section5">
-                <div class="business_details">
-                    <div>
-                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
-                    </div>
-                    <div>
-                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="3" placeholder="Ground Floor, Building 5A, 
-                        32 OGL Tech Rd, Bondridra
-                        Bengaluru, Karnataka 560068
-                        "></textarea>
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="3" placeholder="PAN No: AAECA3151B
-                        GST No: GSTIN 0464RGES529425R5
-                        CIN No: U72900WB2003PTC095621
-                        SAC No: 998422"></textarea>
-                        
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="3" placeholder="Phone: 033-71002000
-                        Email: private@snapbills.com 
-                        Website: www.snapbills.in"></textarea>
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
-                    </div>
-                    <div class="add_line">
-                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
-                        <span class="add_line_text">Add Line</span>
-                    </div>
-                </div>
+                For any query contact us :
+
+                Phone: 033-71002000
+                Email: private@snapbills.com 
+                Website: www.snapbills.in" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
                 <div class="qr_code_holder">
                     <textarea name="qr_code_input" id="qr_code_input">Type your text here</textarea>
 
@@ -252,6 +236,7 @@
                     <textarea class="resize_textarea" name="qr_code_description" id="qr_code_description" cols="30" rows="2" placeholder="Shop From Official Website"></textarea>
                 </div>
             </div>
+
         </div>
     </section>
 
@@ -291,7 +276,7 @@
 
      <!----------------- Other JS ---------------->
      <script src="/global/QrCodeGenerator.js"></script>
-     <script src="/user/invoiceTemplets/template3/template3.js"></script>
+     <script src="/user/invoiceTemplets/template4/template4.js"></script>
     
 </body>
 </html>
