@@ -8,6 +8,7 @@
 textarea {
     resize: none;
     white-space: pre-line;
+    padding: 1px 0;
 }
 
 input,
@@ -101,120 +102,34 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 
 .invoice_section2 {
-    position: relative;
-    margin-top: 20px;
-    display: flex;
-}
-
-.business_details {
-    width: 100%;
-}
-
-.business_details .business_title {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.business_details > div {
-    padding: 0;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border: 1px solid transparent;
-}
-
-.business_details > div:hover {
-    border: 1px solid rgb(210, 210, 210);
-}
-
-.business_details input {
-    width: calc(95% - 2px);
-    font-size: 12px;
-}
-
-.business_details span.remove-line-icon {
-    width: calc(5% - 2px);
-    font-size: 14px;
-    font-weight: normal;
-    color: rgb(0, 0, 0);
-    vertical-align: middle;
-    cursor: pointer;
-    transition: all .3s ease-in-out;
-    opacity: 0;
-}
-
-.business_details > div:hover  span.remove-line-icon {
-    opacity: 1;
-}
-
-.business_details span.remove-line-icon:hover {
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-}
-
-
-.business_details div.add_line {
-    margin-top: 5px;
-    gap: 5px;
-    border: 1px solid rgb(0, 191, 255);
-    width: max-content;
-    padding: 0px 10px 2px 10px;
-    border-radius: 10px;
-    cursor: pointer;
-    color: blue;
-    opacity: 0;
-}
-
-.business_details:hover  div.add_line {
-    opacity: 1;
-}
-
-.business_details div.add_line:hover {
-    background-color: #3e3ef5;
-    color: white;
-}
-.business_details span.add_line_text {
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.business_details span.add-line-icon {
-    font-size: 14px;
-    font-weight: bold;
-    vertical-align: middle;
-}
-
-
-.invoice_section3 {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
 }
 
-.invoice_section3 > div {
+.invoice_section2 > div {
     margin-top: 15px;
 }
 
-.invoice_section3 > div > input:first-child {
+.invoice_section2 > div > input:first-child {
     font-size: 14px;
     font-weight: 600;
     color: #000000;
     font-style: italic;
 }
 
-.invoice_section3 input,
-.invoice_section3 textarea {
+.invoice_section2 input,
+.invoice_section2 textarea {
     width: calc(95% - 2px);
     letter-spacing: .4px;
     font-size: 13px;
 }
-.invoice_section3 textarea {
+.invoice_section2 textarea {
     height: auto;
 }
 
-.invoice_section3 .billig,
-.invoice_section3 .shipping
+.invoice_section2 .billig,
+.invoice_section2 .shipping
  {
     width: 100%;
 }
@@ -295,44 +210,44 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 
-.invoice_section4 {
+.invoice_section3 {
     width: 100%;
     margin-top: 20px;
 }
 
-.invoice_section4 .item_row td.remove_row span {
+.invoice_section3 .item_row td.remove_row span {
     color: rgb(0, 0, 0);
     font-size: 18px;
     cursor: pointer;
     opacity: 0;
 }
 
-.invoice_section4 .item_row:hover td.remove_row span {
+.invoice_section3 .item_row:hover td.remove_row span {
     opacity: 1;
 }
 
-.invoice_section4 .item_row td.remove_row span:hover {
+.invoice_section3 .item_row td.remove_row span:hover {
     font-weight: bold;
 }
 
-.invoice_section4 .row_separator td {
+.invoice_section3 .row_separator td {
     background-color: #d8d8d8;
 }
 
-.invoice_section4 tbody input {
+.invoice_section3 tbody input {
     width: 100%;
 }
 
-.invoice_section4 tbody .item_header input {
+.invoice_section3 tbody .item_header input {
     padding: 0 0 10px 0;
 }
 
-.invoice_section4 tbody .item_row input,
-.invoice_section4 tbody .item_row textarea {
+.invoice_section3 tbody .item_row input,
+.invoice_section3 tbody .item_row textarea {
     padding: 5px 10px 5px 0;
 }
 
-.invoice_section4 .add_new_row td div.add_line {
+.invoice_section3 .add_new_row td div.add_line {
     margin-top: 5px;
     gap: 5px;
     border: 1px solid rgb(0, 191, 255);
@@ -344,73 +259,195 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     opacity: 0;
 }
 
-.invoice_section4 tbody:hover  div.add_line {
+.invoice_section3 tbody:hover  div.add_line {
     opacity: 1;
 }
 
-.invoice_section4 .add_new_row td div.add_line:hover {
+.invoice_section3 .add_new_row td div.add_line:hover {
     background-color: #3e3ef5;
     color: white;
 }
-.invoice_section4 .add_new_row td span.add_line_text {
+.invoice_section3 .add_new_row td span.add_line_text {
     font-size: 12px;
     font-weight: bold;
 }
 
-.invoice_section4 .add_new_row td span.add-line-icon {
+.invoice_section3 .add_new_row td span.add-line-icon {
     font-size: 14px;
     font-weight: bold;
     vertical-align: middle;
 }
 
-.invoice_section4 tbody .after_item_row input {
+.invoice_section3 tbody .after_item_row input {
     padding: 2px 0;
 }
-.invoice_section4 tbody .subtotal_row input {
+.invoice_section3 tbody .subtotal_row input {
     margin-top: 10px;
 }
 
-.invoice_section4 tbody th input {
+.invoice_section3 tbody th input {
     font-weight: 600;
     font-size: 11px;
     letter-spacing: .7px;
 }
 
-.invoice_section4 tbody input.unit_price,
-.invoice_section4 tbody input.cgst,
-.invoice_section4 tbody input.sgst,
-.invoice_section4 tbody input.quantity {
+.invoice_section3 tbody input.unit_price,
+.invoice_section3 tbody input.cgst,
+.invoice_section3 tbody input.sgst,
+.invoice_section3 tbody input.quantity {
     text-align: center;
 }
 
-.invoice_section4 tbody input.price {
+.invoice_section3 tbody input.price {
     text-align: right;
 }
 
-.invoice_section4 tbody input.subtotal,
-.invoice_section4 tbody input.shipping,
-.invoice_section4 tbody input.gst,
-.invoice_section4 tbody input.grand_total {
+.invoice_section3 tbody input.subtotal,
+.invoice_section3 tbody input.shipping,
+.invoice_section3 tbody input.gst,
+.invoice_section3 tbody input.grand_total {
     text-align: right;
     letter-spacing: .8px;
 }
 
-.invoice_section4 tbody .grand_total_row input {
+.invoice_section3 tbody .grand_total_row input {
     font-weight: 600;
     color: #000000;
 }
 
 
 
-.invoice_section5 {
+.invoice_section4 {
     margin-top: 35px;
     padding-top: 20px;
     border-top: 1px solid black;
 }
 
-.invoice_section5 textarea {
+.invoice_section4 textarea {
     padding: 5px;
     width: 100%;
+}
+
+
+
+.invoice_section5 {
+    position: relative;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.business_details {
+    width: 60%;
+}
+
+.qr_code_holder {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.business_details .business_title {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.business_details > div {
+    padding: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid transparent;
+}
+
+.business_details > div:hover {
+    border: 1px solid rgb(210, 210, 210);
+}
+
+.business_details input,
+.business_details textarea {
+    width: calc(95% - 2px);
+    font-size: 12px;
+    font-style: italic;
+}
+
+.business_details span.remove-line-icon {
+    width: calc(5% - 2px);
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.business_details > div:hover  span.remove-line-icon {
+    opacity: 1;
+}
+
+.business_details span.remove-line-icon:hover {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+.business_details div.add_line {
+    margin-top: 5px;
+    gap: 5px;
+    border: 1px solid rgb(0, 191, 255);
+    width: max-content;
+    padding: 0px 10px 2px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blue;
+    opacity: 0;
+}
+
+.business_details:hover  div.add_line {
+    opacity: 1;
+}
+
+.business_details div.add_line:hover {
+    background-color: #3e3ef5;
+    color: white;
+}
+.business_details span.add_line_text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.business_details span.add-line-icon {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.qr_code_holder #qr_code_input {
+    position: absolute;
+    width: 150px;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(182, 182, 182);
+    opacity: 0;
+}
+
+.qr_code_holder #qr_code_input:hover,
+.qr_code_holder #qr_code_input:focus {
+    opacity: 1;
+}
+
+.qr_code_holder #qrcode img {
+    width: 150px;
+    aspect-ratio: 1/1;
+}
+.qr_code_holder #qr_code_description {
+    padding: 5px;
+    width: 150px;
+    text-align: center;
 }
 
 

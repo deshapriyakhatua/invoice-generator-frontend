@@ -136,11 +136,11 @@
     /*-------------- Auto Resize textarea --------------- */
 
     function autoResizeTextArea() {
-        const tx = document.getElementsByTagName("textarea");
+        const tx = document.getElementsByClassName("resize_textarea");
 
         for (let i = 0; i < tx.length; i++) {
             if (tx[i].value == '') {
-                tx[i].setAttribute("style", "height:auto;overflow-y:hidden;");
+                tx[i].setAttribute("style", "height:auto; overflow-y:hidden;");
             } else {
                 tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
             }
@@ -159,7 +159,7 @@
 
     /* ------------ Add & remove item row ---------- */
 
-    document.querySelector(".invoice_section4 .add_new_row td div.add_line").addEventListener("click", (event) => {
+    document.querySelector(".invoice_section3 .add_new_row td div.add_line").addEventListener("click", (event) => {
         let itemRow = document.createElement("tr");
         itemRow.className = "item_row";
         itemRow.innerHTML = `
@@ -192,8 +192,8 @@
                         <td height="1" colspan="6"></td>
     `;
 
-        let parentNode = document.querySelector(".invoice_section4 tbody");
-        let afterItemRow = document.querySelector(".invoice_section4 .add_new_row");
+        let parentNode = document.querySelector(".invoice_section3 tbody");
+        let afterItemRow = document.querySelector(".invoice_section3 .add_new_row");
         parentNode.insertBefore(itemRow, afterItemRow);
         parentNode.insertBefore(rowSeparator, afterItemRow);
         autoResizeTextArea();
@@ -214,15 +214,15 @@
 
     /*---------- Add and Remove Business details ------------- */
 
-    document.querySelector(".invoice_section2 .business_details div.add_line").addEventListener("click", (event) => {
+    document.querySelector(".invoice_section5 .business_details div.add_line").addEventListener("click", (event) => {
         let itemRow = document.createElement("div");
         itemRow.innerHTML = `
         <input type="text" value="" placeholder="Enter Custom Value">
         <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
     `;
 
-        let parentNode = document.querySelector(".invoice_section2 .business_details");
-        let afterItemRow = document.querySelector(".invoice_section2 .business_details div.add_line");
+        let parentNode = document.querySelector(".invoice_section5 .business_details");
+        let afterItemRow = document.querySelector(".invoice_section5 .business_details div.add_line");
         parentNode.insertBefore(itemRow, afterItemRow);
     });
 
@@ -235,12 +235,12 @@
 
     /*------------------- Add and Remove Billing & shipping details ---------------- */
 
-    document.querySelector(".invoice_section3 .billig div.add_line").addEventListener("click", () => {
-        addNewRowInput(".invoice_section3 .billig", ".invoice_section3 .billig div.add_line");
+    document.querySelector(".invoice_section2 .billig div.add_line").addEventListener("click", () => {
+        addNewRowInput(".invoice_section2 .billig", ".invoice_section2 .billig div.add_line");
     });
 
-    document.querySelector(".invoice_section3 .shipping div.add_line").addEventListener("click", () => {
-        addNewRowInput(".invoice_section3 .shipping", ".invoice_section3 .shipping div.add_line");
+    document.querySelector(".invoice_section2 .shipping div.add_line").addEventListener("click", () => {
+        addNewRowInput(".invoice_section2 .shipping", ".invoice_section2 .shipping div.add_line");
     });
 
 

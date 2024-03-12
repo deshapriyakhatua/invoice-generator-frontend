@@ -8,6 +8,8 @@ document.querySelector(".change_layout").addEventListener("click", ()=>{
 
     if(iframe.src.endsWith("/user/invoiceTemplets/template1/template1.html")){
         iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template2/template2.html";
+    }else if(iframe.src.endsWith("/user/invoiceTemplets/template2/template2.html")){
+        iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template3/template3.html";
     }else{
         iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template1/template1.html";
     }

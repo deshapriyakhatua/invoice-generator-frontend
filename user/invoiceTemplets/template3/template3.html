@@ -39,15 +39,15 @@
                 </div>
             </div>
 
-            <div class="invoice_section3">
+            <div class="invoice_section2">
                 <div class="billig">
-                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Bill To" placeholder="">
+                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Bill To:" placeholder="">
                     <div>
                         <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <textarea name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
+                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
@@ -68,13 +68,13 @@
                     </div>
                 </div>
                 <div class="shipping">
-                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Ship To" placeholder="">
+                    <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Ship To:" placeholder="">
                     <div>
                         <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
-                        <textarea name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
+                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
                         <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
                     </div>
                     <div>
@@ -96,7 +96,7 @@
                 </div>
             </div>
 
-            <table class="invoice_section4">
+            <table class="invoice_section3">
                 <tbody>
                     <tr class="item_header">
                         <th>
@@ -106,10 +106,10 @@
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header unit_price" value="Price (₹)" disabled>
                         </th>
                         <th>
-                            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header cgst" value="CGST" disabled>
+                            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header cgst" value="IGST">
                         </th>
                         <th>
-                            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header sgst" value="SGST" disabled>
+                            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header sgst" value="CESS">
                         </th>
                         <th>
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header quantity" value="Qty" disabled>
@@ -125,7 +125,7 @@
                     </tr>
                     <tr class="item_row">
                         <td class="first">
-                            <textarea name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
+                            <textarea class="resize_textarea" name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
                         </td>
                         <td class="second">
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="unit_price" value="554">
@@ -151,7 +151,7 @@
                     </tr>
                     <tr class="item_row">
                         <td class="first">
-                            <textarea name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
+                            <textarea  class="resize_textarea" name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
                         </td>
                         <td class="second">
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="unit_price" value="400">
@@ -209,10 +209,64 @@
                 </tbody>
             </table>         
 
-            <div class="invoice_section5">
-                <textarea name="" id="" cols="30" rows="2" placeholder="Have a nice day." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+            <div class="invoice_section4">
+                <textarea class="resize_textarea" name="" id="" cols="30" rows="2" placeholder="Thank you for choosing us ! Have a nice day." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
             </div>
 
+            <div class="invoice_section5">
+                <div class="business_details">
+                    <div>
+                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
+                    </div>
+                    <div>
+                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="1">Ground Floor, Building 5A, 
+32 OGL Tech Rd, Bondridra
+Bengaluru, Karnataka 560068</textarea>
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="1">PAN No: AAECA3151B
+GST No: GSTIN 0464RGES529425R5
+CIN No: U72900WB2003PTC095621
+SAC No: 998422</textarea>
+                        
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div>
+                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="1">Phone: 033-71002000
+Email: private@snapbills.com 
+Website: www.snapbills.in</textarea>
+                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBusinessDetailsRow(event)">cancel</span>
+                    </div>
+                    <div class="add_line">
+                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
+                        <span class="add_line_text">Add Line</span>
+                    </div>
+                </div>
+                <div class="qr_code_holder">
+                    <textarea name="qr_code_input" id="qr_code_input">https://snapbills.in/</textarea>
+
+                    <!-- QR code  -->
+                    <div id="qrcode"></div>
+                    <script src="/global/QrCodeGenerator.js"></script>
+                    <script type="text/javascript">
+                        
+                        let qrCodeInput = document.getElementById("qr_code_input");
+                        let qrCode = document.getElementById("qrcode");
+
+                        new QRCode(qrCode, qrCodeInput.value);
+
+                        qrCodeInput.addEventListener("focusout", ()=>{
+                            qrCode.innerHTML="";
+                            new QRCode(qrCode, qrCodeInput.value);
+                        })
+
+                    </script>
+                    <!-- ------ -->
+
+                    <textarea class="resize_textarea" name="qr_code_description" id="qr_code_description" cols="30" rows="1">Shop From Official Website</textarea>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -251,8 +305,8 @@
     </section>
 
      <!----------------- Other JS ---------------->
-
+    
      <script src="/user/invoiceTemplets/template3/template3.js"></script>
-
+    
 </body>
 </html>
