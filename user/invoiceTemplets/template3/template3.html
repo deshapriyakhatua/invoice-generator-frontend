@@ -244,25 +244,9 @@ Website: www.snapbills.in</textarea>
                     </div>
                 </div>
                 <div class="qr_code_holder">
-                    <textarea name="qr_code_input" id="qr_code_input">https://snapbills.in/</textarea>
+                    <textarea name="qr_code_input" id="qr_code_input">Type your text here</textarea>
 
-                    <!-- QR code  -->
                     <div id="qrcode"></div>
-                    <script src="/global/QrCodeGenerator.js"></script>
-                    <script type="text/javascript">
-                        
-                        let qrCodeInput = document.getElementById("qr_code_input");
-                        let qrCode = document.getElementById("qrcode");
-
-                        new QRCode(qrCode, qrCodeInput.value);
-
-                        qrCodeInput.addEventListener("focusout", ()=>{
-                            qrCode.innerHTML="";
-                            new QRCode(qrCode, qrCodeInput.value);
-                        })
-
-                    </script>
-                    <!-- ------ -->
 
                     <textarea class="resize_textarea" name="qr_code_description" id="qr_code_description" cols="30" rows="1">Shop From Official Website</textarea>
                 </div>
@@ -305,7 +289,7 @@ Website: www.snapbills.in</textarea>
     </section>
 
      <!----------------- Other JS ---------------->
-    
+     <script src="/global/QrCodeGenerator.js"></script>
      <script src="/user/invoiceTemplets/template3/template3.js"></script>
     
 </body>

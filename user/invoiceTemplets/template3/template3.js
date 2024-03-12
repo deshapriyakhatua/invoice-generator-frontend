@@ -292,3 +292,15 @@
         calculateTotalPrice();
     });
 
+
+    /*------------- QR code generator --------- */
+
+    let qrCodeInput = document.getElementById("qr_code_input");
+    let qrCode = document.getElementById("qrcode");
+
+    new QRCode(qrCode, qrCodeInput.value);
+
+    qrCodeInput.addEventListener("focusout", ()=>{
+        qrCode.innerHTML="";
+        new QRCode(qrCode, qrCodeInput.value);
+    })

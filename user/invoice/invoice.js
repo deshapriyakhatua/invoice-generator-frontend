@@ -6,6 +6,9 @@ let iframe = document.querySelector(".invoice_iframe");
 
 document.querySelector(".change_layout").addEventListener("click", ()=>{
 
+    document.querySelector(".invoice_iframe").display = "none";
+    document.querySelector(".holds-the-iframe").style.display = "block";
+
     if(iframe.src.endsWith("/user/invoiceTemplets/template1/template1.html")){
         iframe.src = iframe.src.slice(0, -46) + "/user/invoiceTemplets/template2/template2.html";
     }else if(iframe.src.endsWith("/user/invoiceTemplets/template2/template2.html")){
@@ -15,6 +18,7 @@ document.querySelector(".change_layout").addEventListener("click", ()=>{
     }
 
 });
+
 
 /*------------- print invoice -----------*/
 
