@@ -428,6 +428,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .qr_code_holder #qr_code_input {
+    padding: 5px;
     position: absolute;
     width: 150px;
     aspect-ratio: 1/1;

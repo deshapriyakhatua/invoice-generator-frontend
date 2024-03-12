@@ -6,7 +6,7 @@ let iframe = document.querySelector(".invoice_iframe");
 
 document.querySelector(".change_layout").addEventListener("click", ()=>{
 
-    document.querySelector(".invoice_iframe").display = "none";
+    document.querySelector(".invoice_iframe").style.display = "none";
     document.querySelector(".holds-the-iframe").style.display = "block";
 
     if(iframe.src.endsWith("/user/invoiceTemplets/template1/template1.html")){

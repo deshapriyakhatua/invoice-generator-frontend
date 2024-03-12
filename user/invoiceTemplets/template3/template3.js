@@ -142,7 +142,7 @@
             if (tx[i].value == '') {
                 tx[i].setAttribute("style", "height:auto; overflow-y:hidden;");
             } else {
-                tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");
+                tx[i].setAttribute("style", "height:" + (tx[i].scrollHeight) + "px;overflow-y:hidden;");console.log(tx[i].style.height)
             }
             tx[i].addEventListener("input", OnInput, false);
         }
@@ -155,6 +155,7 @@
     }
 
     autoResizeTextArea();
+    
 
 
     /* ------------ Add & remove item row ---------- */
