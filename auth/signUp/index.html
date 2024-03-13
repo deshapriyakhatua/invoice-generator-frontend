@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" type="image/x-icon" href="/favicon.png">
-    <title>Sign In</title>
+    <title>Sign Up</title>
 
     <!------------ Google Fonts & Icon ------------->
     <link rel="stylesheet"
@@ -52,7 +52,7 @@
             margin-bottom: 10px;
         }
 
-        .signin_container {
+        .signup_container {
             padding: 2rem 0 4rem 0;
             width: 100%;
             display: flex;
@@ -104,25 +104,11 @@
             background-color: rgb(255, 255, 255);
             box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(60, 66, 87, 0.16) 0px 0px 0px 1px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px;
         }
-
-        .forgot_password_parent {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            align-items: center;
-        }
-
-        .reset-pass a,
         label {
             font-size: 13px;
             font-weight: 600;
             display: block;
         }
-
-        .reset-pass>a {
-            text-align: right;
-            margin-bottom: 10px;
-        }
-
         #submit_button {
             margin-top: 2rem;
             background-color: var(--theme-color);
@@ -152,7 +138,7 @@
         }
 
         a.ssolink span {
-            background-color: rgb(255, 55, 0);
+            background-color: rgb(250, 71, 22);
             display: inline;
             color: white;
             padding: 0px 4px;
@@ -167,7 +153,7 @@
         }
 
         @media screen and (max-width: 1000px) {
-            .signin_container {
+            .signup_container {
                 padding: 2rem 0;
             }
 
@@ -186,7 +172,7 @@
         }
 
         @media screen and (max-width: 500px) {
-            .signin_container {
+            .signup_container {
                 padding: 1rem 0;
             }
 
@@ -204,45 +190,40 @@
 </head>
 
 <body>
-    <div class="signin_container">
+    <div class="signup_container">
 
         <div class="formbg-outer">
             <img class="main_logo" src="/global/files/logoDark.png" alt="">
             <div class="formbg">
-                <span class="formbg_title">Sign In to your account</span>
+                <span class="formbg_title">Sign Up to your account</span>
                 <form id="form-login">
                     <div class="field">
                         <label for="email">Email or Phone Number</label>
                         <input type="text" name="email" id="email">
                     </div>
                     <div class="field">
-                        <div class="forgot_password_parent">
-                            <label for="password">Password</label>
-                            <div class="reset-pass">
-                                <a href="#">Forgot your password?</a>
-                            </div>
-                        </div>
+                        <label for="password">Password</label>
                         <input type="password" name="password" id="password">
                     </div>
                     <div class="field">
-                        <input id="submit_button" type="submit" name="submit" value="Sign In">
+                        <input id="submit_button" type="submit" name="submit" value="Sign Up">
                     </div>
                     <p id="status_text"></p>
                     <div class="field">
-                        <a class="ssolink" href="#">Sign-in with Google
+                        <a class="ssolink" href="#">Sign Up with Google
                             <span>G</span>
                         </a>
                     </div>
                 </form>
             </div>
             <div class="footer-link">
-                <span>Don't have an account? <a href="/auth/signup.html">Sign Up</a></span>
+                <span>Already have an account? <a href="/auth/signIn">Sign In</a></span>
             </div>
         </div>
     </div>
 </body>
 
 <script src="/global/global.js"></script>
-<script src="/auth/signinBcknd.js"></script>
+<script src="/auth/signUp/signupBckend.js"></script>
 
 </html>

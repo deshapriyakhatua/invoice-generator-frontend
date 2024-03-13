@@ -10,7 +10,7 @@ document.write(`
                 </div>
             </div>
             <div class="profile_icon">
-                <a href="/auth/signin.html"><span class="material-symbols-rounded"> account_circle </span></a>
+                <a href="/auth/signIn"><span class="material-symbols-rounded"> account_circle </span></a>
             </div>
         </header>
 
