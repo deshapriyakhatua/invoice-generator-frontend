@@ -15,7 +15,7 @@
 
     <!-------------- link css -------------->
 
-    <link rel="stylesheet" href="/user/invoiceTemplets/template4/template4.css">
+    <link rel="stylesheet" href="/user/invoiceTemplates/template6/template6.css">
 
 </head>
 <body>
@@ -23,7 +23,17 @@
     <section class="invoice_container" id="invoice_container">
         <div class="main_invoice">
 
-            <div class="invoice_section1">
+            <div class="invoice_section1">   
+                <div class="invoice_logo_holder">
+                    <div class="business_details">
+                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
+                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="5" placeholder="Ground Floor, Building 5A, 
+                        32 OGL Tech Rd, Bondridra
+                        Bengaluru, Karnataka 560068
+                        PAN No: AAECA3151B
+                        GST No: GSTIN 0464RGES529425R5"></textarea>
+                    </div>
+                </div>
                 <div class="invoice_type_holder">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="Tax Invoice">
                     <div class="invoice_details">
@@ -33,75 +43,28 @@
                         <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_id" placeholder="#00000025">
                         
                     </div>
-                </div>        
-                <div class="invoice_logo_holder">
-                    <img src="/global/files/invoiceLogo.png" alt="image logo" class="invoice_logo">
-                    <div class="business_details">
-                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
-                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="6" placeholder="Ground Floor, Building 5A, 
-                        32 OGL Tech Rd, Bondridra
-                        Bengaluru, Karnataka 560068
-                        PAN No: AAECA3151B
-                        GST No: GSTIN 0464RGES529425R5
-                        CIN No: U72900WB2003PTC095621
-                        SAC No: 998422"></textarea>
-                    </div>
-                </div>
+                </div> 
             </div>
 
             <div class="invoice_section2">
                 <div class="billig">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Bill To:" placeholder="">
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Mob : 9876543210">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Payment Method : Online">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Payment Status : Paid">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div class="add_line">
-                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
-                        <span class="add_line_text">Add Line</span>
+                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="6" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Name : Vinay Dhara
+                        Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin - 302545
+                        Mob : 9876543210
+                        Payment Method : Online
+                        Payment Status : Paid"></textarea>
                     </div>
                 </div>
                 <div class="shipping">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" value="Ship To:" placeholder="">
                     <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Name : Vinay Dhara">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="1" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin: 302545"></textarea>
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="LandMark : Near Rajrang SBI Branch">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Mob : 9876543210">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div>
-                        <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="Shipping By : DELHIVERY PVT LTD">
-                        <span class="material-symbols-rounded remove-line-icon" onclick="removeBillingDetailsRow(event)">cancel</span>
-                    </div>
-                    <div class="add_line">
-                        <span class="material-symbols-rounded add-line-icon">add_circle</span>
-                        <span class="add_line_text">Add Line</span>
+                        <textarea class="resize_textarea" name="address" id="" cols="100" rows="6" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Name : Vinay Dhara
+                        Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin - 302545
+                        LandMark : Near Rajrang SBI Branch
+                        Mob : 9876543210
+                        Shipping By : DELHIVERY PVT LTD"></textarea>
                     </div>
                 </div>
             </div>
@@ -127,8 +90,6 @@
                         <th>
                             <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="table_header price" value="Subtotal (₹)" disabled>
                         </th>
-                        <td class="remove_row">
-                        </td>
                     </tr>
                     <tr class="row_separator">
                         <td height="1" colspan="6"></td>
@@ -220,14 +181,6 @@
             </table>         
 
             <div class="invoice_section4">
-                <textarea class="resize_textarea" name="" id="" cols="30" rows="2" placeholder="Type your notes here...
-                Thank you for choosing us ! Have a nice day.
-
-                For any query contact us :
-
-                Phone: 033-71002000
-                Email: private@snapbills.com 
-                Website: www.snapbills.in" autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
                 <div class="qr_code_holder">
                     <textarea name="qr_code_input" id="qr_code_input">Type your text here</textarea>
 
@@ -235,6 +188,11 @@
 
                     <textarea class="resize_textarea" name="qr_code_description" id="qr_code_description" cols="30" rows="2" placeholder="Shop From Official Website"></textarea>
                 </div>
+                <div class="logo_container">
+                    <textarea class="resize_textarea" name="" id="" cols="30" rows="3" placeholder="Type your notes here...
+                    Thank you for choosing us ! Have a nice day." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+                    <img src="/global/files/invoiceLogoLandscape.png" alt="image logo" class="invoice_logo">
+                </div>                
             </div>
 
         </div>
@@ -276,7 +234,7 @@
 
      <!----------------- Other JS ---------------->
      <script src="/global/QrCodeGenerator.js"></script>
-     <script src="/user/invoiceTemplets/template4/template4.js"></script>
+     <script src="/user/invoiceTemplates/template6/template6.js"></script>
     
 </body>
 </html>

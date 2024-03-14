@@ -1,0 +1,579 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif; 
+}
+
+textarea {
+    resize: none;
+    white-space: pre-line;
+    padding: 1px 0;
+}
+
+input,
+textarea {
+    border-width: 0;
+    outline: 0;
+    color: #000000;
+    font-size: 11px;
+    border: 1px solid transparent;
+    transition: all .2s ease-in-out;
+}
+
+input:disabled {
+    background-color: transparent;
+}
+input:hover,
+textarea:hover {
+    border-color: rgb(193, 193, 193);
+}
+input:focus,
+textarea:focus {
+    border-color: black;
+    background-color: #f2f1f1;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: black;
+    opacity: 1; /* Firefox */
+}
+
+input::-ms-input-placeholder { /* Edge 12-18 */
+    color: black;
+}
+
+.invoice_container {
+    overflow: auto;
+}
+
+.main_invoice {
+    position: relative;
+    margin: 20px auto;
+    width: 700px;
+    padding: 35px;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: white;
+}
+
+/*----------- invoice section1 ---------*/
+
+.invoice_section1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+}
+
+.invoice_type_holder {
+    width: 70%;
+}
+
+.invoice_details {
+    margin-top: 10px;
+}
+
+.invoice_type {
+    font-size: 65px;
+    font-weight: 100;
+    color: #000000; 
+    text-align: left;
+    width: 95%;
+}
+
+.invoice_id {
+    margin-left: 20px;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.invoice_date {
+    width: 130px;
+    font-size: 18px;
+    font-weight: 300;
+    text-align: left;
+}
+
+.invoice_logo_holder {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 5px;
+    border-left: 1px dotted rgb(202, 202, 202);
+    padding-left: 10px;
+}
+
+.invoice_logo {
+    width: auto;
+    height: 30px;
+    cursor: pointer;
+}
+
+.business_details {
+    width: 100%;
+}
+
+.business_details .business_title {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.business_details input,
+.business_details textarea {
+    width: 100%;
+    font-size: 11px;
+    font-style: italic;
+}
+
+
+
+/*------- invoice section2 ---------*/
+
+
+.invoice_section2 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.invoice_section2 > div {
+    margin-top: 15px;
+}
+
+.invoice_section2 > div > input:first-child {
+    font-size: 14px;
+    font-weight: 600;
+    color: #000000;
+    font-style: italic;
+}
+
+.invoice_section2 input,
+.invoice_section2 textarea {
+    width: calc(95% - 2px);
+    letter-spacing: .4px;
+    font-size: 13px;
+}
+.invoice_section2 textarea {
+    height: auto;
+}
+
+.invoice_section2 .billig,
+.invoice_section2 .shipping
+ {
+    width: 100%;
+}
+
+.billig > div,
+.shipping > div
+ {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.billig > div:hover,
+.shipping > div:hover
+ {
+    border: 1px solid rgb(210, 210, 210);
+}
+
+.billig span.remove-line-icon,
+.shipping span.remove-line-icon {
+    width: calc(5% - 2px);
+    font-size: 14px;
+    font-weight: normal;
+    color: rgb(0, 0, 0);
+    vertical-align: middle;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+    opacity: 0;
+}
+
+.billig > div:hover  span.remove-line-icon,
+.shipping > div:hover  span.remove-line-icon{
+    opacity: 1;
+}
+
+.billig span.remove-line-icon:hover,
+.shipping span.remove-line-icon:hover {
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+.billig div.add_line,
+.shipping div.add_line {
+    gap: 5px;
+    margin-top: 9px;
+    border: 1px solid rgb(0, 191, 255);
+    width: max-content;
+    padding: 0px 10px 2px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blue;
+    opacity: 0;
+}
+
+.billig:hover  div.add_line,
+.shipping:hover  div.add_line {
+    opacity: 1;
+}
+
+.billig div.add_line:hover,
+.shipping div.add_line:hover {
+    background-color: #3e3ef5;
+    color: white;
+}
+
+.billig span.add_line_text,
+.shipping span.add_line_text{
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.billig span.add-line-icon,
+.shipping span.add-line-icon {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+
+/*------- invoice section3 ---------*/
+
+
+.invoice_section3 {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.invoice_section3 .item_row td.remove_row span {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.invoice_section3 .item_row:hover td.remove_row span {
+    opacity: 1;
+}
+
+.invoice_section3 .item_row td.remove_row span:hover {
+    font-weight: bold;
+}
+
+.invoice_section3 .row_separator td {
+    background-color: #d8d8d8;
+}
+
+.invoice_section3 tbody input {
+    width: 100%;
+}
+
+.invoice_section3 tbody .item_header {
+    background-color: #d7d7d7;
+}
+.invoice_section3 tbody .item_header input {
+    padding: 0 5px 10px 5px;
+    background-color: #d7d7d7;
+}
+
+.invoice_section3 tbody .item_row input,
+.invoice_section3 tbody .item_row textarea {
+    padding: 5px 10px 5px 0;
+}
+
+.invoice_section3 .add_new_row td div.add_line {
+    margin-top: 5px;
+    gap: 5px;
+    border: 1px solid rgb(0, 191, 255);
+    width: max-content;
+    padding: 0px 10px 2px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: blue;
+    opacity: 0;
+}
+
+.invoice_section3 tbody:hover  div.add_line {
+    opacity: 1;
+}
+
+.invoice_section3 .add_new_row td div.add_line:hover {
+    background-color: #3e3ef5;
+    color: white;
+}
+.invoice_section3 .add_new_row td span.add_line_text {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.invoice_section3 .add_new_row td span.add-line-icon {
+    font-size: 14px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.invoice_section3 tbody .after_item_row input {
+    padding: 2px 0;
+}
+.invoice_section3 tbody .subtotal_row input {
+    margin-top: 10px;
+}
+
+.invoice_section3 tbody th input {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .7px;
+}
+
+.invoice_section3 tbody input.unit_price,
+.invoice_section3 tbody input.cgst,
+.invoice_section3 tbody input.sgst,
+.invoice_section3 tbody input.quantity {
+    text-align: center;
+}
+
+.invoice_section3 tbody input.price {
+    text-align: right;
+}
+
+.invoice_section3 tbody input.subtotal,
+.invoice_section3 tbody input.shipping,
+.invoice_section3 tbody input.gst,
+.invoice_section3 tbody input.grand_total {
+    text-align: right;
+    letter-spacing: .8px;
+}
+
+.invoice_section3 tbody .grand_total_row input {
+    font-weight: 600;
+    color: #000000;
+}
+
+
+
+/*------- invoice section4 ---------*/
+
+
+
+.invoice_section4 {
+    margin-top: 35px;
+    padding-top: 20px;
+    display: flex;
+    border-top: 1px solid black;
+}
+
+.invoice_section4 textarea {
+    padding: 5px;
+    width: 60%;
+}
+
+.qr_code_holder {
+    position: relative;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.qr_code_holder #qr_code_input {
+    padding: 5px;
+    position: absolute;
+    width: 100px;
+    aspect-ratio: 1/1;
+    border: 1px solid rgb(182, 182, 182);
+    opacity: 0;
+}
+
+.qr_code_holder #qr_code_input:hover,
+.qr_code_holder #qr_code_input:focus {
+    opacity: 1;
+}
+
+.qr_code_holder #qrcode img {
+    width: 100px;
+    aspect-ratio: 1/1;
+}
+.qr_code_holder #qr_code_description {
+    padding: 5px;
+    width: 100px;
+    text-align: center;
+}
+
+
+/* -------------- image upload popup ------------ */
+
+
+.image_upload {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+	width: 100vw;
+	height: 100vh;
+	display: none;
+   	justify-content: center;
+	align-items: center;
+}
+
+.close_drag_drop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+	background-color: #ffffffa2;
+}
+.upload-files-container {
+    position: relative;
+	background-color: #ffffff;
+	width: 420px;
+	padding: 30px 60px;
+	border-radius: 40px;
+	display: flex;
+   	align-items: center;
+   	justify-content: center;
+	flex-direction: column;
+	box-shadow: rgba(95, 94, 94, 0.24) 0px 10px 20px, rgba(71, 70, 70, 0.28) 0px 6px 6px;
+}
+.drag-file-area {
+	border: 2px dashed #cfcece;
+	border-radius: 40px;
+	margin: 10px 0 15px;
+	padding: 30px 50px;
+	width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.drag-file-area .upload-icon {
+	font-size: 25px;
+}
+
+.drag-file-area h4 {
+	font-size: 20px;
+	margin: 15px 0;
+}
+.drag-file-area .browse-files {
+    position: relative;
+}
+
+.drag-file-area .browse-files-text {
+	color: #3e3ef5;
+	font-weight: bolder;
+}
+
+.default-file-input {
+    position: absolute;
+    cursor: pointer;
+	opacity: 0;
+}
+.cannot-upload-message {
+	background-color: #ffc6c4;
+	font-size: 17px;
+	display: flex;
+	align-items: center;
+	margin: 5px 0;
+	padding: 5px 10px 5px 30px;
+	border-radius: 5px;
+	color: #BB0000;
+	display: none;
+    transition: all 1s ease-in-out;
+}
+.cannot-upload-message span, .upload-button-icon {
+	padding-right: 10px;
+}
+.cannot-upload-message span:last-child {
+	padding-left: 20px;
+	cursor: pointer;
+}
+.file-block {
+	color: #f7fff7;
+	background-color: #474747;
+  	transition: all 1s;
+	width: 390px;
+	position: relative;
+	display: none;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 10px 0 15px;
+	padding: 10px 20px;
+	border-radius: 25px;
+	cursor: pointer;
+}
+.file-info {
+	display: flex;
+	align-items: center;
+	font-size: 15px;
+}
+.file-icon {
+	margin-right: 10px;
+}
+
+.file-name, .file-size {
+	padding: 0 3px;
+}
+.remove-file-icon {
+	cursor: pointer;
+}
+.progress-bar {
+	display: flex;
+	position: absolute;
+	bottom: -10px;
+    left: 0;
+	width: 0;
+	height: 10%;
+	border-radius: 25px;
+	background-color: #a9a9a9;
+}
+.upload-button {
+	font-family: 'Montserrat';
+	background-color: #050505;
+	color: #ffffff;
+	display: flex;
+	align-items: center;
+	font-size: 18px;
+	border: none;
+	border-radius: 20px;
+	margin: 10px;
+	padding: 7.5px 50px;
+	cursor: pointer;
+}
+
+
+/* ----------- css for print button press ----------*/
+
+@media print {
+
+    .invoice_body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .invoice_container {
+        overflow: hidden;
+    }
+
+    .main_invoice {
+        margin: 0 auto;
+        padding: 0;
+        border-width: 0;
+    }
+    
+    #invoice_container * {
+        print-color-adjust: exact !important;
+        -webkit-print-color-adjust: exact !important;
+    }
+
+}
+
+@page {
+    size: a4;
+    margin: 8mm 0;
+}
