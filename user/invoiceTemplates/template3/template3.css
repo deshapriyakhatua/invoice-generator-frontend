@@ -446,7 +446,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .qr_code_holder #qrcode img,
-.qr_code_holder #qrcode {
+.qr_code_holder #qrcode,
+.qr_code_holder canvas {
     width: 150px;
     aspect-ratio: 1/1;
 }
