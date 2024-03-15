@@ -23,18 +23,17 @@
     <section class="invoice_container" id="invoice_container">
         <div class="main_invoice">
 
-            <div class="invoice_section1">   
-                <div class="invoice_logo_holder">
-                    <div class="business_details">
-                        <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
-                        <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="5" placeholder="Ground Floor, Building 5A, 
-                        32 OGL Tech Rd, Bondridra
-                        Bengaluru, Karnataka 560068
-                        PAN No: AAECA3151B
-                        GST No: GSTIN 0464RGES529425R5"></textarea>
-                    </div>
+            <div class="invoice_section1">
+                <div class="business_details_holder">
+                    <input class="business_title" autocorrect="off" autocapitalize="off" spellcheck="false" type="text" placeholder="SnapBills Private Limited">
+                    <textarea class="resize_textarea" autocorrect="off" autocapitalize="off" spellcheck="false" name="business_address" id="business_address" cols="50" rows="5" placeholder="Ground Floor, Building 5A, 
+                    32 OGL Tech Rd, Bondridra
+                    Bengaluru, Karnataka 560068
+                    PAN No: AAECA3151B
+                    GST No: GSTIN 0464RGES529425R5"></textarea>
                 </div>
                 <div class="invoice_type_holder">
+                    <img src="/global/files/invoiceLogoLandscape2.png" alt="image logo" class="invoice_logo">
                     <input autocorrect="off" autocapitalize="off" spellcheck="false" type="text" class="invoice_type" placeholder="Tax Invoice">
                     <div class="invoice_details">
                         
@@ -53,7 +52,6 @@
                         <textarea class="resize_textarea" name="address" id="" cols="100" rows="7" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Name : Vinay Dhara
                         Address : Rajrang, Gulapor, Kathaward, Rajasthan, Pin - 302545
                         Mob : 9876543210
-                        Payment Method : Online
                         Payment Status : Due
                         Due Date: FEB 01 2025"></textarea>
                     </div>
@@ -199,13 +197,19 @@
 
                     <textarea class="resize_textarea" name="qr_code_description" id="qr_code_description" cols="30" rows="2" placeholder="Scan for UPI pay"></textarea>
 
-                    <textarea class="resize_textarea" name="" id="" cols="40" rows="2">Bank and Payment Details 
-Account No : 
-                    </textarea>
+                    <input type="text" value="Bank Details:" class="account_details_title">
+                    <textarea class="resize_textarea account_details" name="" id="" cols="40" rows="4" placeholder="Name : Yes Bank
+                    Account : 1234567890
+                    IFSC : YES12345
+                    Branch :  Bondridra"></textarea>
                 </div>
-                <div class="logo_container">
-                    <textarea class="resize_textarea" name="" id="" cols="30" rows="5" placeholder="Thank you for your recent purchase. If you have any questions, feel free to reach out. Payment is appreciated within the specified timeframe. We value your business and look forward to serving you again." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
-                    <img src="/global/files/invoiceLogoLandscape2.png" alt="image logo" class="invoice_logo">
+                <div class="notes_holder">
+                    <input type="text" class="t_n_c_title" value="Terms and Conditions:">
+                    <textarea class="resize_textarea t_n_c" name="" id="" cols="30" rows="5" placeholder="1. WE are not manufacturers, company will stand for warranty as per their terms and conditions
+                    2. Subject to local Jurisdiction.
+                    3. Interest @24% p.a. will be charged for uncleared bills beyond 15 days." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
+                    <input type="text" class="notes_title" value="Notes:">
+                    <textarea class="resize_textarea notes" name="" id="" cols="30" rows="5" placeholder="Thank you business. For any query, feel free to reach out. Payment is appreciated within the specified timeframe. We value your business and look forward to serving you again." autocorrect="off" autocapitalize="off" spellcheck="false"></textarea>
                 </div>                
             </div>
 

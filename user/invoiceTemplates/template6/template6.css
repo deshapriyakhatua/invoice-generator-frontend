@@ -62,22 +62,48 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 .invoice_section1 {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: normal;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
+}
+
+.business_details_holder {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.business_details_holder .business_title {
+    width: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.business_details_holder textarea {
+    width: 100%;
+    font-size: 13px;
+    font-style: italic;
 }
 
 .invoice_type_holder {
     width: 40%;
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
     align-items: flex-end;
 }
 
-.invoice_details {
-    margin-top: 10px;
+.invoice_type_holder .invoice_details {
     display: flex;
     justify-content: flex-end;
+}
+
+.invoice_type_holder .invoice_logo {
+    width: auto;
+    height: 40px;
+    cursor: pointer;
 }
 
 .invoice_type {
@@ -101,32 +127,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-size: 15px;
     font-weight: 300;
     text-align: right;
-}
-
-.invoice_logo_holder {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 5px;
-}
-
-.business_details {
-    width: 100%;
-}
-
-.business_details .business_title {
-    width: 100%;
-    font-size: 28px;
-    font-weight: 400;
-    padding-bottom: 10px;
-}
-
-.business_details textarea {
-    width: 100%;
-    font-size: 13px;
-    font-style: italic;
 }
 
 
@@ -183,7 +183,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_section3 tbody .item_header {
     background-color: #dddddd;
-    transform: skewX(-10deg);
 }
 
 .invoice_section3 tbody input.quantity{
@@ -313,34 +312,13 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     border-top: 1px solid black;
 }
 
-.invoice_section4 .logo_container {
-    width: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-}
-
-.invoice_section4 .logo_container textarea {
-    padding: 5px;
-    width: 100%;
-    text-align: left;
-    font-size: 12px;
-}
-
-.invoice_section4 .invoice_logo {
-    width: auto;
-    height: 40px;
-    cursor: pointer;
-}
-
 .qr_code_holder {
     position: relative;
     width: 40%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .qr_code_holder #qr_code_input {
@@ -363,11 +341,49 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     width: 100px;
     aspect-ratio: 1/1;
 }
+
 .qr_code_holder #qr_code_description {
     padding: 5px;
     width: 100px;
     text-align: center;
 }
+
+.qr_code_holder .account_details_title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.qr_code_holder .account_details {
+    width: 100%;
+    font-size: 12px;
+}
+
+.invoice_section4 .notes_holder {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.invoice_section4 .notes_title,
+.invoice_section4 .t_n_c_title {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.invoice_section4 .notes_holder textarea {
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+
 
 
 /* -------------- image upload popup ------------ */

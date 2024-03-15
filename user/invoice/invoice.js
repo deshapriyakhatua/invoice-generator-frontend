@@ -9,7 +9,7 @@ document.querySelector(".change_layout").addEventListener("click", ()=>{
     document.querySelector(".invoice_iframe").style.display = "none";
     document.querySelector(".holds-the-iframe").style.display = "block";
 
-    let templates = {1:"4", 2:"5", 3:"6", 4:"2", 5:"3", 6:"1"}
+    let templates = {1:"4", 2:"5", 3:"6", 4:"2", 5:"7", 6:"1", 7:"3"}
     let currTemplate = iframe.src.substr(-6,1);
     console.log(currTemplate,templates[currTemplate])
     iframe.src = iframe.src.slice(0, -16) + templates[currTemplate] + iframe.src.slice(-15, -6) + templates[currTemplate] + iframe.src.slice(-5);
