@@ -164,36 +164,33 @@
         let itemRow = document.createElement("tr");
         itemRow.className = "item_row";
         itemRow.innerHTML = `
-        <td class="first">
-            <textarea class="resize_textarea" name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
-        </td>
-        <td class="second">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="hsn_sac" value="84304120">
-        </td>
-        <td class="third">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="unit_price" value="554">
-        </td>
-        <td class="fourth">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="cgst" value="89">
-        </td>
-        <td class="fifth">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="sgst" value="89">
-        </td>
-        <td class="sixth">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="quantity" value="1">
-        </td>
-        <td class="seventh">
-            <input autocorrect="off" autocapitalize="off" spellcheck="false" type="number" class="price" value="859" disabled>
-        </td>
-        <td class="remove_row">
-            <span class="material-symbols-rounded remove-line-icon" onclick="removeRowItem(event)">cancel</span>
-        </td>
+                        <td class="first">
+                            <textarea name="item_name" class="item_name" id="" cols="30" rows="1" placeholder="Enter Product Title Here" spellcheck="false"></textarea>
+                        </td>
+                        <td class="second">
+                            <input type="number" class="unit_price" value="100">
+                        </td>
+                        <td class="third">
+                            <input type="number" class="cgst" value="89">
+                        </td>
+                        <td class="fourth">
+                            <input type="number" class="sgst" value="89">
+                        </td>
+                        <td class="fifth">
+                            <input type="number" class="quantity" value="1">
+                        </td>
+                        <td class="sixth">
+                            <input type="number" class="price" value="859" disabled>
+                        </td>
+                        <td class="remove_row">
+                            <span class="material-symbols-rounded remove-line-icon" onclick="removeRowItem(event)">cancel</span>
+                        </td>
     `;
 
         let rowSeparator = document.createElement("tr");
         rowSeparator.className = "row_separator";
         rowSeparator.innerHTML = `
-                        <td height="1" colspan="7"></td>
+                        <td height="1" colspan="6"></td>
     `;
 
         let parentNode = document.querySelector(".invoice_section3 tbody");

@@ -68,7 +68,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_type_holder {
-    width: 40%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -81,7 +81,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_type {
-    font-size: 20px;
+    font-size: 60px;
     font-weight: 400;
     color: #000000; 
     text-align: right;
@@ -104,7 +104,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_logo_holder {
-    width: 60%;
+    width: 40%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -117,15 +117,14 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .business_details .business_title {
-    width: 100%;
-    font-size: 28px;
-    font-weight: 400;
-    padding-bottom: 10px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
+.business_details input,
 .business_details textarea {
     width: 100%;
-    font-size: 13px;
+    font-size: 11px;
     font-style: italic;
 }
 
@@ -186,15 +185,19 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     transform: skewX(-10deg);
 }
 
-.invoice_section3 tbody input.quantity{
-    width: 40px;
+.invoice_section3 .item_row td.remove_row span {
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    opacity: 0;
 }
 
-.invoice_section3 tbody input::-webkit-outer-spin-button,
-.invoice_section3 tbody input::-webkit-inner-spin-button {
-    appearance: textfield;
-    -webkit-appearance: none;
-    margin: 0;
+.invoice_section3 .item_row:hover td.remove_row span {
+    opacity: 1;
+}
+
+.invoice_section3 .item_row td.remove_row span:hover {
+    font-weight: bold;
 }
 
 .invoice_section3 .row_separator td {
@@ -212,26 +215,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_section3 tbody .item_row input,
 .invoice_section3 tbody .item_row textarea {
-    padding: 1px 1px 1px 0;
-}
-
-
-.invoice_section3 tbody th input {
-    font-weight: 600;
-    font-size: 11px;
-    letter-spacing: .7px;
-}
-
-.invoice_section3 tbody input.unit_price,
-.invoice_section3 tbody input.cgst,
-.invoice_section3 tbody input.sgst,
-.invoice_section3 tbody input.quantity,
-.invoice_section3 tbody input.hsn_sac {
-    text-align: center;
-}
-
-.invoice_section3 tbody input.price {
-    text-align: center;
+    padding: 1px 10px 1px 0;
 }
 
 .invoice_section3 .add_new_row td div.add_line {
@@ -272,6 +256,23 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     margin-top: 10px;
 }
 
+.invoice_section3 tbody th input {
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: .7px;
+}
+
+.invoice_section3 tbody input.unit_price,
+.invoice_section3 tbody input.cgst,
+.invoice_section3 tbody input.sgst,
+.invoice_section3 tbody input.quantity {
+    text-align: center;
+}
+
+.invoice_section3 tbody input.price {
+    text-align: right;
+}
+
 .invoice_section3 tbody input.subtotal,
 .invoice_section3 tbody input.shipping,
 .invoice_section3 tbody input.gst,
@@ -286,20 +287,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     color: #000000;
 }
 
-.invoice_section3 .item_row td.remove_row span {
-    color: rgb(0, 0, 0);
-    font-size: 18px;
-    cursor: pointer;
-    opacity: 0;
-}
-
-.invoice_section3 .item_row:hover td.remove_row span {
-    opacity: 1;
-}
-
-.invoice_section3 .item_row td.remove_row span:hover {
-    font-weight: bold;
-}
 
 
 /*------- invoice section4 ---------*/
@@ -324,8 +311,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 .invoice_section4 .logo_container textarea {
     padding: 5px;
     width: 100%;
-    text-align: left;
-    font-size: 12px;
+    text-align: right;
 }
 
 .invoice_section4 .invoice_logo {
