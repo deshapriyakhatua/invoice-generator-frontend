@@ -64,11 +64,11 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     justify-content: space-between;
     align-items: normal;
     padding-bottom: 10px;
-    border-bottom: 5px solid rgb(202, 202, 202);
+    border-bottom: 5px groove rgb(202, 202, 202);
 }
 
 .business_details_holder {
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -78,7 +78,11 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     width: 100%;
     font-size: 28px;
     font-weight: 400;
-    padding-bottom: 10px;
+    padding: 5px 8px;
+    background-color: rgb(135, 135, 135);
+    border-right: 8px ridge rgb(240, 240, 240);
+    border-left: 8px groove rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .business_details_holder textarea {
@@ -88,7 +92,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_type_holder {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -102,30 +106,30 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_type_holder .invoice_logo {
     width: auto;
-    height: 40px;
+    height: 45px;
     cursor: pointer;
 }
 
 .invoice_type {
-    font-size: 20px;
+    font-size: 25px;
     font-weight: 400;
     color: #000000; 
     text-align: right;
-    width: 95%;
+    width: 100%;
 }
 
 .invoice_id {
-    width: 100px;
-    margin-left: 20px;
-    font-size: 15px;
-    font-weight: 300;
+    width: 80px;
+    margin-left: 5px;
+    font-size: 13px;
+    font-weight: 400;
     text-align: right;
 }
 
 .invoice_date {
-    width: 130px;
-    font-size: 15px;
-    font-weight: 300;
+    width: 100px;
+    font-size: 13px;
+    font-weight: 400;
     text-align: right;
 }
 
@@ -146,6 +150,10 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-weight: 600;
     color: #000000;
     font-style: italic;
+    padding: 2px 5px;
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .invoice_section2 input,
@@ -181,9 +189,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     margin-top: 30px;
 } 
 
-.invoice_section3 tbody .item_header {
-    background-color: #dddddd;
-}
 
 .invoice_section3 tbody input.quantity{
     width: 40px;
@@ -205,8 +210,10 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_section3 tbody .item_header input {
-    padding: 0 5px 10px 5px;
-    background-color: #dddddd;
+    padding: 5px 5px;
+    background-color: rgb(135, 135, 135);
+    border: 2px ridge rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .invoice_section3 tbody .item_row input,
@@ -281,7 +288,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_section3 tbody .grand_total_row input {
     font-size: 15px;
-    font-weight: 400;
+    font-weight: 500;
     color: #000000;
 }
 
@@ -309,7 +316,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     margin-top: 35px;
     padding-top: 20px;
     display: flex;
-    border-top: 5px solid rgb(198, 198, 198);
+    border-top: 5px groove rgb(198, 198, 198);
+    gap: 10px;
 }
 
 .qr_code_holder {
@@ -353,6 +361,10 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-size: 14px;
     font-weight: 600;
     font-style: italic;
+    padding: 2px 5px;
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .qr_code_holder .account_details {
@@ -374,6 +386,10 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-size: 14px;
     font-weight: 600;
     font-style: italic;
+    padding: 2px 5px;
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .invoice_section4 .notes_holder textarea {
