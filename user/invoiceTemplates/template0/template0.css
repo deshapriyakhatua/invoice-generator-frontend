@@ -57,31 +57,32 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     background-color: white;
 }
 
-.section_separator {
-    margin-top: 10px;
-    border-right: 300px inset rgba(255, 255, 255, 0);
-    border-left: 300px outset rgba(255, 255, 255, 0);
-    border-top: 5px outset rgb(67, 67, 67);
-}
-
 /*----------- invoice section1 ---------*/
 
 .invoice_section1 {
     display: flex;
     justify-content: space-between;
     align-items: normal;
+    padding-bottom: 10px;
+    border-bottom: 5px groove rgb(202, 202, 202);
 }
 
 .business_details_holder {
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-direction: column;
+    gap: 5px;
 }
 
 .business_details_holder .business_title {
     width: 100%;
-    font-size: 18px;
-    font-weight: 700;
+    font-size: 28px;
+    font-weight: 400;
+    padding: 5px 8px;
+    background-color: rgb(135, 135, 135);
+    border-right: 8px ridge rgb(240, 240, 240);
+    border-left: 8px groove rgb(240, 240, 240);
+    color: #ffffff;
 }
 
 .business_details_holder textarea {
@@ -91,7 +92,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 .invoice_type_holder {
-    width: 40%;
+    width: 30%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -107,6 +108,14 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     width: auto;
     height: 45px;
     cursor: pointer;
+}
+
+.invoice_type {
+    font-size: 25px;
+    font-weight: 400;
+    color: #000000; 
+    text-align: right;
+    width: 100%;
 }
 
 .invoice_id {
@@ -125,16 +134,6 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 }
 
 
-/*------- invoice section1a ---------*/
-
-.invoice_type {
-    margin-top: 10px;
-    font-size: 30px;
-    font-weight: 650;
-    color: rgb(67, 67, 67); 
-    text-align: center;
-    width: 100%;
-}
 
 /*------- invoice section2 ---------*/
 
@@ -143,7 +142,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: 40px;
+    margin-top: 30px;
 }
 
 .invoice_section2 > div > input:first-child {
@@ -151,8 +150,9 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-weight: 600;
     color: #000000;
     font-style: italic;
-    padding: 0px 10px;
-    background-color: rgb(67, 67, 67);
+    padding: 2px 5px;
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
     color: #ffffff;
 }
 
@@ -211,8 +211,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
 
 .invoice_section3 tbody .item_header input {
     padding: 5px 5px;
-    font-style: italic;
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(135, 135, 135);
+    border: 2px ridge rgb(240, 240, 240);
     color: #ffffff;
 }
 
@@ -316,6 +316,7 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     margin-top: 35px;
     padding-top: 20px;
     display: flex;
+    border-top: 5px groove rgb(198, 198, 198);
     gap: 10px;
 }
 
@@ -361,7 +362,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-weight: 600;
     font-style: italic;
     padding: 2px 5px;
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
     color: #ffffff;
 }
 
@@ -385,7 +387,8 @@ input::-ms-input-placeholder { /* Edge 12-18 */
     font-weight: 600;
     font-style: italic;
     padding: 2px 5px;
-    background-color: rgb(67, 67, 67);
+    background-color: rgb(135, 135, 135);
+    border: 3px ridge rgb(240, 240, 240);
     color: #ffffff;
 }
 
