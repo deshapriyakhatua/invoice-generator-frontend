@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Styling</title>
+
+    <!------------ Google Fonts & Icon ------------->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,100..700,0..1,0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="/global/global.css">
+    <link rel="stylesheet" href="/user/qrCode/genrateQrCode.css">
+    <script type="text/javascript" src="/user/qrCode/qrCodeMain.js"></script>
+</head>
+<body>
+    <section class="main_qrcode_generator">
+        <div class="qr_input_holder">
+            <h2 class="qr_input_heading">Enter your website or text below :</h2>
+            <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..."></textarea>
+            
+            <h2 class="qr_logo_url_heading">Enter your logo URL below or <input type="file" name="" id=""></h2>
+            <textarea name="qr_logo_url" id="qr_logo_url" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter URL link of your logo..."></textarea>
+            <h2 class="qr_background_color_heading">Select color of QR Code background :</h2>
+            <input type="color" name="qr_background_color" id="qr_background_color" value="#ffffff">
+
+            <h2 class="qr_color_heading">Select color of QR Code :</h2>
+            <input type="color" name="qr_color" id="qr_color" value="#000000">
+            <button class="genrate_qrcode_button">Generate QR Code</button>
+        </div>
+        <div class="qr_output_holder">
+            <div class="qrcode_output">
+                <div id="canvas"></div>
+            </div>
+            <div class="qr_download_options">
+                <p>Choose extension for download :</p>
+                <form>
+                    <input type="radio" id="png" name="fav_language" value="png">
+                    <label for="png">png</label><br>
+                    <input type="radio" id="jpeg" name="fav_language" value="jpeg">
+                    <label for="jpeg">jpeg</label><br>
+                    <input type="radio" id="webp" name="fav_language" value="webp">
+                    <label for="webp">webp</label><br>
+                    <input type="radio" id="svg" name="fav_language" value="svg">
+                    <label for="svg">svg</label>
+                </form>
+
+            </div>
+            <button>Download</button>
+        </div>
+    </section>
+
+<script type="text/javascript">
+
+// https://github.com/kozakdenys/qr-code-styling 
+
+    const qrCode = new QRCodeStyling({
+        width: 100,
+        height: 100,
+        type: "svg",
+        data: "https://www.facebook.com/123456789123456789123456789123456789123456789123456789123456789123456789123456789",
+        image: "https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg",
+        dotsOptions: {
+            color: "#4267b2",
+            type: "rounded"
+        },
+        backgroundOptions: {
+            color: "#fff",
+        },
+        imageOptions: {
+            crossOrigin: "anonymous",
+            margin: 2
+        }
+    });
+
+    qrCode.append(document.getElementById("canvas"));
+    //qrCode.download({ name: "qr", extension: "svg" });
+</script>
+</body>
+</html>

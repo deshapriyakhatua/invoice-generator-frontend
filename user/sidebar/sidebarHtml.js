@@ -31,7 +31,7 @@ document.write(`
                                 <span> BILLING </span>
                             </li>
                             <li class="menu-item sub-menu">
-                                <a href="#">
+                                <a href="/user/invoice/createInvoice">
                                     <span class="menu-title">Create Invoices</span>
                                     <span class="menu-suffix">
                                         <span class="badge primary">Free</span>
@@ -39,8 +39,11 @@ document.write(`
                                 </a>
                             </li>
                             <li class="menu-item sub-menu">
-                                <a href="#">
-                                    <span class="menu-title">Generate Estimates</span>
+                                <a href="/user/qrCode/generateQrCode">
+                                    <span class="menu-title">Generate QR Code</span>
+                                    <span class="menu-suffix">
+                                        <span class="badge primary">Free</span>
+                                    </span>
                                 </a>
                             </li>
                             <li class="menu-item sub-menu">
