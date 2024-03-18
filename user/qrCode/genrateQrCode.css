@@ -7,30 +7,38 @@
     flex-wrap: wrap;
     justify-content: space-between;
     gap: 50px;
-    padding: 0 30px;
+    padding: 30px;
 }
 
 .qr_input_holder {
     border: 1px solid rgb(255, 255, 255);
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 
 .qr_output_holder {
     border: 1px solid rgb(255, 255, 255);
 }
 
+.qr_input_holder > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
 .qr_input_heading,
 .qr_logo_url_heading,
 .qr_background_color_heading,
 .qr_color_heading,
 .choose_dots_type_heading {
-    margin-top: 25px;
     font-size: 16px;
     font-weight: 500;
 }
 
 #qr_input,
 #qr_logo_url {
-    margin-top: 20px;
     width: 100%;
     padding: 15px;
     font-size: 18px;
@@ -69,14 +77,29 @@
     outline-color: rgb(177, 177, 177);
 }
 
+.color_card_parent {
+    display: flex;
+    gap: 20px;
+}
+
+.bgColor_card,
+.color_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 5px 5px 8px;
+    border: 1px solid rgb(235, 235, 235);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
 #qr_background_color,
 #qr_color {
-    margin-top: 20px;
     width: 80px;
     height: 80px;
     border: 0px solid rgb(225, 225, 225);
-    border-radius: 50%;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 5%;
     appearance: none;
     background-color: transparent;
     cursor: pointer;
@@ -85,24 +108,23 @@
 #qr_background_color::-webkit-color-swatch,
 #qr_color::-webkit-color-swatch {
     border: none;
-    border-radius: 50%;
+    border-radius: 5%;
 }
 
 #qr_background_color::-moz-color-swatch,
 #qr_color::-moz-color-swatch {
     border: none;
-    border-radius: 50%;
+    border-radius: 5%;
 }
 
-.qr_dots_options {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.bgColor_card label,
+.color_card label {
+    font-size: 12px;
+    font-weight: 600;
 }
 
-.qr_dots_options input,
-.qr_dots_options label {
+.qr_dots_options_container input,
+.qr_dots_options_container label {
     cursor: pointer;
     font-weight: 500;
     padding-left: 5px;
@@ -110,7 +132,6 @@
 
 .genrate_qrcode_button {
     display: block;
-    margin-top: 60px;
     width: 50%;
     padding: 8px 5px;
     font-size: 14px;
@@ -144,10 +165,16 @@
 }
 
 #canvas {
+    width: 200px;
+    height: 200px;
     padding: 0px;
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
+#canvas canvas {
+    width: 200px;
+    height: 200px;
+}
 .choose_extension_heading {
     font-size: 16px;
     font-weight: 500;

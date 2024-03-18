@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/global/files/favicon.png">
+    <meta name="description" content="Generate QR Codes with our Free QR Code Generator. Add Logo and style as your need. Download as png-jpeg-svg-webp.">
+
     <title>QR Code Generator</title>
 
     <!------------ Google Fonts & Icon ------------->
@@ -28,24 +31,46 @@
 
 
     <section class="main_qrcode_generator">
+
         <div class="qr_input_holder">
-            <h3 class="qr_input_heading">Enter your website or text below :</h3>
-            <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..." autofocus>https://snapbills.in</textarea>
+
+            <div class="qr_input_container">
+                <h3 class="qr_input_heading">Enter your website or text below :</h3>
+                <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..." autofocus>https://snapbills.in</textarea>
+            </div>
             
-            <h3 class="qr_logo_url_heading">Enter your logo URL below or 
-                <label for="qr_logo_file" class="qr_logo_file_label">
-                    <span class="material-symbols-rounded"> backup </span> Custom Upload
-                </label>
-                <input type="file" name="" id="qr_logo_file">
-            </h3>
-            <textarea name="qr_logo_url" id="qr_logo_url" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter URL link of your logo..."></textarea>
-            <h3 class="qr_background_color_heading">Select color of QR Code background :</h3>
-            <input type="color" name="qr_background_color" id="qr_background_color" value="#ffffff">
-
-            <h3 class="qr_color_heading">Select color of QR Code :</h3>
-            <input type="color" name="qr_color" id="qr_color" value="#000000">
-
-            <div class="qr_dots_options">
+            <div class="qr_logo_file_container">
+                <h3 class="qr_logo_url_heading">Enter your logo URL below or 
+                    <label for="qr_logo_file" class="qr_logo_file_label">
+                        <span class="material-symbols-rounded"> backup </span> Custom Upload
+                    </label>
+                    <input type="file" name="" id="qr_logo_file">
+                </h3>
+                <textarea name="qr_logo_url" id="qr_logo_url" cols="30" rows="2" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter URL link of your logo...">https://snapbills.in/global/files/invoiceLogo.png</textarea>
+            </div>
+            
+            <div class="qr_background_color_container">
+                <h3 class="qr_background_color_heading">Select color of QR Code background :</h3>
+                <div class="color_card_parent">
+                    <div class="bgColor_card">
+                        <input type="color" name="qr_background_color" id="qr_background_color" value="#cef934">
+                        <label for="qr_background_color">Background</label>
+                    </div>
+                    <div class="color_card">
+                        <input type="color" name="qr_color" id="qr_color" value="#ff2e38">
+                        <label for="qr_color">QR Dots</label>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="qr_color_container">
+                <h3 class="qr_color_heading">Select color of QR Code :</h3>
+                
+            </div>
+            
+            <div class="qr_dots_options_container">
                 <h3 class="choose_dots_type_heading">Select QR Code dot type :</h3>
                 <form>
                     <input type="radio" id="rounded" name="qr_dots_type" checked="checked" value="rounded">
@@ -63,12 +88,17 @@
                 </form>
 
             </div>
+
             <button class="genrate_qrcode_button">Generate QR Code</button>
+
         </div>
+
         <div class="qr_output_holder">
+
             <div class="qrcode_output">
                 <div id="canvas"></div>
             </div>
+
             <div class="qr_download_options">
                 <h3 class="choose_extension_heading">Choose extension for download :</h3>
                 <form>
@@ -83,59 +113,67 @@
                 </form>
 
             </div>
+
             <button class="download_qrcode">Download</button>
+
         </div>
+        
     </section>
 
 <script type="text/javascript">
 
 // https://github.com/kozakdenys/qr-code-styling 
 
-    let qrCode = new QRCodeStyling({
-        width: 200,
-        height: 200,
-        margin: 10,
-        type: "svg",
-        data: "https://snapbills.in",
-        image: "/global/files/invoiceLogo.png",
-        dotsOptions: {
-            color: "#ed686e",
-            type: "dots"
-        },
-        backgroundOptions: {
-            color: "#fff",
-        },
-        imageOptions: {
-            crossOrigin: "anonymous",
-            margin: 2
-        }
-    });
+    let qrCode;
+    function createQrCode(obj){
 
-    qrCode.append(document.getElementById("canvas"));
+        document.getElementById("canvas").innerHTML = `<img src="/global/files/qrCodeLoader.gif" alt="qr code generator" class="qr_code_loader">`;
+        qrCode = new QRCodeStyling(obj);
+        setTimeout(()=>{
+            document.getElementById("canvas").innerHTML = "";
+            qrCode.append(document.getElementById("canvas"));
+        },2000);
+        
 
+    }
+    
+    createQrCode({
+            width: 500,
+            height: 500,
+            margin: 10,
+            type: "canvas",
+            data: "https://snapbills.in",
+            image: "/global/files/invoiceLogo.png",
+            dotsOptions: {
+                color: "#ff2e38",
+                type: "classy"
+            },
+            backgroundOptions: {
+                color: "#cef934",
+            },
+            imageOptions: {
+                crossOrigin: "anonymous",
+                margin: 2
+            }
+        });
 
 
     document.querySelector(".genrate_qrcode_button").addEventListener("click", ()=>{
+
         let data = document.querySelector("#qr_input").value;
         let qrBgColor = document.querySelector("#qr_background_color").value;
         let qrColor = document.querySelector("#qr_color").value;
         let dotsType = document.querySelector("input[name='qr_dots_type']:checked").value
         
-        let iconUrl = document.querySelector("#qr_logo_file").value;
-        console.log(iconUrl)
         let fileInput = document.querySelector("#qr_logo_file");
-        let reader = new FileReader();
-        reader.onload = function (e) {
-            
-            iconUrl = e.target.result
+        let iconUrl = document.querySelector("#qr_logo_url").value;
 
-            console.log(data,iconUrl,qrBgColor,qrColor);
-
-            qrCode = new QRCodeStyling({
-                width: 200,
-                height: 200,
+        if(fileInput.value == "" && iconUrl != ""){
+            createQrCode({
+                width: 500,
+                height: 500,
                 margin: 10,
-                type: "svg",
+                type: "canvas",
                 data: data,
                 image: iconUrl,
                 dotsOptions: {
@@ -150,17 +188,33 @@
                     margin: 2
                 }
             });
-            document.getElementById("canvas").innerHTML = "";
-            qrCode.append(document.getElementById("canvas"));
-
-
         }
-        reader.readAsDataURL(fileInput.files[0]);
-        
-        // iconUrl = document.querySelector("#qr_logo_url").value;
-        
-        
 
+        if(fileInput.value != ""){
+            let reader = new FileReader();
+            reader.onload = function (e) {
+                createQrCode({
+                    width: 500,
+                    height: 500,
+                    margin: 10,
+                    type: "canvas",
+                    data: data,
+                    image: e.target.result,
+                    dotsOptions: {
+                        color: qrColor,
+                        type: dotsType
+                    },
+                    backgroundOptions: {
+                        color: qrBgColor,
+                    },
+                    imageOptions: {
+                        crossOrigin: "anonymous",
+                        margin: 2
+                    }
+                });
+            }
+            reader.readAsDataURL(fileInput.files[0]);
+        }
         
     });
 
