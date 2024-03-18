@@ -30,15 +30,39 @@
     <section class="main_qrcode_generator">
         <div class="qr_input_holder">
             <h3 class="qr_input_heading">Enter your website or text below :</h3>
-            <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..."></textarea>
+            <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..." autofocus>https://snapbills.in</textarea>
             
-            <h3 class="qr_logo_url_heading">Enter your logo URL below or <input type="file" name="" id=""></h3>
+            <h3 class="qr_logo_url_heading">Enter your logo URL below or 
+                <label for="qr_logo_file" class="qr_logo_file_label">
+                    <span class="material-symbols-rounded"> backup </span> Custom Upload
+                </label>
+                <input type="file" name="" id="qr_logo_file">
+            </h3>
             <textarea name="qr_logo_url" id="qr_logo_url" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter URL link of your logo..."></textarea>
             <h3 class="qr_background_color_heading">Select color of QR Code background :</h3>
             <input type="color" name="qr_background_color" id="qr_background_color" value="#ffffff">
 
             <h3 class="qr_color_heading">Select color of QR Code :</h3>
             <input type="color" name="qr_color" id="qr_color" value="#000000">
+
+            <div class="qr_dots_options">
+                <h3 class="choose_dots_type_heading">Select QR Code dot type :</h3>
+                <form>
+                    <input type="radio" id="rounded" name="qr_dots_type" checked="checked" value="rounded">
+                    <label for="rounded">rounded</label><br>
+                    <input type="radio" id="dots" name="qr_dots_type" value="dots">
+                    <label for="dots">dots</label><br>
+                    <input type="radio" id="classy" name="qr_dots_type" value="classy">
+                    <label for="classy">classy</label><br>
+                    <input type="radio" id="classy-rounded" name="qr_dots_type" value="classy-rounded">
+                    <label for="classy-rounded">classy-rounded</label><br>
+                    <input type="radio" id="square" name="qr_dots_type" value="square">
+                    <label for="square">square</label><br>
+                    <input type="radio" id="extra-rounded" name="qr_dots_type" value="extra-rounded">
+                    <label for="extra-rounded">extra-rounded</label>
+                </form>
+
+            </div>
             <button class="genrate_qrcode_button">Generate QR Code</button>
         </div>
         <div class="qr_output_holder">
@@ -48,13 +72,13 @@
             <div class="qr_download_options">
                 <h3 class="choose_extension_heading">Choose extension for download :</h3>
                 <form>
-                    <input type="radio" id="png" name="fav_language" value="png">
+                    <input type="radio" id="png" name="download_extension" checked="checked" value="png">
                     <label for="png">png</label><br>
-                    <input type="radio" id="jpeg" name="fav_language" value="jpeg">
+                    <input type="radio" id="jpeg" name="download_extension" value="jpeg">
                     <label for="jpeg">jpeg</label><br>
-                    <input type="radio" id="webp" name="fav_language" value="webp">
+                    <input type="radio" id="webp" name="download_extension" value="webp">
                     <label for="webp">webp</label><br>
-                    <input type="radio" id="svg" name="fav_language" value="svg">
+                    <input type="radio" id="svg" name="download_extension" value="svg">
                     <label for="svg">svg</label>
                 </form>
 
@@ -67,15 +91,16 @@
 
 // https://github.com/kozakdenys/qr-code-styling 
 
-    const qrCode = new QRCodeStyling({
-        width: 100,
-        height: 100,
+    let qrCode = new QRCodeStyling({
+        width: 200,
+        height: 200,
+        margin: 10,
         type: "svg",
         data: "https://snapbills.in",
         image: "/global/files/invoiceLogo.png",
         dotsOptions: {
             color: "#ed686e",
-            type: "rounded"
+            type: "dots"
         },
         backgroundOptions: {
             color: "#fff",
@@ -87,36 +112,61 @@
     });
 
     qrCode.append(document.getElementById("canvas"));
-    //qrCode.download({ name: "qr", extension: "svg" });
+
 
 
     document.querySelector(".genrate_qrcode_button").addEventListener("click", ()=>{
         let data = document.querySelector("#qr_input").value;
-        let iconUrl = document.querySelector("#qr_logo_url").value;
         let qrBgColor = document.querySelector("#qr_background_color").value;
         let qrColor = document.querySelector("#qr_color").value;
-        console.log(data,iconUrl,qrBgColor,qrColor);
+        let dotsType = document.querySelector("input[name='qr_dots_type']:checked").value
+        
+        let iconUrl = document.querySelector("#qr_logo_file").value;
+        console.log(iconUrl)
+        let fileInput = document.querySelector("#qr_logo_file");
+        let reader = new FileReader();
+        reader.onload = function (e) {
+            
+            iconUrl = e.target.result
 
-        const qrCode = new QRCodeStyling({
-            width: 100,
-            height: 100,
-            type: "svg",
-            data: data,
-            image: iconUrl,
-            dotsOptions: {
-                color: qrColor,
-                type: "rounded"
-            },
-            backgroundOptions: {
-                color: qrBgColor,
-            },
-            imageOptions: {
-                crossOrigin: "anonymous",
-                margin: 2
-            }
-        });
-        document.getElementById("canvas").innerHTML = "";
-        qrCode.append(document.getElementById("canvas"));
+            console.log(data,iconUrl,qrBgColor,qrColor);
+
+            qrCode = new QRCodeStyling({
+                width: 200,
+                height: 200,
+                margin: 10,
+                type: "svg",
+                data: data,
+                image: iconUrl,
+                dotsOptions: {
+                    color: qrColor,
+                    type: dotsType
+                },
+                backgroundOptions: {
+                    color: qrBgColor,
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous",
+                    margin: 2
+                }
+            });
+            document.getElementById("canvas").innerHTML = "";
+            qrCode.append(document.getElementById("canvas"));
+
+
+        }
+        reader.readAsDataURL(fileInput.files[0]);
+        
+        // iconUrl = document.querySelector("#qr_logo_url").value;
+        
+        
+
+        
+    });
+
+    document.querySelector(".download_qrcode").addEventListener("click", ()=>{
+        let extension = document.querySelector("input[name='download_extension']:checked").value;
+        qrCode.download({ name: "SnapBills-Qr-Code", extension: extension });
     })
 </script>
 
