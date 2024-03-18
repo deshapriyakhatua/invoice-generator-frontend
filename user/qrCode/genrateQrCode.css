@@ -1,8 +1,10 @@
 
 .main_qrcode_generator {
+    margin-top: 60px;
     display: flex;
+    justify-content: space-between;
     gap: 20px;
-    padding: 0 30px;
+    padding: 0 50px;
 }
 
 .qr_input_holder {
@@ -10,7 +12,7 @@
 }
 
 .qr_output_holder {
-    border: 1px solid rgb(254, 254, 254);
+    border: 1px solid rgb(255, 255, 255);
 }
 
 .qr_input_heading,
@@ -18,30 +20,117 @@
 .qr_background_color_heading,
 .qr_color_heading {
     margin-top: 25px;
-    font-size: 20px;
-    font-weight: 400;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 #qr_input,
 #qr_logo_url {
     margin-top: 20px;
     width: 90%;
-    padding: 10px;
+    padding: 15px;
     font-size: 18px;
+    border: 1px solid rgb(210, 210, 210);
+    border-radius: 10px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#qr_input:focus,
+#qr_logo_url:focus {
+    outline-color: rgb(177, 177, 177);
 }
 
 #qr_background_color,
 #qr_color {
     margin-top: 20px;
-    width: 50%;
-    height: 40px;
+    width: 80px;
+    height: 80px;
+    border: 0px solid rgb(225, 225, 225);
+    border-radius: 50%;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#qr_background_color::-webkit-color-swatch,
+#qr_color::-webkit-color-swatch {
     border: none;
+    border-radius: 50%;
+}
+
+#qr_background_color::-moz-color-swatch,
+#qr_color::-moz-color-swatch {
+    border: none;
+    border-radius: 50%;
 }
 
 .genrate_qrcode_button {
+    display: block;
     margin-top: 30px;
     width: 50%;
-    padding: 5px;
+    padding: 8px 5px;
     font-size: 14px;
     font-weight: 600;
+    background-color: rgb(75, 75, 255);
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.genrate_qrcode_button:hover {
+    background-color: rgb(51, 51, 249);
+}
+
+.genrate_qrcode_button:focus {
+    background-color: rgb(19, 19, 251);
+}
+
+.qr_output_holder {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.qrcode_output {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.choose_extension_heading {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.qr_download_options form {
+    margin-left: 10px;
+}
+
+.qr_download_options input,
+.qr_download_options label {
+    font-size: 15px;
+    font-weight: 500;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.download_qrcode {
+    padding: 8px 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    background-color: rgb(249, 146, 67);
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.download_qrcode:hover {
+    background-color: rgb(246, 126, 35);
+}
+
+.download_qrcode:focus {
+    background-color: rgb(233, 104, 5);
 }
