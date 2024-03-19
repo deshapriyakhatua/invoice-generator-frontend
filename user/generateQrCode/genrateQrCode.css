@@ -1,7 +1,63 @@
 
+.header_row {
+    margin-top: 60px;
+	background-color: #f3f3f3;
+	padding: 10px 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.main_heading {
+    font-size: 18px;
+	color: #000000;
+	font-weight: 400;
+}
+
+.heading_options button {
+	padding: 8px 10px;
+	font-weight: 600;
+	background-color: rgb(5, 218, 222);
+	border: none;
+	cursor: pointer;
+    display: none;
+}
+
+.heading_options button:first-child {
+	background-color: rgb(73, 223, 133);
+}
+
+.heading_options button:hover {
+	background-color: rgb(6, 6, 6);
+	color: white;
+}
+
+.heading_options .print_invoice {
+	background-color: orange;
+}
+
+@media only screen and (max-width: 1000px) {
+	.header_row {
+		padding: 10px 25px;
+	}
+	.main_heading {
+		font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 780px) {
+	.heading_options button {
+		font-size: 12px;
+		padding: 6px 8px;
+	}
+	.main_heading {
+		font-size: 16px;
+	}
+}
+
 .main_qrcode_generator {
     margin: auto;
-    margin-top: 60px;
     max-width: 1000px;
     display: flex;
     flex-wrap: wrap;
@@ -34,14 +90,15 @@
 .qr_color_heading,
 .choose_dots_type_heading {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 #qr_input,
 #qr_logo_url {
     width: 100%;
     padding: 15px;
-    font-size: 18px;
+    font-size: 15px;
+    font-weight: 400;
     border: 1px solid rgb(210, 210, 210);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
@@ -52,8 +109,9 @@
 }
 
 .qr_logo_file_label {
+    margin-top: 5px;
     padding: 6px 12px;
-    display: inline;
+    display: inline-block;
     border: 1px solid rgb(205, 205, 205);
     cursor: pointer;
     font-size: 14px;
@@ -126,8 +184,8 @@
 .qr_dots_options_container input,
 .qr_dots_options_container label {
     cursor: pointer;
-    font-weight: 500;
-    padding-left: 5px;
+    font-weight: 400;
+    margin-left: 5px;
 }
 
 .genrate_qrcode_button {
@@ -159,7 +217,6 @@
 }
 
 .qrcode_output {
-    margin-top: 25px;
     display: flex;
     justify-content: center;
 }
@@ -171,13 +228,13 @@
     box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
 }
 
-#canvas canvas {
+#canvas svg {
     width: 200px;
     height: 200px;
 }
 .choose_extension_heading {
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
 }
 
 .qr_download_options form {
@@ -187,7 +244,7 @@
 .qr_download_options input,
 .qr_download_options label {
     font-size: 15px;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 10px;
     cursor: pointer;
 }

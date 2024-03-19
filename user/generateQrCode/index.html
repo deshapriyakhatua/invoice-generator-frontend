@@ -18,9 +18,9 @@
     <!-------------- link css -------------->
     <link rel="stylesheet" href="/user/sidebar/sidebar.css">
     <link rel="stylesheet" href="/global/global.css">
-    <link rel="stylesheet" href="/user/qrCode/genrateQrCode.css">
+    <link rel="stylesheet" href="/user/generateQrCode/genrateQrCode.css">
 
-    <script type="text/javascript" src="/user/qrCode/qrCodeMain.js"></script>
+    <script type="text/javascript" src="/user/generateQrCode/qrCodeMain.js"></script>
 
 </head>
 <body>
@@ -29,6 +29,14 @@
 
     <script src="/user/sidebar/sidebarHtml.js"></script>
 
+    <div class="header_row">
+        <h1 class="main_heading">Free QR Code Generator</h1>
+        <div class="heading_options">
+            <button class="change_layout">Layout</button>
+            <button>Save</button>
+            <button class="print_invoice"> Print</button>
+        </div>
+    </div>
 
     <section class="main_qrcode_generator">
 
@@ -50,7 +58,7 @@
             </div>
             
             <div class="qr_background_color_container">
-                <h3 class="qr_background_color_heading">Select color of QR Code background :</h3>
+                <h3 class="qr_background_color_heading">Select background and dots color :</h3>
                 <div class="color_card_parent">
                     <div class="bgColor_card">
                         <input type="color" name="qr_background_color" id="qr_background_color" value="#cef934">
@@ -62,11 +70,6 @@
                     </div>
                 </div>
                 
-                
-            </div>
-            
-            <div class="qr_color_container">
-                <h3 class="qr_color_heading">Select color of QR Code :</h3>
                 
             </div>
             
@@ -138,10 +141,10 @@
     }
     
     createQrCode({
-            width: 500,
-            height: 500,
+            width: 200,
+            height: 200,
             margin: 10,
-            type: "canvas",
+            type: "svg",
             data: "https://snapbills.in",
             image: "/global/files/invoiceLogo.png",
             dotsOptions: {
@@ -157,6 +160,9 @@
             }
         });
 
+    document.querySelector("#qr_logo_file").addEventListener("change", (event)=>{
+        document.querySelector("#qr_logo_url").value = event.target.value;
+    })
 
     document.querySelector(".genrate_qrcode_button").addEventListener("click", ()=>{
 
@@ -168,36 +174,17 @@
         let fileInput = document.querySelector("#qr_logo_file");
         let iconUrl = document.querySelector("#qr_logo_url").value;
 
-        if(fileInput.value == "" && iconUrl != ""){
-            createQrCode({
-                width: 500,
-                height: 500,
-                margin: 10,
-                type: "canvas",
-                data: data,
-                image: iconUrl,
-                dotsOptions: {
-                    color: qrColor,
-                    type: dotsType
-                },
-                backgroundOptions: {
-                    color: qrBgColor,
-                },
-                imageOptions: {
-                    crossOrigin: "anonymous",
-                    margin: 2
-                }
-            });
+        if(iconUrl == ""){
+            alert("Empty logo URL Input");
         }
-
-        if(fileInput.value != ""){
+        else if(fileInput.value == iconUrl){
             let reader = new FileReader();
             reader.onload = function (e) {
                 createQrCode({
-                    width: 500,
-                    height: 500,
+                    width: 200,
+                    height: 200,
                     margin: 10,
-                    type: "canvas",
+                    type: "svg",
                     data: data,
                     image: e.target.result,
                     dotsOptions: {
@@ -214,6 +201,28 @@
                 });
             }
             reader.readAsDataURL(fileInput.files[0]);
+        }
+        else{
+            fileInput.value = "";
+            createQrCode({
+                width: 200,
+                height: 200,
+                margin: 10,
+                type: "svg",
+                data: data,
+                image: iconUrl,
+                dotsOptions: {
+                    color: qrColor,
+                    type: dotsType
+                },
+                backgroundOptions: {
+                    color: qrBgColor,
+                },
+                imageOptions: {
+                    crossOrigin: "anonymous",
+                    margin: 2
+                }
+            });
         }
         
     });
