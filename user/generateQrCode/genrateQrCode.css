@@ -66,11 +66,17 @@
     padding: 30px;
 }
 
+@media only screen and (max-width: 780px) {
+    .main_qrcode_generator {
+        justify-content: center;
+    }
+}
+
 .qr_input_holder {
     border: 1px solid rgb(255, 255, 255);
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 0px;
 }
 
 .qr_output_holder {
@@ -78,119 +84,142 @@
 }
 
 .qr_input_holder > div {
+    padding: 10px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.qr_input_holder > div > h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 10px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #000000;
+    background-color: #ffffff;
+    border: 1px solid rgb(211, 211, 211);
+    border-radius: 5px;
+}
+
+.qr_input_holder > div > h3 > span {
+    transform: rotate(45deg);
+    width: 10px;
+    height: 10px;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    transition: all .3s ease-in-out;
+    cursor: pointer;
+}
+
+.options_container {
+    margin-left: 10px;
+    margin-bottom: 20px;
+    padding-left: 10px;
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-
-.qr_input_heading,
-.qr_logo_url_heading,
-.qr_background_color_heading,
-.qr_color_heading,
-.choose_dots_type_heading {
-    font-size: 16px;
-    font-weight: 600;
+.options_container.hide {
+    display: none;
 }
 
-#qr_input,
-#qr_logo_url {
+select {
+    border: 1px solid rgb(201, 200, 200);
+}
+input {
+    border: 1px solid rgb(201, 200, 200);
+}
+
+#qr_input {
+    margin-bottom: 10px;
     width: 100%;
     padding: 15px;
     font-size: 15px;
     font-weight: 400;
-    border: 1px solid rgb(210, 210, 210);
+    border: 1px solid rgb(229, 229, 229);
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
 
 #qr_logo_file {
-    display: none;
-}
-
-.qr_logo_file_label {
-    margin-top: 5px;
-    padding: 6px 12px;
-    display: inline-block;
-    border: 1px solid rgb(205, 205, 205);
+    margin-bottom: 10px;
+    padding: 10px 12px;
+    display: inline;
     cursor: pointer;
     font-size: 14px;
     border-radius: 5px;
     color: rgb(11, 11, 253);
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+#qr_logo_file::file-selector-button {
+    padding: 8px 12px;
+    background-color: rgb(121, 121, 246);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+}
+#qr_logo_file::file-selector-button:hover {
+    background-color: rgb(96, 96, 245);
 }
 
-.qr_logo_file_label:hover {
-    color: #ffffff;
-    background-color: rgb(97, 97, 243);
+.logo_style_container input {
+    text-align: center;
 }
 
-.qr_logo_file_label span {
-    font-size: 20px;
-    vertical-align: middle;
+.rotation_gradient {
+    width: 70px;
 }
-
-#qr_input:focus,
-#qr_logo_url:focus {
-    outline-color: rgb(177, 177, 177);
-}
-
 .color_card_parent {
     display: flex;
     gap: 20px;
 }
-
-.bgColor_card,
-.color_card {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    padding: 5px 5px 8px;
+.first_color_card,
+.second_color_card {
+    padding: 3px 3px 15px;
     border: 1px solid rgb(235, 235, 235);
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    border-radius: 10%;
 }
-
-#qr_background_color,
-#qr_color {
-    width: 80px;
-    height: 80px;
-    border: 0px solid rgb(225, 225, 225);
-    border-radius: 5%;
+.first_color,
+.second_color {
+    width: 60px;
+    height: 60px;
+    border: none;
     appearance: none;
     background-color: transparent;
     cursor: pointer;
 }
-
-#qr_background_color::-webkit-color-swatch,
-#qr_color::-webkit-color-swatch {
+.first_color::-webkit-color-swatch,
+.second_color::-webkit-color-swatch {
     border: none;
-    border-radius: 5%;
+    border-radius: 10%;
 }
 
-#qr_background_color::-moz-color-swatch,
-#qr_color::-moz-color-swatch {
+.first_color::-moz-color-swatch,
+.second_color::-moz-color-swatch {
     border: none;
-    border-radius: 5%;
+    border-radius: 10%;
 }
 
-.bgColor_card label,
-.color_card label {
-    font-size: 12px;
-    font-weight: 600;
+.gradient_type_select_container,
+.rotation_container,
+.second_color_card {
+    display: none;
 }
 
-.qr_dots_options_container input,
-.qr_dots_options_container label {
-    cursor: pointer;
-    font-weight: 400;
-    margin-left: 5px;
+#logo_size,
+#logo_outside_margin {
+    width: 60px;
 }
 
 .genrate_qrcode_button {
+    margin: auto;
+    margin-top: 20px;
     display: block;
-    width: 50%;
+    width: 100%;
     padding: 8px 5px;
     font-size: 14px;
     font-weight: 600;
@@ -206,7 +235,7 @@
     background-color: rgb(51, 51, 249);
 }
 
-.genrate_qrcode_button:focus {
+.genrate_qrcode_button:active {
     background-color: rgb(19, 19, 251);
 }
 
@@ -232,39 +261,60 @@
     width: 200px;
     height: 200px;
 }
-.choose_extension_heading {
-    font-size: 16px;
-    font-weight: 600;
+
+.size_of_qr_parent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
 }
 
-.qr_download_options form {
-    margin-left: 10px;
+#qr_size {
+    width: 60px;
+    text-align: center;
 }
-
-.qr_download_options input,
-.qr_download_options label {
-    font-size: 15px;
-    font-weight: 400;
-    margin-top: 10px;
-    cursor: pointer;
+.download_qr_parent {
+    margin: 0 auto;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    border: 1px solid rgb(67, 73, 249);
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
 }
-
 .download_qrcode {
     padding: 8px 5px;
     border: none;
     font-size: 14px;
     font-weight: 600;
-    background-color: rgb(249, 146, 67);
-    color: #ffffff;
-    border-radius: 5px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(67, 73, 249);
     cursor: pointer;
-    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    border-right: 1px solid rgb(67, 73, 249);
 }
 
 .download_qrcode:hover {
-    background-color: rgb(246, 126, 35);
+    color: white;
+    background-color: rgb(78, 84, 249);
+    border-radius: 5px;
 }
 
-.download_qrcode:focus {
-    background-color: rgb(233, 104, 5);
+.download_qrcode:active {
+    color: white;
+    background-color: rgb(28, 35, 250);
+}
+
+.download_extension_select {
+    padding: 8px 5px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: rgb(67, 73, 249);
+    cursor: pointer;
+}
+
+.download_extension_select:focus {
+    outline: none;
 }

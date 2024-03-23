@@ -43,54 +43,200 @@
         <div class="qr_input_holder">
 
             <div class="qr_input_container">
-                <h3 class="qr_input_heading">Enter your website or text below :</h3>
+                <h3 class="qr_input_heading">Enter your text below :</h3>
                 <textarea name="qr_input" id="qr_input" cols="30" rows="3" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter your text here..." autofocus>https://snapbills.in</textarea>
             </div>
             
             <div class="qr_logo_file_container">
-                <h3 class="qr_logo_url_heading">Enter your logo URL below or 
-                    <label for="qr_logo_file" class="qr_logo_file_label">
-                        <span class="material-symbols-rounded"> backup </span> Custom Upload
-                    </label>
-                    <input type="file" name="" id="qr_logo_file">
+                <h3 class="qr_logo_url_heading">Logo :
                 </h3>
-                <textarea name="qr_logo_url" id="qr_logo_url" cols="30" rows="2" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="Enter URL link of your logo...">https://snapbills.in/global/files/invoiceLogo.png</textarea>
+                <input type="file" name="" id="qr_logo_file">
             </div>
-            
-            <div class="qr_background_color_container">
-                <h3 class="qr_background_color_heading">Select background and dots color :</h3>
-                <div class="color_card_parent">
-                    <div class="bgColor_card">
-                        <input type="color" name="qr_background_color" id="qr_background_color" value="#cef934">
-                        <label for="qr_background_color">Background</label>
+
+            <div class="dots_style_container">
+                <h3 class="dots_style_heading">Dots Style : <span style="transform: rotate(-135deg);"></span></h3>
+                <div class="options_container">
+                    <div class="style_select_container">
+                        <label for="dots_style_type">Dots Style</label>
+                        <select id="dots_style_type" class="style_type">
+                            <option value="rounded">Rounded</option>
+                            <option value="square">Square</option>
+                            <option value="dots">Dots</option>
+                            <option value="classy">Classy</option>
+                            <option value="classy-rounded" selected>Classy Rounded</option>
+                            <option value="extra-rounded">Extra Rounded</option>
+                        </select>
                     </div>
-                    <div class="color_card">
-                        <input type="color" name="qr_color" id="qr_color" value="#ff2e38">
-                        <label for="qr_color">QR Dots</label>
+                    <div class="color_type_select_container">
+                        <label for="dots_select_color_type">Color Type</label>
+                        <select id="dots_select_color_type" class="select_color_type">
+                            <option value="single">Single color</option>
+                            <option value="gradient">Color gradient</option>
+                        </select>
+                    </div>
+                    <div class="gradient_type_select_container">
+                        <label for="dots_select_gradient_type">Gradient Type</label>
+                        <select id="dots_select_gradient_type" class="select_gradient_type">
+                            <option value="linear">Linear</option>
+                            <option value="radial">Radial</option>
+                        </select>
+                    </div>
+                    <div class="rotation_container">
+                        <label for="dots_rotation_gradient">Rotation</label>
+                        <input type="number" id="dots_rotation_gradient" value="10" class="rotation_gradient">
+                    </div>
+                    <div class="color_card_parent">
+                        <div class="first_color_card">
+                            <input type="color" name="first_color" id="dots_first_color" value="#f53d46" class="first_color">
+                        </div>
+                        <div class="second_color_card">
+                            <input type="color" name="second_color" id="dots_second_color" class="second_color" value="#ff2e38">
+                        </div>
                     </div>
                 </div>
-                
-                
             </div>
-            
-            <div class="qr_dots_options_container">
-                <h3 class="choose_dots_type_heading">Select QR Code dot type :</h3>
-                <form>
-                    <input type="radio" id="rounded" name="qr_dots_type" checked="checked" value="rounded">
-                    <label for="rounded">rounded</label><br>
-                    <input type="radio" id="dots" name="qr_dots_type" value="dots">
-                    <label for="dots">dots</label><br>
-                    <input type="radio" id="classy" name="qr_dots_type" value="classy">
-                    <label for="classy">classy</label><br>
-                    <input type="radio" id="classy-rounded" name="qr_dots_type" value="classy-rounded">
-                    <label for="classy-rounded">classy-rounded</label><br>
-                    <input type="radio" id="square" name="qr_dots_type" value="square">
-                    <label for="square">square</label><br>
-                    <input type="radio" id="extra-rounded" name="qr_dots_type" value="extra-rounded">
-                    <label for="extra-rounded">extra-rounded</label>
-                </form>
 
+            <div class="corners_square_style_container">
+                <h3 class="corners_square_style_heading">Corners Square Style :<span></span></h3>
+                <div class="options_container hide">
+                    <div class="style_select_container">
+                        <label for="corners_square_style_type">Corners Square Style</label>
+                        <select id="corners_square_style_type" class="style_type">
+                            <option value="">None</option>
+                            <option value="square">Square</option>
+                            <option value="dot">Dot</option>
+                            <option value="extra-rounded" selected>Extra rounded</option>
+                        </select>
+                    </div>
+                    <div class="color_type_select_container">
+                        <label for="corners_square_select_color_type">Color Type</label>
+                        <select id="corners_square_select_color_type" class="select_color_type">
+                            <option value="single">Single color</option>
+                            <option value="gradient">Color gradient</option>
+                        </select>
+                    </div>
+                    <div class="gradient_type_select_container">
+                        <label for="corners_square_select_gradient_type">Gradient Type</label>
+                        <select id="corners_square_select_gradient_type" class="select_gradient_type">
+                            <option value="linear">Linear</option>
+                            <option value="radial">Radial</option>
+                        </select>
+                    </div>
+                    <div class="rotation_container">
+                        <label for="corners_square_rotation_gradient">Rotation</label>
+                        <input type="number" id="corners_square_rotation_gradient" value="10" class="rotation_gradient">
+                    </div>
+                    <div class="color_card_parent">
+                        <div class="first_color_card">
+                            <input type="color" name="first_color" id="corners_square_first_color" value="#000000" class="first_color">
+                        </div>
+                        <div class="second_color_card">
+                            <input type="color" name="second_color" id="corners_square_second_color" class="second_color" value="#1e72cc">
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="corners_dot_style_container">
+                <h3 class="corners_dot_style_heading">Corners Dot Style :<span></span></h3>
+                <div class="options_container hide">
+                    <div class="style_select_container">
+                        <label for="corners_dot_style_type">Corners Dot Style</label>
+                        <select id="corners_dot_style_type" class="style_type">
+                            <option value="">None</option>
+                            <option value="square">Square</option>
+                            <option value="dot" selected>Dot</option>
+                        </select>
+                    </div>
+                    <div class="color_type_select_container">
+                        <label for="corners_dot_select_color_type">Color Type</label>
+                        <select id="corners_dot_select_color_type" class="select_color_type">
+                            <option value="single">Single color</option>
+                            <option value="gradient">Color gradient</option>
+                        </select>
+                    </div>
+                    <div class="gradient_type_select_container">
+                        <label for="corners_dot_select_gradient_type">Gradient Type</label>
+                        <select id="corners_dot_select_gradient_type" class="select_gradient_type">
+                            <option value="linear">Linear</option>
+                            <option value="radial">Radial</option>
+                        </select>
+                    </div>
+                    <div class="rotation_container">
+                        <label for="corners_dot_rotation_gradient">Rotation</label>
+                        <input type="number" id="corners_dot_rotation_gradient" value="10" class="rotation_gradient">
+                    </div>
+                    <div class="color_card_parent">
+                        <div class="first_color_card">
+                            <input type="color" name="first_color" id="corners_dot_first_color" value="#f53d46" class="first_color">
+                        </div>
+                        <div class="second_color_card">
+                            <input type="color" name="second_color" id="corners_dot_second_color" class="second_color" value="#024fca">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="background_style_container">
+                <h3 class="background_style_heading">Background Color :<span></span></h3>
+                <div class="options_container hide">
+                    <div class="color_type_select_container">
+                        <label for="background_select_color_type">Color Type</label>
+                        <select id="background_select_color_type" class="select_color_type">
+                            <option value="single">Single color</option>
+                            <option value="gradient">Color gradient</option>
+                        </select>
+                    </div>
+                    <div class="gradient_type_select_container">
+                        <label for="background_select_gradient_type">Gradient Type</label>
+                        <select id="background_select_gradient_type" class="select_gradient_type">
+                            <option value="linear">Linear</option>
+                            <option value="radial">Radial</option>
+                        </select>
+                    </div>
+                    <div class="rotation_container">
+                        <label for="background_rotation_gradient">Rotation</label>
+                        <input type="number" id="background_rotation_gradient" value="10" class="rotation_gradient">
+                    </div>
+                    <div class="color_card_parent">
+                        <div class="first_color_card">
+                            <input type="color" name="first_color" id="background_first_color" value="#ffffff" class="first_color">
+                        </div>
+                        <div class="second_color_card">
+                            <input type="color" name="second_color" id="background_second_color" class="second_color" value="#ebd8f8">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="logo_style_container">
+                <h3 class="logo_style_heading">Logo Style :<span></span></h3>
+                <div class="options_container hide">
+                    <div class="logo_size_parent">
+                        <label for="logo_size">Logo Size </label>
+                        <input type="range" id="logo_size" min="40" max ="100" value="70">
+                    </div>
+                    <div class="logo_margin_parent">
+                        <label for="logo_outside_margin">Logo Margin</label>
+                        <input type="range" id="logo_outside_margin" min="0" max="3" value="2">
+                    </div>
+                </div>
+            </div>
+
+            <div class="error_correction_level">
+                <h3 class="err_correction_lvl">Other Options :<span></span></h3>
+                <div class="options_container hide">
+                    <div class="err_crn_parent">
+                        <label for="err_crn_lvl">Error Correction Level</label>
+                        <select id="err_crn_lvl" class="err_crn_lvl">
+                            <option value="L">L</option>
+                            <option value="M">M</option>
+                            <option value="Q">Q</option>
+                            <option value="H">H</option>
+                        </select>
+                    </div>
+                </div>
+            </div>            
 
             <button class="genrate_qrcode_button">Generate QR Code</button>
 
@@ -100,139 +246,35 @@
 
             <div class="qrcode_output">
                 <div id="canvas"></div>
+                <img src="" alt="" class="canvar_image">
             </div>
 
-            <div class="qr_download_options">
-                <h3 class="choose_extension_heading">Choose extension for download :</h3>
-                <form>
-                    <input type="radio" id="png" name="download_extension" checked="checked" value="png">
-                    <label for="png">png</label><br>
-                    <input type="radio" id="jpeg" name="download_extension" value="jpeg">
-                    <label for="jpeg">jpeg</label><br>
-                    <input type="radio" id="webp" name="download_extension" value="webp">
-                    <label for="webp">webp</label><br>
-                    <input type="radio" id="svg" name="download_extension" value="svg">
-                    <label for="svg">svg</label>
-                </form>
-
+            <div class="size_of_qr_parent">
+                <label for="qr_size" class="show_qr_size">500 x</label>
+                <input type="number" id="qr_size" name="qr_size" value="500">
+                <span>PX </span>
             </div>
 
-            <button class="download_qrcode">Download</button>
+            <div class="download_qr_parent">
+                <button class="download_qrcode">Download</button>
+                <select id="download_extension_type" name="download_extension_type" class="download_extension_select">
+                    <option value="png">png</option>
+                    <option value="jpeg">jpeg</option>
+                    <option value="svg">svg</option>
+                    <option value="webp">webp</option>
+                </select>
+            </div>
 
         </div>
         
     </section>
 
+    
 <script type="text/javascript">
 
 // https://github.com/kozakdenys/qr-code-styling 
-
-    let qrCode;
-    function createQrCode(obj){
-
-        document.getElementById("canvas").innerHTML = `<img src="/global/files/qrCodeLoader.gif" alt="qr code generator" class="qr_code_loader">`;
-        qrCode = new QRCodeStyling(obj);
-        setTimeout(()=>{
-            document.getElementById("canvas").innerHTML = "";
-            qrCode.append(document.getElementById("canvas"));
-        },2000);
-        
-
-    }
-    
-    createQrCode({
-            width: 200,
-            height: 200,
-            margin: 10,
-            type: "svg",
-            data: "https://snapbills.in",
-            image: "/global/files/invoiceLogo.png",
-            dotsOptions: {
-                color: "#ff2e38",
-                type: "classy"
-            },
-            backgroundOptions: {
-                color: "#cef934",
-            },
-            imageOptions: {
-                crossOrigin: "anonymous",
-                margin: 2
-            }
-        });
-
-    document.querySelector("#qr_logo_file").addEventListener("change", (event)=>{
-        document.querySelector("#qr_logo_url").value = event.target.value;
-    })
-
-    document.querySelector(".genrate_qrcode_button").addEventListener("click", ()=>{
-
-        let data = document.querySelector("#qr_input").value;
-        let qrBgColor = document.querySelector("#qr_background_color").value;
-        let qrColor = document.querySelector("#qr_color").value;
-        let dotsType = document.querySelector("input[name='qr_dots_type']:checked").value
-        
-        let fileInput = document.querySelector("#qr_logo_file");
-        let iconUrl = document.querySelector("#qr_logo_url").value;
-
-        if(iconUrl == ""){
-            alert("Empty logo URL Input");
-        }
-        else if(fileInput.value == iconUrl){
-            let reader = new FileReader();
-            reader.onload = function (e) {
-                createQrCode({
-                    width: 200,
-                    height: 200,
-                    margin: 10,
-                    type: "svg",
-                    data: data,
-                    image: e.target.result,
-                    dotsOptions: {
-                        color: qrColor,
-                        type: dotsType
-                    },
-                    backgroundOptions: {
-                        color: qrBgColor,
-                    },
-                    imageOptions: {
-                        crossOrigin: "anonymous",
-                        margin: 2
-                    }
-                });
-            }
-            reader.readAsDataURL(fileInput.files[0]);
-        }
-        else{
-            fileInput.value = "";
-            createQrCode({
-                width: 200,
-                height: 200,
-                margin: 10,
-                type: "svg",
-                data: data,
-                image: iconUrl,
-                dotsOptions: {
-                    color: qrColor,
-                    type: dotsType
-                },
-                backgroundOptions: {
-                    color: qrBgColor,
-                },
-                imageOptions: {
-                    crossOrigin: "anonymous",
-                    margin: 2
-                }
-            });
-        }
-        
-    });
-
-    document.querySelector(".download_qrcode").addEventListener("click", ()=>{
-        let extension = document.querySelector("input[name='download_extension']:checked").value;
-        qrCode.download({ name: "SnapBills-Qr-Code", extension: extension });
-    })
 </script>
-
+<script src="/user/generateQrCode/generateQrCode.js"></script>
     <!----------------- Other JS ---------------->
 
     <script src="/user/sidebar/sidebar.js"></script>
